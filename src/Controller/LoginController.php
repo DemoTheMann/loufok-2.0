@@ -18,7 +18,8 @@ class LoginController extends Controller
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
 
-        var_dump($_POST);
+        $loginModel->authAdmin($_POST['login'], $_POST['password']);
+        $loginModel->authJoueur($_POST['login'], $_POST['password']);
 
       }
 
