@@ -105,6 +105,7 @@ case FastRoute\Dispatcher::FOUND:
       // appeler la méthode du contrôleur
       return call_user_func_array([$controller, $action], $vars);
     } catch (Exception $exception) {
+      var_dump($exception);
       $logger->alert(
         '404 - erreur dans le processus de traitement du routage',
         ['routeInfo' => $routeInfo, 'exception-line' => $exception->getLine(), 'exception-file' => $exception->getFile(), 'exception-code' => $exception->getMessage()]

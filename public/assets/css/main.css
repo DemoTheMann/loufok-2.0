@@ -1,0 +1,62 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+html {
+  --main-font : 'Kurale', serif;
+  --title-font : 'Qwitcher Grypen', cursive;
+  --highlight-font : 'Qwigley', cursive;
+  --ombre: 10px 10px 30px 0px rgba(16, 16, 16, 0.15), -10px -10px 30px 0px #fff;
+  --blanc: #f5f5f5;
+  --rose-clair:#F7CAC9;
+  --bleu-fonce: #082C37;
+  --bleu-clair: #1a98c0;
+  --red: #ff453a;
+  background-color: var(--blanc);
+  font-family: var(--main-font);
+}
+
+input, button, a, label, textarea {
+  font-family: inherit;
+}
+
+/****     navbar    ****/
+
+
+.navbar{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+  /* background: #f8f8ff ; */
+}
+
+.navbar__logout {
+  padding: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.navbar__title {
+  font-size: 0.8;
+  font-style: italic;
+}
+
+
+main {
+  width: 100%;
+  height: 80%;
+  padding: 2rem 1.5rem ;
+  flex-direction: column;
+  gap: 32px;
+  display: inline-flex;
+}
+
+.welcome__name{
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-family: var(--highlight-font);
+}

@@ -1,0 +1,327 @@
+[2023-11-02 11:26:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:28:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:28:39]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:30:42]	[ALERT]	404 - commande non existante :: /loufok/login
+[2023-11-02 11:33:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:33:11]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:33:41]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:34:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:34:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:34:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:34:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:35:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:38:06]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:38:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:39:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:46:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:47:23]	[ALERT]	404 - commande non existante :: /login
+[2023-11-02 11:47:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:51:04]	[ALERT]	500 - la méthode index n'existe pas
+[2023-11-02 11:52:00]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 11:53:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@index',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 13:13:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 13:15:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 13:15:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 218
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name '''
+[2023-11-02 13:16:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-02 13:17:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-02 13:18:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:18:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:19:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:20:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:21:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:22:41]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:26:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 8
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unexpected token "name" of value "joueur" ("end of print statement" expected).'
+[2023-11-02 13:39:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 9
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unknown "form_start" function.'
+[2023-11-02 13:40:31]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 9
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unknown "form_start" function.'
+[2023-11-02 13:44:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined variable $form'
+[2023-11-02 13:58:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined variable $form'
+[2023-11-02 14:10:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 31
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined variable $form'
+[2023-11-02 14:11:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 10
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
+    exception-code: 'Unknown "csrfInput" function.'

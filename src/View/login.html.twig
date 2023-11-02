@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Loufok login{% endblock %}
+{% block content %}
+<body>
+  <main class="container vh-100">
+    
+  <h1>OE</h1>
+
+  <form method="POST" accept-charset="UTF-8">
+  
+    <h3><label for="loginName">Username or email</label></h3>
+    <input id="nom_plume" type="text" name="nom_plume" value="" required>
+  
+    {% if errors is defined %}
+      <ul class="errors">
+        {% for error in errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  
+    <input type="submit" value="Submit">
+  </form>
+
+  </main>
+</body>
+{% endblock %}

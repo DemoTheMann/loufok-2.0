@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Model;
+namespace App\Entity;
 
-class Avatar extends Model
+class Joueur extends Base
 {
-    protected $tableName = APP_TABLE_PREFIX . 'avatar';
+    protected $tableName = APP_TABLE_PREFIX . 'joueur';
     protected static $instance;
 
     public static function getInstance()
@@ -15,4 +15,6 @@ class Avatar extends Model
 
         return self::$instance;
     }
+
+
 }
