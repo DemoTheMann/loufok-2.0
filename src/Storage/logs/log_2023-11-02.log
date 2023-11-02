@@ -325,3 +325,105 @@
     exception-line: 10
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\login.html.twig'
     exception-code: 'Unknown "csrfInput" function.'
+[2023-11-02 15:01:51]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 21
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined array key "login"'
+[2023-11-02 15:02:09]	[ALERT]	404 - commande non existante :: /loufok
+[2023-11-02 15:11:00]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key "mot_de_passe_joueur"'
+[2023-11-02 15:11:52]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key "mot_de_passe_joueur"'
+[2023-11-02 15:11:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key "mot_de_passe_joueur"'
+[2023-11-02 15:12:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 21
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key "mot_de_passe_administrateur"'
+[2023-11-02 15:14:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 110
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-02 15:14:45]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-02 15:14:51]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-02 15:15:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-02 15:15:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 36
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-02 15:31:43]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-02 15:36:51]	[ALERT]	500 - le contrôleur App\Controller\LogoutController n'existe pas
+[2023-11-02 15:37:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 52
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
