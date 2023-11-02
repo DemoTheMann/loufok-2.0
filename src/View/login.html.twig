@@ -8,8 +8,11 @@
 
   <form method="POST" accept-charset="UTF-8">
   
-    <h3><label for="loginName">Username or email</label></h3>
-    <input id="nom_plume" type="text" name="nom_plume" value="" required>
+    <h3><label for="login">Username or email</label></h3>
+    <input id="login" type="text" name="login" value="" required>
+
+    <h3><label for="password">Password</label></h3>
+    <input id="password" type="password" name="password" value="" required>
   
     {% if errors is defined %}
       <ul class="errors">
