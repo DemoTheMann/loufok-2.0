@@ -11,30 +11,35 @@ class LoginController extends Controller
 {
     public function login()
     {
-
-      $loginModel = Login::getInstance();
-      $joueurs = $loginModel->returnAll();
+      session_start();
 
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
+        $loginModel = Login::getInstance();
 
-        $admin = $loginModel->authAdmin($_POST['login'], $_POST['password']);
-        if($admin) {
-          $this->display('admin/index.html.twig', ['user' => $admin]);          
-        };
-        
-        $joueur = $loginModel->authJoueur($_POST['login'], $_POST['password']);
-        if($joueur){
-          $this->display('joueur/index.html.twig', ['user' => $joueur]);
-        };
-        if(!$admin && !$joueur)
+        $loginModel->authAdmin($_POST['login'], $_POST['password']);
+        $loginModel->authJoueur($_POST['login'], $_POST['password']);
+
+        // if(!$admin && !$joueur)
+        // {
+        //   $this->display('login.html.twig');
+        // }
+
+      }
+      
+      if(isset($_SESSION['auth']))
+      {
+        if($_SESSION['auth'] === true && $_SESSION['user'] === 'admin');
         {
-          $this->display('login.html.twig');
+          HTTP::redirect('/loufok/admin');
         }
 
-      }else{
-        $this->display('login.html.twig');
+        if($_SESSION['auth'] === true && $_SESSION['user'] === 'admin');
+        {
+          HTTP::redirect('/loufok/index');
+        }
       }
 
+      $this->display('login.html.twig');
     }
 }

@@ -11,8 +11,10 @@ class LogoutController extends Controller
 {
     public function logout()
     {
+        session_start();
+
         $loginModel = Login::getInstance();
         $loginModel->logout();
-        $this->display('login.html.twig');
+        HTTP::redirect('/loufok/login');
     }
 }

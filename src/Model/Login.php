@@ -14,35 +14,32 @@ class Login extends Model
     }
 
 
-    public function authAdmin(string $email, string $password)
+    public function authAdmin(string $email, string $password):void
     {
         $admin = Admin::getInstance()->findBy(['ad_mail_administrateur' => $email]);
 
         if ($admin && $password === $admin[0]['mot_de_passe_administrateur']) {
-            $_SESSION['loaded'] = true;
-            $_SESSION['login'] = $admin[0]['ad_mail_administrateur'];
-
-            return $admin;    
+            $_SESSION['auth'] = true;
+            $_SESSION['user'] = 'admin';
+            $_SESSION['user_id'] = $admin[0]['id_administrateur'];
         }
     }
 
 
-    public function authJoueur(string $username, string $password)
+    public function authJoueur(string $username, string $password):void
     {
         $joueur = Joueur::getInstance()->findBy(['nom_plume' => $username]);
 
         if($joueur && $password === $joueur[0]['mot_de_passe_joueur']) {
-            $_SESSION['loaded'] = true;
-            $_SESSION['login'] = $joueur[0]['nom_plume'];
-
-            return $joueur;
+            $_SESSION['auth'] = true;
+            $_SESSION['user'] = 'joueur';
+            $_SESSION['user_id'] = $joueur[0]['id_joueur'];
         }
     }
 
     public function logout()
     {
-        
-        session_destroy();
+        session_unset();
     }
     
 }
