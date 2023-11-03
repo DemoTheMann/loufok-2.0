@@ -57,3 +57,193 @@
     exception-line: 17
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\LoginController.php'
     exception-code: 'Undefined array key "login"'
+[2023-11-03 9:16:00]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:19:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:40:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:42:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:43:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:44:36]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 9:45:12]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 10:00:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 30
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:12:48]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-03 10:14:30]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 15
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:16:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 15
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:17:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:17:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:18:17]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:18:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:19:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:20:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:21:01]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:21:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:26:07]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:26:48]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
+[2023-11-03 10:30:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'index@index',
+        2 => array(),
+    )
+    exception-line: 18
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
+    exception-code: 'Undefined array key "auth"'
