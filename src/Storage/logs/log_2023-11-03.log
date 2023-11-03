@@ -1,0 +1,59 @@
+[2023-11-03 0:20:25]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 0:32:19]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 0:34:31]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 0:35:30]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 46
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 0:35:31]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 46
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 0:37:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 46
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 0:54:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'logout@logout',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\Login.php'
+    exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-03 0:57:07]	[ALERT]	404 - commande non existante :: /loufo
+[2023-11-03 0:57:31]	[ALERT]	404 - commande non existante :: /loufok
+[2023-11-03 9:04:04]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 9:09:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 17
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined array key "login"'

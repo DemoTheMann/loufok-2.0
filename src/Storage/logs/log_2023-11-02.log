@@ -427,3 +427,58 @@
     exception-line: 52
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\Login.php'
     exception-code: 'session_destroy(): Trying to destroy uninitialized session'
+[2023-11-02 22:43:47]	[ALERT]	404 - commande non existante :: /
+[2023-11-02 23:16:47]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined global variable $_SESSION'
+[2023-11-02 23:20:41]	[ALERT]	404 - commande non existante :: /
+[2023-11-02 23:20:42]	[ALERT]	404 - commande non existante :: /
+[2023-11-02 23:27:37]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-02 23:42:47]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\index.html.twig'
+    exception-code: 'Unknown "path" function.'
+[2023-11-02 23:44:26]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\index.html.twig'
+    exception-code: 'Unexpected token "operator" of value "/".'
+[2023-11-02 23:46:28]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\index.html.twig'
+    exception-code: 'Unexpected token "operator" of value "/".'
+[2023-11-02 23:49:14]	[ALERT]	404 - commande non existante :: /loufok/loufok/logout
+[2023-11-02 23:49:25]	[ALERT]	404 - commande non existante :: /loufok/loufok/logout
+[2023-11-02 23:49:32]	[ALERT]	404 - commande non existante :: /logout
+[2023-11-02 23:51:23]	[ALERT]	404 - commande non existante :: /logout
+[2023-11-02 23:51:26]	[ALERT]	404 - commande non existante :: /logout
+[2023-11-02 23:51:28]	[ALERT]	404 - commande non existante :: /logout
+[2023-11-02 23:59:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\index.html.twig'
+    exception-code: 'Unknown "path" function.'
