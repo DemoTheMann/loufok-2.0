@@ -18,17 +18,19 @@ class LoginController extends Controller
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
 
-        $loginModel->authAdmin($_POST['login'], $_POST['password']);
-        $loginModel->authJoueur($_POST['login'], $_POST['password']);
+        $admin = $loginModel->authAdmin($_POST['login'], $_POST['password']);
+        if($admin) {
+          $this->display('admin/index.html.twig', ['user' => $admin]);          
+        };
+        
+        $joueur = $loginModel->authJoueur($_POST['login'], $_POST['password']);
+        if($joueur){
+          $this->display('joueur/index.html.twig', ['user' => $joueur]);
+        };
 
+      }else{
+        $this->display('login.html.twig');
       }
-
-      $this->display(
-        'login.html.twig',
-        [
-            'joueurs' => '',
-        ]
-      );
 
     }
 }

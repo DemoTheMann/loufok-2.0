@@ -20,14 +20,10 @@ class Login extends Model
 
         if ($admin && $password === $admin[0]['mot_de_passe_administrateur']) {
             $_SESSION['loaded'] = true;
-            $_SESSION['mail'] = $admin[0]['ad_mail_administrateur'];
+            $_SESSION['login'] = $admin[0]['ad_mail_administrateur'];
 
-        } else {
-            $errors = 'Identifiants invalides';
-            return $errors;
+            return $admin;    
         }
-
-        var_dump($_SESSION);
     }
 
 
@@ -39,18 +35,14 @@ class Login extends Model
             $_SESSION['loaded'] = true;
             $_SESSION['login'] = $joueur[0]['nom_plume'];
 
-        } else {
-            $errors = 'Identifiants invalides';
-            return $errors;
+            return $joueur;
         }
-
-        var_dump($_SESSION);
     }
 
     public function logout()
     {
+        
         session_destroy();
-        HTTP::redirect('/loufok/login');
     }
     
 }

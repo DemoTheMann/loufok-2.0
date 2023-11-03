@@ -13,5 +13,6 @@ class LogoutController extends Controller
     {
         $loginModel = Login::getInstance();
         $loginModel->logout();
+        $this->display('login.html.twig');
     }
 }
