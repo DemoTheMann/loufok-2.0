@@ -18,6 +18,7 @@ class AdminController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $this->display('joueur/index.html.twig');
+        var_dump($_SESSION);
+        $this->display('admin/admin.html.twig');
     }
 }

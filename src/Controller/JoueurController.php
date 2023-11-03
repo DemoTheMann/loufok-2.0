@@ -7,9 +7,9 @@ namespace App\Controller;
 use App\Helper\HTTP;
 use App\Model\Login;
 
-class IndexController extends Controller
+class JoueurController extends Controller
 {
-    public function index()
+    public function joueur()
     {
         session_start();
 
@@ -18,6 +18,7 @@ class IndexController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $this->display('joueur/index.html.twig'); 
+        var_dump($_SESSION);
+        $this->display('joueur/joueur.html.twig'); 
     }
 }

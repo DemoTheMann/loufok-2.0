@@ -29,17 +29,18 @@ class LoginController extends Controller
       
       if(isset($_SESSION['auth']))
       {
-        if($_SESSION['auth'] === true && $_SESSION['user'] === 'admin');
+        if($_SESSION['auth'] === true && $_SESSION['user'] === 'admin')
         {
           HTTP::redirect('/loufok/admin');
         }
 
-        if($_SESSION['auth'] === true && $_SESSION['user'] === 'admin');
+        if($_SESSION['auth'] === true && $_SESSION['user'] === 'joueur')
         {
-          HTTP::redirect('/loufok/index');
+          HTTP::redirect('/loufok/joueur');
         }
       }
 
+      var_dump($_SESSION);
       $this->display('login.html.twig');
     }
 }
