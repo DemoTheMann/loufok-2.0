@@ -27,6 +27,10 @@ class LoginController extends Controller
         if($joueur){
           $this->display('joueur/index.html.twig', ['user' => $joueur]);
         };
+        if(!$admin && !$joueur)
+        {
+          $this->display('login.html.twig');
+        }
 
       }else{
         $this->display('login.html.twig');
