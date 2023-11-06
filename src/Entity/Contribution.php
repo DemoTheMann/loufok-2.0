@@ -16,5 +16,4 @@ class Contribution extends Base
         return self::$instance;
     }
 
-
 }
