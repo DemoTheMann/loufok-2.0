@@ -1,0 +1,72 @@
+[2023-11-06 21:24:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 59
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $formulaire'
+[2023-11-06 21:24:36]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 59
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $formulaire'
+[2023-11-06 21:25:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 59
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $formulaire'
+[2023-11-06 21:26:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 59
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $formulaire'
+[2023-11-06 21:36:30]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 37
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Cadavre.php'
+    exception-code: 'Undefined variable $errors_periode'
+[2023-11-06 21:37:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 37
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Cadavre.php'
+    exception-code: 'Undefined variable $errors_periode'
+[2023-11-06 21:40:29]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 37
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Cadavre.php'
+    exception-code: 'Undefined variable $errors_periode'
+[2023-11-06 21:40:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 37
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Cadavre.php'
+    exception-code: 'Undefined variable $errors_periode'

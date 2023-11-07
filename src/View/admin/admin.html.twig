@@ -1,14 +1,82 @@
 {% extends 'layout.html.twig' %}
+{% block csslink %}../assets/css/admin.css{% endblock %}
 {% block title %}Loufok login{% endblock %}
 {% block content %}
 <body>
+
+  <!-- logout -->
   <header>
-    <a href="/loufok/logout"> Se déconnecter </a>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <a href="/loufok/logout" class="navbar__logout">
+              <img src="/assets/images/logout.svg" alt="Déconnexion">
+          </a>
+      </div>
   </header>
-  <main class="container vh-100">
-    
-    <h1>Administrateur</h1>
-    <h3> Connexion sécurisée </h3>
+
+  <!-- Main Content -->
+  <main>
+    <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{user.ad_mail_administrateur}} </p>
+    </div>
+    <div class="newCadavre">
+    {% if errors != 0 %}
+    <span class="newCadavre__errors"> 
+    Le cadavre exquis n'a pas été enregistré 
+    car des erreurs ont été rencontrées. Merci
+    de bien vouloir recommencer. </span>
+    {% endif %}
+
+    {% if errors_message != 0 %}
+    <span class="newCadavre__errors"> 
+    {{ errors_message }}</span>
+    {% endif %}
+      <form id="newCadavre__form" class="newCadavre__form" action="/loufok/nouveau_cadavre" method="POST">
+        
+        <div class="newCadavre__formItem">
+          <label for="titre_cadavre">Titre du cadavre exquis :</label>
+          <input type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
+          <span class="newCadavre__errors">{{ errors.titre }}</span>
+        </div>
+        <div class="newCadavre__formItem">
+          <label for="debut_cadavre">Lancement du cadavre exquis :</label>
+          <input type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
+          <span class="newCadavre__errors">{{ errors.debut_cadavre }}</span>
+        </div>
+
+        <div class="newCadavre__formItem">
+          <label for="fin_cadavre">Fin du cadavre exquis :</label>
+          <input type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
+          <span class="newCadavre__errors">{{ errors.fin_cadavre }}</span>
+        </div>
+        
+        <div class="newCadavre__formItem">
+          <label for="nb_contributions">Contributions maximum :</label>
+          <input type="number" class="input__empty input" id="nb_contributions" name="nb_contributions" required >
+          <span class="newCadavre__errors">{{ errors.nb_contributions_max }}</span>
+        </div>
+        
+        <div class="newCadavre__formItem">
+          <label for="contribution"> Lancement du cadavre exquis ! </label>
+          <textarea 
+            name="contribution" 
+            class="input__textarea input"
+            placeholder="Votre contribution..." 
+            id="contribution" 
+            cols="30" 
+            rows="10" 
+            required
+          ></textarea>
+          <small class="newContribution__info" id="newContribution__info"></small>
+          <span class="newCadavre__errors">{{ errors.contribution }}</span>
+        </div>
+        <input id="btn_submit" type="submit" value="Valider" class="newCadavre__submit">
+      </form>
+    </div>
   </main>
+  
 </body>
+{% endblock %}
+{% block js %}
+<script src="/assets/js/nouveau_cadavre.js" ></script>
 {% endblock %}

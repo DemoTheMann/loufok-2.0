@@ -20,8 +20,8 @@ class Login extends Model
 
         if ($admin && $password === $admin[0]['mot_de_passe_administrateur']) {
             $_SESSION['auth'] = true;
-            $_SESSION['user'] = 'admin';
-            $_SESSION['user_id'] = $admin[0]['id_administrateur'];
+            $_SESSION['role'] = 'admin';
+            $_SESSION['user'] = $admin[0];
         }
     }
 
@@ -32,7 +32,7 @@ class Login extends Model
 
         if($joueur && $password === $joueur[0]['mot_de_passe_joueur']) {
             $_SESSION['auth'] = true;
-            $_SESSION['user'] = 'joueur';
+            $_SESSION['role'] = 'joueur';
             $_SESSION['user_id'] = $joueur[0]['id_joueur'];
         }
     }
