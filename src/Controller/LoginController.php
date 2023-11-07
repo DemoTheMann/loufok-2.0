@@ -33,13 +33,13 @@ class LoginController extends Controller
         {
           HTTP::redirect('/loufok/admin');
         }
-
         if($_SESSION['auth'] === true && $_SESSION['role'] === 'joueur')
         {
-          HTTP::redirect('/loufok/index');
+          HTTP::redirect('/loufok/joueur');
         }
       }
 
+      var_dump($_SESSION);
       $this->display('login.html.twig');
     }
 }
