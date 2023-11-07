@@ -5,8 +5,7 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
-use App\Entity\Cadavre;
+use App\Model\CadavreModel;
 
 class AdminController extends Controller
 {
@@ -51,7 +50,7 @@ class AdminController extends Controller
                 si rien n'est renvoyé, formulaire valide : 
                     vérification titre identiques puis périodes
               */
-            $cadavre = Cadavre::getInstance();
+            $cadavre = CadavreModel::getInstance();
             
             //validationForm renvoie errors[] si problèmes de validation, sinon rien 
             $formulaire_errors = $cadavre->validationform();

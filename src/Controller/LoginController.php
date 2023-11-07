@@ -5,7 +5,7 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
+use App\Model\LoginModel;
 
 class LoginController extends Controller
 {
@@ -15,7 +15,7 @@ class LoginController extends Controller
 
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
-        $loginModel = Login::getInstance();
+        $loginModel = LoginModel::getInstance();
 
         $loginModel->authAdmin($_POST['login'], $_POST['password']);
         $loginModel->authJoueur($_POST['login'], $_POST['password']);
