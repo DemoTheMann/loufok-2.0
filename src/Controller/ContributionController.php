@@ -7,9 +7,9 @@ namespace App\Controller;
 use App\Helper\HTTP;
 use App\Entity\Cadavre;
 
-class JoueurController extends Controller
+class ContributionController extends Controller
 {
-    public function joueur()
+    public function contribution()
     {
         session_start();
 
@@ -20,18 +20,5 @@ class JoueurController extends Controller
 
         $cadavreModel = Cadavre::getInstance();
 
-
-        var_dump($_SESSION);
-
-        $status = false;
-
-
-
-
-
-        $data= [
-            "status" => $status,
-        ];
-        $this->display('joueur/joueur.html.twig',$data);
     }
 }

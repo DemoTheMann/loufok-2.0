@@ -5,7 +5,7 @@ use App\Entity\Joueur;
 use App\Entity\Admin;
 use App\Helper\HTTP;
 
-class Login extends Model
+class LoginModel extends Model
 {
 
     public function returnAll(): array {

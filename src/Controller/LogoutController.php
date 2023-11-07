@@ -5,7 +5,7 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
+use App\Model\LoginModel;
 
 class LogoutController extends Controller
 {
@@ -13,7 +13,7 @@ class LogoutController extends Controller
     {
         session_start();
 
-        $loginModel = Login::getInstance();
+        $loginModel = LoginModel::getInstance();
         $loginModel->logout();
         HTTP::redirect('/loufok/login');
     }
