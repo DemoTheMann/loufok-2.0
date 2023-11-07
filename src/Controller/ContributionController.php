@@ -5,11 +5,11 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
+use App\Entity\Cadavre;
 
-class IndexController extends Controller
+class ContributionController extends Controller
 {
-    public function index()
+    public function contribution()
     {
         session_start();
 
@@ -18,6 +18,7 @@ class IndexController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $this->display('joueur/index.html.twig'); 
+        $cadavreModel = Cadavre::getInstance();
+
     }
 }
