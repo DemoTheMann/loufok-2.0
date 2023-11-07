@@ -2,11 +2,69 @@
 
 namespace App\Model;
 use App\Entity\Cadavre;
+use App\Entity\Contribution;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class CadavreModel extends Model
 {
+
+    public static function cadavreEnCours($user)
+    {
+        //cadavre_en_cours = le cadavre (array) en cours
+        //cadavre_valide = 0 ou 1, si un cadavre est actuellement en cours
+        $ajd = date('Y-m-d');
+        $cadavres = Cadavre::getInstance()->findAll();
+        foreach ($cadavres as $cadavre => $c) {
+
+            //si un cadavre exquis est en cours aujourd'hui
+            if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
+            
+                //récupérer les contributions, voir si le max n'a pas été atteint
+                $contributions = Contribution::getInstance()->findBy(['id_administrateur' => $user['id_administrateur'], 'id_cadavre'=> $c['id_cadavre']]);
+                $max_contribution = 0; 
+                foreach ($contributions as $contribution) {
+                    $max_contribution = $max_contribution + 1; 
+                }
+                //si le max de contributions a été atteint : affichage de l'ancien cadavre
+                if ($max_contribution >=$c['nb_contributions']) {
+                    $cadavre_valide = 0;
+                    $cadavre_en_cours = $c; 
+                    return [$cadavre_valide, $cadavre_en_cours];
+            
+                    //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
+                }else{
+                    $cadavre_valide = 1;
+                    $cadavre_en_cours = $c;
+                    return [$cadavre_valide, $cadavre_en_cours];
+                }
+            }else{
+                $cadavre_valide = 0;
+                $cadavre_en_cours = 0;
+            }
+        }
+        return [$cadavre_valide, $cadavre_en_cours];
+    }
+
+    public static function dateProchainCadavre()
+    {
+        $cadavres = Cadavre::getInstance()->findAll();
+        $future_date = date('Y-m-d', strtotime('+1 year'));
+        $min_date = $future_date;
+        foreach ($cadavres as $cadavre => $c) {   
+            if($c['date_debut_cadavre']< $min_date){
+                $min_date = $c['date_debut_cadavre'];
+            }
+        }
+        if($min_date===$future_date){
+            $min_date = "";
+            return $min_date;
+        }
+        $min_date = date($min_date);
+        $date = date("d/m/Y", strtotime($min_date));
+        $min_date = "Le prochain cadavre exquis commencera le " . $date . ".";
+        return $min_date;
+    }
 
     public static function titreUnique()
     {
@@ -41,17 +99,30 @@ class CadavreModel extends Model
         }
     }
 
+    public static function nouvelleContribution($user, $cadavre){
+        
+        $texte_contribution = $_POST['contribution'];
+        $ajd = date('Y-m-d');
+        Contribution::getInstance()->create(
+            [
+                'texte_contribution' => $texte_contribution,
+                'date_soumission' => $ajd,
+                'ordre_soumission' => 1,
+                'id_administrateur' => $user['id_administrateur'],
+                'id_cadavre' => $cadavre["id_cadavre"]
+            ]);
+    }    
+
     public static function nouveauCadavre($user){
         $titre_cadavre = $_POST['titre_cadavre'];
         $nb_contributions = $_POST['nb_contributions'];
-        $nouveauCadavre = Cadavre::getInstance()->create( 
+        Cadavre::getInstance()->create( 
             [
                 'titre_cadavre' => $titre_cadavre,
                 'nb_contributions' => $nb_contributions,
                 'nb_jaime' => 0,
                 'id_administrateur' => $user['id_administrateur']
-            ] );
-        //return Cadavre::getInstance()->findBy(['id_administrateur' => $user['id_administrateur'], 'titre_cadavre' => $titre_cadavre]);
+            ]);
     }
     
     public static function validationForm()
@@ -70,6 +141,7 @@ class CadavreModel extends Model
             'contribution' => $_POST['contribution'],
         ];
 
+        var_dump($formData['debut_cadavre']);
         // Créez un objet de contraintes de validation
         $constraints = new Assert\Collection([
             'titre' => [
@@ -81,8 +153,7 @@ class CadavreModel extends Model
                 new Assert\NotBlank([
                     'message' => 'Ce champ doit être rempli',
                 ]),
-                new Assert\Regex([
-                    'pattern' => '([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))',
+                new Assert\Date([
                     'message' => 'Vous devez rentrez une date',
                 ]),
                 new Assert\Range([
