@@ -13,6 +13,7 @@ return [
   ['GET', '/loufok/logout', 'logout@logout'],
   ['GET', '/loufok/index', 'index@index'],
   ['GET', '/loufok', 'index@index'],
-  ['GET', '/loufok/admin', 'admin@admin']
+  ['GET', '/loufok/admin', 'admin@admin'],
+  [['GET','POST'], '/loufok/nouveau_cadavre', 'admin@nouveauCadavre']
 
 ];

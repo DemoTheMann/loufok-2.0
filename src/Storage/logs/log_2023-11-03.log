@@ -247,3 +247,279 @@
     exception-line: 18
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\IndexController.php'
     exception-code: 'Undefined array key "auth"'
+[2023-11-03 12:15:48]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 2
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'Unexpected "end" tag (expecting closing tag for the "block" tag defined near line 2).'
+[2023-11-03 12:16:04]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 13
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\layout.html.twig'
+    exception-code: 'The block 'css' has already been defined line 12.'
+[2023-11-03 12:16:04]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:04]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:05]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:05]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:06]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:06]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:06]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:06]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:07]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:08]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:09]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:09]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:09]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:09]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:10]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:11]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:11]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:12]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:12]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:13]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:13]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:16:14]	[ALERT]	404 - commande non existante :: /loufok/{% block css %}{% endblock %}
+[2023-11-03 12:22:19]	[ALERT]	404 - commande non existante :: /loufok/loufok/logout
+[2023-11-03 13:12:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 19
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-03 13:12:38]	[ALERT]	404 - commande non existante :: /loufok/{% block csslink %}{% endblock %}
+[2023-11-03 14:07:30]	[ALERT]	404 - commande non existante :: /loufok/nouveaucadavre
+[2023-11-03 14:11:29]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-03 14:11:30]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 14:12:21]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 14:13:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'Unexpected "error" tag (expecting closing tag for the "block" tag defined near line 5).'
+[2023-11-03 14:22:45]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 37
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $form'
+[2023-11-03 14:46:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'Unknown "form_start" function.'
+[2023-11-03 14:54:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "titre"'
+[2023-11-03 14:56:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'Unknown "form_start" function.'
+[2023-11-03 14:57:18]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-03 15:20:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "dateMessage" do not exist in constraint "Symfony\Component\Validator\Constraints\Date".'
+[2023-11-03 15:20:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 80
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $violations'
+[2023-11-03 15:20:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 80
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $violations'
+[2023-11-03 15:34:09]	[ALERT]	404 - commande non existante :: /
+[2023-11-03 15:36:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "false" do not exist in constraint "Symfony\Component\Validator\Constraints\NotBlank".'
+[2023-11-03 15:37:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "invalid_message" do not exist in constraint "Symfony\Component\Validator\Constraints\NotBlank".'
+[2023-11-03 15:37:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "invalidMessage" do not exist in constraint "Symfony\Component\Validator\Constraints\NotBlank".'
+[2023-11-03 15:39:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "messageTemplate" do not exist in constraint "Symfony\Component\Validator\Constraints\NotBlank".'
+[2023-11-03 15:40:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "messageTemplate" do not exist in constraint "Symfony\Component\Validator\Constraints\Date".'
+[2023-11-03 15:40:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "invalidDateTimeMessage" do not exist in constraint "Symfony\Component\Validator\Constraints\Date".'
+[2023-11-03 15:40:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "invalidDateMessage" do not exist in constraint "Symfony\Component\Validator\Constraints\Date".'
+[2023-11-03 16:20:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 180
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraint.php'
+    exception-code: 'The options "format" do not exist in constraint "Symfony\Component\Validator\Constraints\Date".'
+[2023-11-03 16:29:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 50
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\symfony\validator\Constraints\RegexValidator.php'
+    exception-code: 'preg_match(): No ending delimiter '^' found'
+[2023-11-03 16:48:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $debut_cadavre'
+[2023-11-03 16:48:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $debut_cadavre'
+[2023-11-03 16:48:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $debut_cadavre'
+[2023-11-03 17:09:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 46
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-03 17:11:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-03 17:11:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "errors"'
