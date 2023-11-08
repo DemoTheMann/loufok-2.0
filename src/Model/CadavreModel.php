@@ -68,10 +68,11 @@ class CadavreModel extends Model
 
     public static function titreUnique()
     {
-        $titre_cadavre = $_POST['titre_cadavre'];
+        $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $cadavres_existants = Cadavre::getInstance()->findAll();
         foreach ($cadavres_existants as $cadavre => $c) {
-            if($titre_cadavre === $c['titre_cadavre']){
+            $titre_a_comparer = trim(ucfirst(strtolower($c['titre_cadavre'])));
+            if($titre_cadavre === $titre_a_comparer){
                 $errors = "Un cadavre exquis a déjà le titre \"" . $titre_cadavre . "\", veuillez changer.";
             }
         }
@@ -114,7 +115,7 @@ class CadavreModel extends Model
     }    
 
     public static function nouveauCadavre($user){
-        $titre_cadavre = $_POST['titre_cadavre'];
+        $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $nb_contributions = $_POST['nb_contributions'];
         Cadavre::getInstance()->create( 
             [
