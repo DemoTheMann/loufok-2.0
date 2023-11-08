@@ -1,1 +1,111 @@
 [2023-11-08 19:25:03]	[ALERT]	404 - commande non existante :: /
+[2023-11-08 20:21:05]	[ALERT]	404 - commande non existante :: /loufok/cadavre
+[2023-11-08 20:26:26]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $user'
+[2023-11-08 20:26:36]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $user'
+[2023-11-08 20:28:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "id_admin"'
+[2023-11-08 20:28:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "id_admin"'
+[2023-11-08 20:28:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "id_admin"'
+[2023-11-08 20:28:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "id_admin"'
+[2023-11-08 20:30:06]	[ALERT]	404 - commande non existante :: /loufok/admin/afficahge
+[2023-11-08 20:39:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $contributions'
+[2023-11-08 20:40:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined variable $contributions'
+[2023-11-08 20:41:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-08 20:41:26]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key 1'
+[2023-11-08 20:43:26]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 15
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $cadavre'
+[2023-11-08 20:43:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 15
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $cadavre'

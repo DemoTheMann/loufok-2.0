@@ -9,10 +9,47 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CadavreModel extends Model
 {
 
-    public static function cadavreEnCours($user)
+
+    public static function contributions($id_cadavre)
     {
-        //cadavre_en_cours = le cadavre (array) en cours
-        //cadavre_valide = 0 ou 1, si un cadavre est actuellement en cours
+        return Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
+    }
+
+    public static function cadavreEnCours()
+    {
+        //renvoie le cadavre (array) en cours
+        $ajd = date('Y-m-d');
+        $cadavres = Cadavre::getInstance()->findAll();
+        foreach ($cadavres as $cadavre => $c) {
+
+            //si un cadavre exquis est en cours aujourd'hui
+            if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
+            
+                //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
+                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user']['id_'.$_SESSION['role']], 'id_cadavre'=> $c['id_cadavre']]);
+                $max_contribution = 0;
+                foreach ($contributions as $contribution) {
+                    $max_contribution = $max_contribution + 1; 
+                }
+
+                //si le max de contributions a été atteint : renvoie null
+                if ($max_contribution >=$c['nb_contributions']) {
+                    return null;
+                }else{
+                    //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
+                    return $c;
+                }
+            }
+        }
+        return $cadavre_en_cours;
+    }
+
+/*
+
+    just in case safe cadavreEnCours
+public static function cadavreEnCours($user)
+    {
+        //renvoie le cadavre (array) en cours
         $ajd = date('Y-m-d');
         $cadavres = Cadavre::getInstance()->findAll();
         foreach ($cadavres as $cadavre => $c) {
@@ -28,24 +65,21 @@ class CadavreModel extends Model
                 }
                 //si le max de contributions a été atteint : affichage de l'ancien cadavre
                 if ($max_contribution >=$c['nb_contributions']) {
-                    $cadavre_valide = 0;
                     $cadavre_en_cours = $c; 
-                    return [$cadavre_valide, $cadavre_en_cours];
+                    return $cadavre_en_cours;
             
                     //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
                 }else{
-                    $cadavre_valide = 1;
                     $cadavre_en_cours = $c;
-                    return [$cadavre_valide, $cadavre_en_cours];
+                    return $cadavre_en_cours;
                 }
             }else{
-                $cadavre_valide = 0;
                 $cadavre_en_cours = 0;
             }
         }
-        return [$cadavre_valide, $cadavre_en_cours];
+        return $cadavre_en_cours;
     }
-
+ */
     public static function dateProchainCadavre()
     {
         $cadavres = Cadavre::getInstance()->findAll();
@@ -87,11 +121,11 @@ class CadavreModel extends Model
         $errors = 0;
         $cadavres_existants = Cadavre::getInstance()->findAll();
         foreach ($cadavres_existants as $cadavre => $c) {
-            if ($debut_cadavre>$c['date_debut_cadavre'] && $debut_cadavre<$c['date_fin_cadavre']) {
+            if ($debut_cadavre>=$c['date_debut_cadavre'] && $debut_cadavre<=$c['date_fin_cadavre']) {
                 $errors = "Un cadavre exquis existe déjà pour la période du " . date("d/m/Y", strtotime($c['date_debut_cadavre'])) . " au " . date("d/m/Y", strtotime($c['date_fin_cadavre'])) . ". Le chevauchement de cadavre exquis n'est pas possible." ;
             }
             
-            if ($fin_cadavre>$c['date_debut_cadavre'] && $fin_cadavre<$c['date_fin_cadavre']) {
+            if ($fin_cadavre>=$c['date_debut_cadavre'] && $fin_cadavre<=$c['date_fin_cadavre']) {
                 $errors = "Un cadavre exquis existe déjà pour la période du " . date("d/m/Y", strtotime($c['date_debut_cadavre'])) . " au " . date("d/m/Y", strtotime($c['date_fin_cadavre'])) . ". Le chevauchement de cadavre exquis n'est pas possible." ;
             }
         }

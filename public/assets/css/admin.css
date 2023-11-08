@@ -51,8 +51,11 @@ html{
   background: #1c576963;
 }
 
-
 .newCadavre__errors, .newContribution__info{
     font-style: italic;
     color: gray;
+}
+
+.affichage__contributions{
+  padding: 15px 0;
 }

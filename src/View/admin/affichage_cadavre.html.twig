@@ -31,7 +31,7 @@
       <p> du {{ cadavre.date_debut_cadavre|date("d/m/Y") }} au {{ cadavre.date_fin_cadavre|date("d/m/Y") }} </p>
       <p> contributions max : {{ cadavre.nb_contributions }} </p>
       {% for contribution in contributions %}
-        <p>{{ contribution.texte_contribution}}</p>
+        <p class="affichage__contributions">{{ contribution.texte_contribution}}</p>
       {% endfor %}
     {% endif %}
 
