@@ -88,14 +88,20 @@ class AdminController extends Controller
     public function affichageCadavre()
     {
         session_start();
-        //renvoie le cadavre ou rien s'il n'y en a pas en cours actuellement
+
+        //*CadavreEnCours* renvoie le cadavre ou rien s'il n'y en a pas en cours actuellement
         $cadavre = CadavreModel::getInstance()->cadavreEnCours();
         //si aucun cadavre en cours, alors prévenir l'utilisateur du début du prochain cadavre
         if(!$cadavre){
-            //dateProchainCadavre renvoie la phrase avec la prochaine date, ou rien si aucun cadavre prévu dans l'année qui suit
+            //*dateProchainCadavre* renvoie la phrase avec la prochaine date, ou rien si aucun cadavre prévu dans l'année qui suit
             $prochaine_date = CadavreModel::getInstance()->dateProchainCadavre(); 
             $this->display('admin/affichage_cadavre.html.twig', ['user' => $_SESSION['user'], 'prochaine_date' => $prochaine_date]);
         }else{
+            /**
+             * La méthode *contributions* renvoie un array composé de 2 arrays:
+             *   contributions : texte de la contribution
+             *   joueurs : pseudo du joueur
+             */
             $contributions = CadavreModel::getInstance()->contributions($cadavre["id_cadavre"]);
             $this->display('admin/affichage_cadavre.html.twig', ['user' => $_SESSION['user'], 'cadavre' => $cadavre, 'contributions' => $contributions]);
         }

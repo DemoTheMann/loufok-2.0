@@ -1,30 +1,31 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Loufok login{% endblock %}
+{% block csslink %}../assets/css/login.css{% endblock %}
 {% block content %}
 <body>
-  <main class="container vh-100">
+  <main>
+
+    <h1 class="title">Loufok<br>Se connecter</h1>
+    <form class="loginForm" method="POST" accept-charset="UTF-8">
+      <div class="loginForm__item">
+        <label class="loginForm__label" for="login">Email</label>
+        <input class="loginForm__input" id="login" type="text" name="login" value="" required>
+      </div>
+      <div class="loginForm__item">
+        <label class="loginForm__label" for="password">Mot de passe</label>
+        <input class="loginForm__input" id="password" type="password" name="password" value="" required>
+      </div>
     
-  <h1>OE</h1>
-
-  <form method="POST" accept-charset="UTF-8">
-  
-    <h3><label for="login">Username or email</label></h3>
-    <input id="login" type="text" name="login" value="" required>
-
-    <h3><label for="password">Password</label></h3>
-    <input id="password" type="password" name="password" value="" required>
-  
-    {% if errors is defined %}
-      <ul class="errors">
-        {% for error in errors %}
-          <li>{{ error }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  
-    <input type="submit" value="Submit">
-  </form>
-
+      {% if errors is not empty %}
+        <ul class="errors">
+          {% for error in errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    
+      <input class="loginForm__submit" type="submit" value="Se connecter">
+    </form>
   </main>
 </body>
 {% endblock %}

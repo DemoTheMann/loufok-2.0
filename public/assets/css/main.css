@@ -18,6 +18,7 @@ html {
 html{
   font-family: var(--main-font);
   font-size: 1rem;
+  color: var(--bleu-fonce);
 }
 input, button, a, label, textarea {
   font-family: inherit;

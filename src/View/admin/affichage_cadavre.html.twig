@@ -1,5 +1,5 @@
 {% extends 'layout.html.twig' %}
-{% block csslink %}../../assets/css/admin.css{% endblock %}
+{% block csslink %}../../assets/css/affichage_cadavre.css{% endblock %}
 {% block title %}Loufok login{% endblock %}
 {% block content %}
 <body>
@@ -19,20 +19,36 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{user.ad_mail_administrateur}} </p>
     </div>
-    <div class="cadavre">
+    <div>
     {% if prochaine_date is not empty %}
-      <div>
-        Aucun cadavre exquis en cours pour le moment.{{prochaine_date}}
+    <section class="noCadavre">
+      <div class="noCadavre__background">
+        <p>Aucun cadavre exquis en cours pour le moment.</p>
+        <p>Date du prochain cadavre exquis : {{prochaine_date}}</p>
       </div>
+    </section>
     {% endif %}
     
     {% if cadavre is not empty %}
-      <p> {{ cadavre.titre_cadavre|capitalize }} </p>
-      <p> du {{ cadavre.date_debut_cadavre|date("d/m/Y") }} au {{ cadavre.date_fin_cadavre|date("d/m/Y") }} </p>
-      <p> contributions max : {{ cadavre.nb_contributions }} </p>
-      {% for contribution in contributions %}
-        <p class="affichage__contributions">{{ contribution.texte_contribution}}</p>
-      {% endfor %}
+
+      <!-- affichage du cadavre exquis -->
+      <section class="cadavreExquis">
+        <div class="cadavreExquis__background">
+          <h2 class="cadavreExquis__title"> {{ cadavre.titre_cadavre|capitalize }} </h2>
+          <div class="cadavreExquisHead">
+            <span class="cadavreExquisHead__date"> du {{ cadavre.date_debut_cadavre|date("d/m/Y") }} au {{ cadavre.date_fin_cadavre|date("d/m/Y") }} </span>
+            <p class="cadavreExquisHead__maxContributions"> contributions max : {{ cadavre.nb_contributions }} </p>
+          </div>
+          {% for contribution in contributions %}
+          <div class="contributions">
+            <p class="contributions__content">{{ contribution.contributions}}</p>
+            {% if contribution.joueurs is not empty %}
+            <p class="contributions__pseudo">Par {{ contribution.joueurs}}</p>
+          {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
     {% endif %}
 
     </div>

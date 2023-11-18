@@ -3,6 +3,7 @@
 namespace App\Model;
 use App\Entity\Cadavre;
 use App\Entity\Contribution;
+use App\Entity\Joueur;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -10,9 +11,30 @@ class CadavreModel extends Model
 {
 
 
-    public static function contributions($id_cadavre)
+    /**
+     * Renvoie un array composé de 2 arrays:
+     *   contributions : texte de la contribution
+     *   joueurs : pseudo du joueur
+     */
+    public static function contributions($id_cadavre): array
     {
-        return Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
+        $contributions = Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
+        $datas = [];
+        $i = 0;
+        foreach ($contributions as $c) {
+            $i = $i+1;
+            if ($c['id_joueur']) {
+                $joueur = Joueur::getInstance()->findBy(['id_joueur' => $c['id_joueur']]);
+                $joueur = $joueur[0]['nom_plume'];
+            }else{
+                $joueur = "";
+            }
+            $datas[$i] = [
+                'contributions' => $c['texte_contribution'],
+                'joueurs' => $joueur
+            ];
+        }
+        return $datas;
     }
 
     public static function cadavreEnCours()
@@ -41,7 +63,6 @@ class CadavreModel extends Model
                 }
             }
         }
-        return $cadavre_en_cours;
     }
 
 /*
@@ -83,21 +104,24 @@ public static function cadavreEnCours($user)
     public static function dateProchainCadavre()
     {
         $cadavres = Cadavre::getInstance()->findAll();
+        //Si le prochain cadavre exquis commence dans + d'1 an, date de référence
         $future_date = date('Y-m-d', strtotime('+1 year'));
         $min_date = $future_date;
+        //récupérer les dates de chaque cadavre
         foreach ($cadavres as $cadavre => $c) {   
+            //si la date de début est plus récente que la date de réf, on attribue sa valeur à min_date
             if($c['date_debut_cadavre']< $min_date){
                 $min_date = $c['date_debut_cadavre'];
             }
         }
+        //si la valeur de réf est tjrs là, alors le prochain cadavre exquis commence au minima
+        //dans plus d'un an OU s'il n'y a pas de cadavre exquis prévu pour le moment.
         if($min_date===$future_date){
-            $min_date = "";
+            $min_date = "Plus d'un an";
             return $min_date;
         }
-        $min_date = date($min_date);
         $date = date("d/m/Y", strtotime($min_date));
-        $min_date = "Le prochain cadavre exquis commencera le " . $date . ".";
-        return $min_date;
+        return $date;
     }
 
     public static function titreUnique()
