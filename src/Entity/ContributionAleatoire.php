@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Contribution_aléatoire extends Base
+class ContributionAleatoire extends Base
 {
     protected $tableName = APP_TABLE_PREFIX . 'contribution_aléatoire';
     protected static $instance;
