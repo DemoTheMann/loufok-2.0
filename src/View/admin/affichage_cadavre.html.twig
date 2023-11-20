@@ -1,16 +1,32 @@
 {% extends 'layout.html.twig' %}
-{% block csslink %}../../assets/css/affichage_cadavre.css{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="../../assets/css/affichage_cadavre.css" >
+  <link rel="stylesheet" href="../../assets/css/menu.css" >
+{% endblock %}
 {% block title %}Loufok login{% endblock %}
 {% block content %}
 <body>
 
-  <!-- logout -->
+  <!-- menu -->
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <a href="/loufok/logout" class="navbar__logout">
-              <img src="/assets/images/logout.svg" alt="Déconnexion">
-          </a>
+          <input class="navbar__burger" id="burger" type="checkbox" />
+          <label for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+        <div class="menu">
+          <nav class="menu__hidden">
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="">
+          </nav>
+        </div>
       </div>
   </header>
 

@@ -59,7 +59,7 @@ class AdminController extends Controller
                 $this->display('admin/admin.html.twig', ['user' => $_SESSION['user'], 'errors' => $formulaire_errors, 'errors_message' => 0]);
             }else{
 
-                //vérification qu'il n'y ai pas de duplicata de titres dans la BDD
+                //vérification qu'il n'y ai pas de doublons de titres dans la BDD
                 $verif_titre = $cadavre->titreUnique();
                 if($verif_titre){
                     $this->display('admin/admin.html.twig', ['user' => $_SESSION['user'], 'errors' => 0, 'errors_message' => $verif_titre]);
@@ -78,7 +78,7 @@ class AdminController extends Controller
                 }
             }
         }else{
-            
+
             //méthode GET, aucune donnée à traiter
             $this->display('admin/admin.html.twig', ['user' => $_SESSION['user']]);
         }

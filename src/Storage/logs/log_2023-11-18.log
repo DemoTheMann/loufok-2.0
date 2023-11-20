@@ -110,3 +110,13 @@
     exception-line: 51
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
     exception-code: 'Undefined array key "role"'
+[2023-11-18 20:32:45]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-18 22:08:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 3
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'The block 'csslink' has already been defined line 2.'

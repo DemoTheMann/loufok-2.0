@@ -9,10 +9,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class CadavreModel extends Model
 {
-
-
     /**
-     * Renvoie un array composé de 2 arrays:
+     * Renvoie un array d'arrays avec deux données:
      *   contributions : texte de la contribution
      *   joueurs : pseudo du joueur
      */
@@ -37,6 +35,9 @@ class CadavreModel extends Model
         return $datas;
     }
 
+    /**
+     * Renvoie le cadavre exquis en cours ou rien
+     */
     public static function cadavreEnCours()
     {
         //renvoie le cadavre (array) en cours
@@ -65,42 +66,10 @@ class CadavreModel extends Model
         }
     }
 
-/*
-
-    just in case safe cadavreEnCours
-public static function cadavreEnCours($user)
-    {
-        //renvoie le cadavre (array) en cours
-        $ajd = date('Y-m-d');
-        $cadavres = Cadavre::getInstance()->findAll();
-        foreach ($cadavres as $cadavre => $c) {
-
-            //si un cadavre exquis est en cours aujourd'hui
-            if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
-            
-                //récupérer les contributions, voir si le max n'a pas été atteint
-                $contributions = Contribution::getInstance()->findBy(['id_administrateur' => $user['id_administrateur'], 'id_cadavre'=> $c['id_cadavre']]);
-                $max_contribution = 0; 
-                foreach ($contributions as $contribution) {
-                    $max_contribution = $max_contribution + 1; 
-                }
-                //si le max de contributions a été atteint : affichage de l'ancien cadavre
-                if ($max_contribution >=$c['nb_contributions']) {
-                    $cadavre_en_cours = $c; 
-                    return $cadavre_en_cours;
-            
-                    //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
-                }else{
-                    $cadavre_en_cours = $c;
-                    return $cadavre_en_cours;
-                }
-            }else{
-                $cadavre_en_cours = 0;
-            }
-        }
-        return $cadavre_en_cours;
-    }
- */
+    /**
+     * Récupère la date du prochain cadavre exquis. La méthode ne vérifie pas si 
+     * un cadavre exquis est en cours, la vérification est à faire au préalable.
+     */
     public static function dateProchainCadavre()
     {
         $cadavres = Cadavre::getInstance()->findAll();
@@ -124,6 +93,9 @@ public static function cadavreEnCours($user)
         return $date;
     }
 
+    /**
+     * Ne renvoie rien si aucun doublon dans les titres de cadavre exquis, renvoie un string de l'erreur si doublon
+     */
     public static function titreUnique()
     {
         $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
@@ -139,6 +111,9 @@ public static function cadavreEnCours($user)
         }
     }
 
+    /**
+     * Ne renvoie rien si aucune période ne se chevauche, renvoie un string de l'erreur si chevauchement
+     */
     public static function verificationPeriode(){
         $debut_cadavre = $_POST['debut_cadavre'];
         $fin_cadavre = $_POST['fin_cadavre'];
@@ -158,6 +133,9 @@ public static function cadavreEnCours($user)
         }
     }
 
+    /**
+     * Ajout d'une nouvelle contribution
+     */
     public static function nouvelleContribution($user, $cadavre){
         
         $texte_contribution = $_POST['contribution'];
@@ -172,6 +150,9 @@ public static function cadavreEnCours($user)
             ]);
     }    
 
+    /**
+     * Ajout d'un nouveau cadavre exquis
+     */
     public static function nouveauCadavre($user){
         $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $nb_contributions = $_POST['nb_contributions'];
@@ -184,6 +165,26 @@ public static function cadavreEnCours($user)
             ]);
     }
     
+    /**
+     * Vérification des inputs du formulaire : 
+     *      tous les champs doivent être remplis,
+     *      les dates ne doivent pas être passées,
+     *      la date de fin doit être après ou égale la date de début,
+     *      le nombre de contributions max doit être un chiffre entier,
+     *      le nombre de contributions max doit être supérieur à 2,
+     *      La contribution doit contenir au moins 50 caractères,
+     *      La contribution ne doit pas contenir plus de 280 caractères.
+     * 
+     * Ne renvoie rien si toutes les conditions sont réunies, sinon renvoie un tableau associatif des erreurs :
+     *      [
+     *          'titre_cadavre' => ...,
+     *          'debut_cadavre' => ...,
+     *          'fin_cadavre' => ...,
+     *          'nb_contributions' => ...,
+     *          'contribution' => ...
+     *      ]
+     *      ( min : une erreur, max : 5 erreurs )
+     */
     public static function validationForm()
     {
         $validator = Validation::createValidator();
@@ -200,7 +201,19 @@ public static function cadavreEnCours($user)
             'contribution' => $_POST['contribution'],
         ];
 
-        var_dump($formData['debut_cadavre']);
+
+        $yesterday = date('Y-m-d', strtotime('-1 day'));
+
+        //$formData['debut_cadavre'] = date('YYY')
+        $timestamp = strtotime($formData['debut_cadavre']);
+        var_dump($formData);
+        //$formData['debut_cadavre'] = intval($formData['debut_cadavre']);
+        //var_dump($formData['debut_cadavre']);
+        //$date = DateTime::createFromFormat('Y-m-d', $formData['debut_cadavre']);
+        //$intDate = (int)$timestamp->format('Ymd');
+        //var_dump($intDate);
+
+
         // Créez un objet de contraintes de validation
         $constraints = new Assert\Collection([
             'titre' => [
@@ -216,7 +229,7 @@ public static function cadavreEnCours($user)
                     'message' => 'Vous devez rentrez une date',
                 ]),
                 new Assert\Range([
-                    'min' => 'today',
+                    'min' => $yesterday,
                     'minMessage' => 'La date ne peut pas déjà être passée',
                 ]),
             ],
@@ -224,9 +237,12 @@ public static function cadavreEnCours($user)
                 new Assert\NotBlank([
                     'message' => 'Ce champ doit être rempli',
                 ]),
+                new Assert\Date([
+                    'message' => 'Vous devez rentrez une date',
+                ]),
                 new Assert\Range([
-                    'min' => 'debut_cadavre',
-                    'minMessage' => 'La date ne peut pas déjà être passée',
+                    'min' => $formData['debut_cadavre'],
+                    'minMessage' => 'La date de fin ne peut pas être avant la date de début',
                 ]),
             ],
             'nb_contributions_max' => [

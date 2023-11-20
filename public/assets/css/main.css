@@ -12,6 +12,7 @@ html {
   --bleu-fonce: #082C37;
   --bleu-clair: #1a98c0;
   --red: #ff453a;
+  --jaune: #FFF3D6;
   background-color: var(--blanc);
   font-family: var(--main-font);
 }

@@ -1,16 +1,32 @@
 {% extends 'layout.html.twig' %}
-{% block csslink %}../assets/css/admin.css{% endblock %}
-{% block title %}Loufok login{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="../assets/css/admin.css" >
+  <link rel="stylesheet" href="../assets/css/menu.css" >
+{% endblock %}
+{% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
 <body>
 
-  <!-- logout -->
+  <!-- menu -->
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <a href="/loufok/logout" class="navbar__logout">
-              <img src="/assets/images/logout.svg" alt="Déconnexion">
-          </a>
+          <input class="navbar__burger" id="burger" type="checkbox" />
+          <label for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+        <div class="menu">
+          <nav class="menu__hidden">
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="">
+          </nav>
+        </div>
       </div>
   </header>
 
@@ -35,25 +51,25 @@
         
         <div class="newCadavre__formItem">
           <label for="titre_cadavre">Titre du cadavre exquis :</label>
-          <input type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
-          <span class="newCadavre__errors">{{ errors.titre }}</span>
+          <input onkeyup="verifTitre(this.value)" type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
+          <small class="newCadavre__errors error__titre_cadavre">{{ errors.titre }}</small>
         </div>
         <div class="newCadavre__formItem">
           <label for="debut_cadavre">Lancement du cadavre exquis :</label>
-          <input type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
-          <span class="newCadavre__errors">{{ errors.debut_cadavre }}</span>
+          <input onkeyup="verifPeriode(this)" type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
+          <small class="newCadavre__errors error__debut_cadavre">{{ errors.debut_cadavre }}</small>
         </div>
 
         <div class="newCadavre__formItem">
           <label for="fin_cadavre">Fin du cadavre exquis :</label>
-          <input type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
-          <span class="newCadavre__errors">{{ errors.fin_cadavre }}</span>
+          <input onkeyup="verifPeriode(this)" type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
+          <small class="newCadavre__errors error__fin_cadavre">{{ errors.fin_cadavre }}</small>
         </div>
         
         <div class="newCadavre__formItem">
           <label for="nb_contributions">Contributions maximum :</label>
           <input type="number" class="input__empty input" id="nb_contributions" name="nb_contributions" required >
-          <span class="newCadavre__errors">{{ errors.nb_contributions_max }}</span>
+          <small class="newCadavre__errors error__nb_contributions">{{ errors.nb_contributions_max }}</small>
         </div>
         
         <div class="newCadavre__formItem">
@@ -67,8 +83,8 @@
             rows="10" 
             required
           ></textarea>
-          <small class="newContribution__info" id="newContribution__info"></small>
-          <span class="newCadavre__errors">{{ errors.contribution }}</span>
+          <span class="newContribution__info" id="newContribution__info"></span>
+          <small class="newCadavre__errors error__contribution">{{ errors.contribution }}</small>
         </div>
         <input id="btn_submit" type="submit" value="Valider" class="newCadavre__submit">
       </form>
@@ -79,4 +95,5 @@
 {% endblock %}
 {% block js %}
 <script src="/assets/js/nouveau_cadavre.js" ></script>
+{# <script src="/assets/js/verification_ajax.js"></script> #}
 {% endblock %}

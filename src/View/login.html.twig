@@ -1,10 +1,11 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Loufok login{% endblock %}
-{% block csslink %}../assets/css/login.css{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="../assets/css/login.css" >
+{% endblock %}
 {% block content %}
 <body>
   <main>
-
     <h1 class="title">Loufok<br>Se connecter</h1>
     <form class="loginForm" method="POST" accept-charset="UTF-8">
       <div class="loginForm__item">
