@@ -203,16 +203,8 @@ class CadavreModel extends Model
 
 
         $yesterday = date('Y-m-d', strtotime('-1 day'));
-
-        //$formData['debut_cadavre'] = date('YYY')
-        $timestamp = strtotime($formData['debut_cadavre']);
+        //$timestamp = strtotime($formData['debut_cadavre']);
         var_dump($formData);
-        //$formData['debut_cadavre'] = intval($formData['debut_cadavre']);
-        //var_dump($formData['debut_cadavre']);
-        //$date = DateTime::createFromFormat('Y-m-d', $formData['debut_cadavre']);
-        //$intDate = (int)$timestamp->format('Ymd');
-        //var_dump($intDate);
-
 
         // Créez un objet de contraintes de validation
         $constraints = new Assert\Collection([
