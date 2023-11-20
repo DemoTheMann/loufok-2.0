@@ -20,7 +20,7 @@ class LoginModel extends Model
 
         if ($admin && $password === $admin[0]['mot_de_passe_administrateur']) {
             $_SESSION['auth'] = true;
-            $_SESSION['role'] = 'admin';
+            $_SESSION['role'] = 'administrateur';
             $_SESSION['user'] = $admin[0];
         }
     }

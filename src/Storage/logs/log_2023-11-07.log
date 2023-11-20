@@ -1,2 +1,60 @@
 [2023-11-07 9:38:10]	[ALERT]	404 - commande non existante :: /
 [2023-11-07 9:38:18]	[ALERT]	404 - commande non existante :: /phpmyadmin
+[2023-11-07 17:10:28]	[ALERT]	404 - commande non existante :: /loufok/cadavre
+[2023-11-07 17:10:33]	[ALERT]	404 - commande non existante :: /loufok/affichae_cadavre
+[2023-11-07 17:10:36]	[ALERT]	404 - commande non existante :: /loufok/affichage_cadavre
+[2023-11-07 17:10:47]	[ALERT]	404 - commande non existante :: /loufok/affichage
+[2023-11-07 17:13:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 227
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\twig\twig\src\Loader\FilesystemLoader.php'
+    exception-code: 'Unable to find template "admin/affichage_cadavre.html.twig" (looked into: C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View).'
+[2023-11-07 17:27:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\affichage_cadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "as" ("operator" expected with value "in").'
+[2023-11-07 17:28:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\affichage_cadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "as" ("operator" expected with value "in").'
+[2023-11-07 17:28:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\affichage_cadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "as" ("operator" expected with value "in").'
+[2023-11-07 17:47:01]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 53
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $cadavres'
+[2023-11-07 17:55:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 65
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $date'

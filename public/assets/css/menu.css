@@ -1,0 +1,93 @@
+@import url(main.css);
+
+.navbar__cross{
+    height: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 900;
+}
+
+.navbar__burger{
+    visibility: hidden;
+}
+.navbar__burger + .navbar__cross {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+}
+.navbar__burger:checked + .navbar__cross>span:first-child{
+    transform-origin: top left;
+    transform: rotate(35deg);
+}
+.navbar__burger:checked + .navbar__cross>span:last-child{
+    transform-origin: bottom left;
+    transform: rotate(-35deg);
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+
+.navbar__cross span{
+    display: block;
+    height: 1px;
+    width: 28px;
+    background-color: var(--bleu-fonce);
+}
+
+.navbar__cross1{}
+
+.navbar__cross2{}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: -100vh;
+    /* top: -100vh; */
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background-color: #082c377a;
+    transition: opacity 0.4s ease-in;
+    z-index: 500;
+}
+
+.navbar__burger:checked ~ .menu{
+    top:0vh;
+    opacity: 100%;
+}
+
+.menu__hidden{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 60vh;
+    width: 75vw;
+    background-color: var(--jaune);
+    transition: top 0.4s ease-in;
+    transition-delay: 1s;
+}
+
+.menu__hidden__list{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image:url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mix-blend-mode: multiply;
+    padding: 1.5rem;
+    text-align: center;
+}
+.menu__hidden__listItem{
+    font-size: 1.3rem;
+}
+.menu__hidden__link{
+    text-decoration: none;
+    color: var(--bleu-fonce);
+}
+.menu__end{
+    transform: scale(1.3);
+}
