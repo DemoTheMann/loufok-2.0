@@ -15,7 +15,5 @@ class Cadavre extends Base
 
         return self::$instance;
     }
-    
-
 
 }

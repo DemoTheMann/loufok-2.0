@@ -1,5 +1,5 @@
 {% extends 'layout.html.twig' %}
-{% block title %}Loufok login{% endblock %}
+{% block title %}Joueur Loufok{% endblock %}
 {% block content %}
 <body>
   <header>
@@ -9,14 +9,21 @@
     
     <h1>Joueur</h1>
     <h3> Connexion sécurisée </h3>
-
-    <div class="container status">
-
+    <div class="container current_cadavre">
+    {% if title %}
+      <p>Titre du cadavre exquis en cours : {{ title }}</p>
+    {% else %}
+      <p>Pas de Cadavre Exquis en cours pour le moment.<p>
+    {% endif %}
     </div>
 
     <ul>
-      <li><a href="/loufok/logout"> participer au Cadavre Exquis en cours</a></li>
-      <li><a href="/loufok/logout"> Consulter mes Cadavres Exquis précédents</a></li>
+    {% if title %}
+      <li><a href="/loufok/contribution"> participer au Cadavre Exquis en cours</a></li>
+    {% endif %}
+    {% if latest %}
+      <li><a href="/loufok"> Consulter mes Cadavres Exquis précédents</a></li>
+    {% endif %}
   </main>
 </body>
 {% endblock %}

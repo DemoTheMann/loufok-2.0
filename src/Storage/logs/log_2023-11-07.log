@@ -1,2 +1,92 @@
 [2023-11-07 9:38:10]	[ALERT]	404 - commande non existante :: /
 [2023-11-07 9:38:18]	[ALERT]	404 - commande non existante :: /phpmyadmin
+[2023-11-07 10:18:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\joueur\joueur.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-07 10:18:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 12
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\joueur\joueur.html.twig'
+    exception-code: 'Unexpected token "operator" of value "=" ("end of statement block" expected).'
+[2023-11-07 10:26:02]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 31
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "date_debut"'
+[2023-11-07 10:27:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 31
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:28:07]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 31
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:28:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 31
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:32:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 34
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:33:00]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 34
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:33:54]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 34
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'
+[2023-11-07 10:34:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 34
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Object of class DateTime could not be converted to int'

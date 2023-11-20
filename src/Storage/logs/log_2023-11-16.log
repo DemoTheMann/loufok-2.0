@@ -1,0 +1,63 @@
+[2023-11-16 8:15:04]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:18:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:18:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:19:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:19:18]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:19:30]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-16 8:20:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 38
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
