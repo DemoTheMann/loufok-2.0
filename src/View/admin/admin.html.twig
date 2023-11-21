@@ -36,34 +36,28 @@
         <p class="welcome__name"> Bienvenue {{user.ad_mail_administrateur}} </p>
     </div>
     <div class="newCadavre">
-    {% if errors != 0 %}
-    <span class="newCadavre__errors"> 
-    Le cadavre exquis n'a pas été enregistré 
-    car des erreurs ont été rencontrées. Merci
-    de bien vouloir recommencer. </span>
+
+    {% if global_message != 0 %}
+    <span class="newCadavre__message">{{global_message}}</span>
     {% endif %}
 
-    {% if errors_message != 0 %}
-    <span class="newCadavre__errors"> 
-    {{ errors_message }}</span>
-    {% endif %}
       <form id="newCadavre__form" class="newCadavre__form" action="" method="POST">
         
         <div class="newCadavre__formItem">
           <label for="titre_cadavre">Titre du cadavre exquis :</label>
           <input type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
-          <small class="newCadavre__errors error__titre_cadavre">{{ errors.titre }}</small>
+          <small class="newCadavre__errors error__titre_cadavre">{{ errors_message.titre }}</small>
         </div>
         <div class="newCadavre__formItem">
           <label for="debut_cadavre">Lancement du cadavre exquis :</label>
           <input type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
-          <small class="newCadavre__errors error__debut_cadavre">{{ errors.debut_cadavre }}</small>
+          <small class="newCadavre__errors error__debut_cadavre">{{ errors_message.debut_cadavre }}</small>
         </div>
 
         <div class="newCadavre__formItem">
           <label for="fin_cadavre">Fin du cadavre exquis :</label>
           <input type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
-          <small class="newCadavre__errors error__fin_cadavre">{{ errors.fin_cadavre }}</small>
+          <small class="newCadavre__errors error__fin_cadavre">{{ errors_message.fin_cadavre }}</small>
         </div>
         
         <div class="newCadavre__formItem">
@@ -95,6 +89,14 @@
 {% endblock %}
 {% block js %}
 <script>
+  /* 
+  if({{global_message}} ==="Le cadavre exquis a bien été créé !"){
+    document.querySelector(".newCadavre__message").classList.add(.newCadavre__success);
+    document.querySelector(".newCadavre__message").classList.remove(.newCadavre__errors);
+  }else{
+    document.querySelector(".newCadavre__message").classList.remove(.newCadavre__success);
+    document.querySelector(".newCadavre__message").classList.add(.newCadavre__errors);
+  } */
   let titres={{titres | raw}};
   let periodes={{periodes | raw}};
 </script>

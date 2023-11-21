@@ -136,6 +136,7 @@ class CadavreModel extends Model
     {
         $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $cadavres_existants = Cadavre::getInstance()->findAll();
+        $errors = 0;
         foreach ($cadavres_existants as $cadavre => $c) {
             $titre_a_comparer = trim(ucfirst(strtolower($c['titre_cadavre'])));
             if($titre_cadavre === $titre_a_comparer){
@@ -180,7 +181,7 @@ class CadavreModel extends Model
         
         $texte_contribution = $_POST['contribution'];
         $ajd = date('Y-m-d');
-        Contribution::getInstance()->create(
+        $contribition = Contribution::getInstance()->create(
             [
                 'texte_contribution' => $texte_contribution,
                 'date_soumission' => $ajd,
@@ -196,8 +197,8 @@ class CadavreModel extends Model
     public static function nouveauCadavre($user){
         $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $nb_contributions = $_POST['nb_contributions'];
-        $date_debut = $_POST['date_debut'];
-        $date_fin = $_POST['date_fin'];
+        $date_debut = $_POST['debut_cadavre'];
+        $date_fin = $_POST['fin_cadavre'];
         Cadavre::getInstance()->create( 
             [
                 'titre_cadavre' => $titre_cadavre,
@@ -208,6 +209,8 @@ class CadavreModel extends Model
                 'nb_jaime' => 0,
                 'id_administrateur' => $user['id_administrateur']
             ]);
+        //la je dois récup celui la et le return pour pouvoir le prendre dans nouvelleContribution
+        return Cadavre::getInstance()->findBy(['titre_cadavre'=>$titre_cadavre]);
     }
     
     /**
@@ -245,7 +248,7 @@ class CadavreModel extends Model
             'nb_contributions_max' => $_POST['nb_contributions'],
             'contribution' => $_POST['contribution'],
         ];
-        
+
         $ajd = date('Y-m-d', strtotime('today UTC'));
 
         // Créez un objet de contraintes de validation

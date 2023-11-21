@@ -348,3 +348,93 @@
     exception-line: 70
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
     exception-code: 'Undefined variable $verif_titre'
+[2023-11-21 20:08:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 145
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-21 20:09:02]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 145
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-21 20:09:11]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 145
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-21 20:09:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 145
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $errors'
+[2023-11-21 20:09:48]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 202
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "date_debut"'
+[2023-11-21 20:09:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 202
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined array key "date_debut"'
+[2023-11-21 22:05:41]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 213
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`loufok2.0`.`contribution`, CONSTRAINT `contribution_ibfk_3` FOREIGN KEY (`id_cadavre`) REFERENCES `cadavre` (`id_cadavre`))'
+[2023-11-21 22:09:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 213
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`loufok2.0`.`contribution`, CONSTRAINT `contribution_ibfk_3` FOREIGN KEY (`id_cadavre`) REFERENCES `cadavre` (`id_cadavre`))'
+[2023-11-21 22:11:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 227
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\vendor\twig\twig\src\Loader\FilesystemLoader.php'
+    exception-code: 'Unable to find template "admin/affichage.html.twig" (looked into: C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View).'
+[2023-11-21 22:19:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@nouveauCadavre',
+        2 => array(),
+    )
+    exception-line: 213
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Base.php'
+    exception-code: 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`loufok2.0`.`contribution`, CONSTRAINT `contribution_ibfk_3` FOREIGN KEY (`id_cadavre`) REFERENCES `cadavre` (`id_cadavre`))'
