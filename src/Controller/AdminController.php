@@ -19,14 +19,18 @@ class AdminController extends Controller
         }else{
 
             if(!isset($_SESSION['auth']))
-            {
+           {
                 HTTP::redirect('/loufok/login');
             }
         $error = 0; 
+        $periodes = CadavreModel::getInstance()->periodes();
+        $titres = CadavreModel::getInstance()->titres();
         $this->display('admin/admin.html.twig', 
             [
                 'user' => $_SESSION['user'],
-                'error' => $error
+                'error' => $error,
+                'periodes' => json_encode($periodes),
+                'titres' => json_encode($titres)
             ]);
         }
     }

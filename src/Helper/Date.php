@@ -2,7 +2,7 @@
 
 namespace App\Helper;
 
-class Date
+/* class Date
 {
     public static function validate($date, $format = 'Y-m-d'): bool
     {
@@ -14,4 +14,4 @@ class Date
 
         return $d && $d->format($format) == $date;
     }
-}
+} */

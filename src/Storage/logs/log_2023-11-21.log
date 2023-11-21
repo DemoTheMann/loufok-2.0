@@ -1,0 +1,80 @@
+[2023-11-21 11:34:13]	[ALERT]	404 - commande non existante :: /loufok/login/admin
+[2023-11-21 11:35:10]	[ALERT]	404 - commande non existante :: /loufok/nouveau_cadavre
+[2023-11-21 11:35:29]	[ALERT]	404 - commande non existante :: /loufok/nouveau_cadavre
+[2023-11-21 12:06:28]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "user"'
+[2023-11-21 12:06:40]	[ALERT]	404 - commande non existante :: /loufok/login/admin/affichage
+[2023-11-21 12:06:46]	[ALERT]	404 - commande non existante :: /loufok/login/joueur
+[2023-11-21 12:06:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "user"'
+[2023-11-21 12:19:02]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "user"'
+[2023-11-21 12:20:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "user"'
+[2023-11-21 12:20:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 28
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
+    exception-code: 'Undefined array key "user"'
+[2023-11-21 14:15:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 98
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-21 14:19:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 98
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-21 14:28:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 98
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\admin\admin.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-21 14:28:24]	[ALERT]	404 - commande non existante :: /
+[2023-11-21 14:28:24]	[ALERT]	404 - commande non existante :: /
+[2023-11-21 17:07:11]	[ALERT]	404 - commande non existante :: /

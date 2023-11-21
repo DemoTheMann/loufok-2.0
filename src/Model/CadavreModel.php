@@ -9,6 +9,42 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class CadavreModel extends Model
 {
+
+    /**
+     * Renvoie les périodes de tous les cadavres exquis
+     * dans array d'arrays avec deux données:
+     *   contributions : texte de la contribution
+     *   joueurs : pseudo du joueur
+    */
+    public static function periodes(){
+        $cadavres = Cadavre::getInstance()->findAll();
+        $periodes = [];
+        $result = [];
+        $i = 0;
+        foreach ($cadavres as $cadavre) {
+            $i = $i + 1;
+            $periodes[$i] = 
+            [
+                'debut_cadavre' => $cadavre['date_debut_cadavre'],
+                'fin_cadavre' => $cadavre['date_fin_cadavre']
+            ];
+            array_push($result, $periodes[$i]);
+        }
+        return $periodes;
+    }
+
+    /**
+     * Renvoie les titres de tous les cadavre exquis
+     */
+    public static function titres(){
+        $cadavres = Cadavre::getInstance()->findAll();
+        $titres = [];
+        foreach ($cadavres as $cadavre) {
+            array_push($titres, $cadavre['titre_cadavre']);
+        }
+        return $titres;
+    }
+
     /**
      * Renvoie un array d'arrays avec deux données:
      *   contributions : texte de la contribution
@@ -127,6 +163,10 @@ class CadavreModel extends Model
             if ($fin_cadavre>=$c['date_debut_cadavre'] && $fin_cadavre<=$c['date_fin_cadavre']) {
                 $errors = "Un cadavre exquis existe déjà pour la période du " . date("d/m/Y", strtotime($c['date_debut_cadavre'])) . " au " . date("d/m/Y", strtotime($c['date_fin_cadavre'])) . ". Le chevauchement de cadavre exquis n'est pas possible." ;
             }
+            
+            if ($debut_cadavre<=$c['date_debut_cadavre'] && $fin_cadavre>=$c['date_fin_cadavre']) {
+                $errors = "Un cadavre exquis existe déjà pour la période du " . date("d/m/Y", strtotime($c['date_debut_cadavre'])) . " au " . date("d/m/Y", strtotime($c['date_fin_cadavre'])) . ". Le chevauchement de cadavre exquis n'est pas possible." ;
+            }
         }
         if($errors){
             return $errors;
@@ -156,9 +196,14 @@ class CadavreModel extends Model
     public static function nouveauCadavre($user){
         $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
         $nb_contributions = $_POST['nb_contributions'];
+        $date_debut = $_POST['date_debut'];
+        $date_fin = $_POST['date_fin'];
         Cadavre::getInstance()->create( 
             [
                 'titre_cadavre' => $titre_cadavre,
+                'nb_contributions' => $nb_contributions,
+                'date_debut_cadavre' => $date_debut,
+                'date_fin_cadavre' => $date_fin,
                 'nb_contributions' => $nb_contributions,
                 'nb_jaime' => 0,
                 'id_administrateur' => $user['id_administrateur']
@@ -200,11 +245,8 @@ class CadavreModel extends Model
             'nb_contributions_max' => $_POST['nb_contributions'],
             'contribution' => $_POST['contribution'],
         ];
-
-
-        $yesterday = date('Y-m-d', strtotime('-1 day'));
-        //$timestamp = strtotime($formData['debut_cadavre']);
-        var_dump($formData);
+        
+        $ajd = date('Y-m-d', strtotime('today UTC'));
 
         // Créez un objet de contraintes de validation
         $constraints = new Assert\Collection([
@@ -220,9 +262,9 @@ class CadavreModel extends Model
                 new Assert\Date([
                     'message' => 'Vous devez rentrez une date',
                 ]),
-                new Assert\Range([
-                    'min' => $yesterday,
-                    'minMessage' => 'La date ne peut pas déjà être passée',
+                new Assert\GreaterThanOrEqual([
+                    'value' => $ajd,
+                    'message' => 'La date ne peut pas déjà être passée',
                 ]),
             ],
             'fin_cadavre' => [
@@ -232,9 +274,9 @@ class CadavreModel extends Model
                 new Assert\Date([
                     'message' => 'Vous devez rentrez une date',
                 ]),
-                new Assert\Range([
-                    'min' => $formData['debut_cadavre'],
-                    'minMessage' => 'La date de fin ne peut pas être avant la date de début',
+                new Assert\GreaterThanOrEqual([
+                    'value' => $ajd,
+                    'message' => 'La date ne peut pas déjà être passée',
                 ]),
             ],
             'nb_contributions_max' => [

@@ -47,22 +47,22 @@
     <span class="newCadavre__errors"> 
     {{ errors_message }}</span>
     {% endif %}
-      <form id="newCadavre__form" class="newCadavre__form" action="/loufok/nouveau_cadavre" method="POST">
+      <form id="newCadavre__form" class="newCadavre__form" action="" method="POST">
         
         <div class="newCadavre__formItem">
           <label for="titre_cadavre">Titre du cadavre exquis :</label>
-          <input onkeyup="verifTitre(this.value)" type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
+          <input type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
           <small class="newCadavre__errors error__titre_cadavre">{{ errors.titre }}</small>
         </div>
         <div class="newCadavre__formItem">
           <label for="debut_cadavre">Lancement du cadavre exquis :</label>
-          <input onkeyup="verifPeriode(this)" type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
+          <input type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
           <small class="newCadavre__errors error__debut_cadavre">{{ errors.debut_cadavre }}</small>
         </div>
 
         <div class="newCadavre__formItem">
           <label for="fin_cadavre">Fin du cadavre exquis :</label>
-          <input onkeyup="verifPeriode(this)" type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
+          <input type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
           <small class="newCadavre__errors error__fin_cadavre">{{ errors.fin_cadavre }}</small>
         </div>
         
@@ -94,6 +94,10 @@
 </body>
 {% endblock %}
 {% block js %}
-<script src="/assets/js/nouveau_cadavre.js" ></script>
+<script>
+  let titres={{titres | raw}};
+  let periodes={{periodes | raw}};
+</script>
+<script src="/assets/js/nouveau_cadavre.js"></script>
 {# <script src="/assets/js/verification_ajax.js"></script> #}
 {% endblock %}
