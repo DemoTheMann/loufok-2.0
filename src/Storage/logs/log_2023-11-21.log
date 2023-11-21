@@ -1,0 +1,63 @@
+[2023-11-21 9:35:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 24
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "num_contribution"'
+[2023-11-21 9:43:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 48
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-21 9:44:42]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-21 9:45:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 48
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-21 10:08:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 34
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "nnb_contributions"'
+[2023-11-21 10:09:07]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 48
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-21 10:41:39]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 41
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "texte_contribution"'
