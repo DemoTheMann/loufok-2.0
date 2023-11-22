@@ -16,4 +16,9 @@ class Contribution extends Base
         return self::$instance;
     }
 
+    public static function getUserLatest(int $id_joueur): ?int
+    {
+        
+    }
+
 }
