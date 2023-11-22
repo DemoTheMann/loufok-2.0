@@ -6,13 +6,13 @@
       _dateDebutCadavre: document.querySelector('#debut_cadavre'),
       _dateFinCadavre: document.querySelector('#fin_cadavre'),
       _form: document.querySelector("#newCadavre__form"),
-      
+      _titreCadavre: document.querySelector("#titre_cadavre"),
+
       _errorContribution: document.querySelector('.error__contribution'),
       _errorTitreCadavre: document.querySelector('.error__titre_cadavre'),
       _errorDebutCadavre: document.querySelector('.error__debut_cadavre'),
       _errorFinCadavre: document.querySelector('.error__fin_cadavre'),
       _errorNbContributions: document.querySelector('.error__nb_contributions'),
-      
 
       _nouvContribution: document.querySelector("#contribution"),
       _nbChara: document.querySelector("#newContribution__info"),
@@ -25,14 +25,57 @@
   
       // les gestionnaires d'ev
       app_handlers: function () {
-        App._dateFinCadavre.addEventListener("input", App.verification);
-        App._dateDebutCadavre.addEventListener("input", App.debutCadavreVerification);
-        App._dateDebutCadavre.addEventListener("input", App.verification);
+        App._titreCadavre.addEventListener("input", App.titreVerification);
+        App._dateDebutCadavre.addEventListener("change", App.verification);
+        App._dateDebutCadavre.addEventListener("change", App.debutCadavreVerification);
+        App._dateDebutCadavre.addEventListener("change", App.periodeVerification);
+        App._dateFinCadavre.addEventListener("change", App.verification);
+        App._dateFinCadavre.addEventListener("change", App.periodeVerification);
         App._nbContributions.addEventListener("input", App.maxContributionVerification);
         App._nouvContribution.addEventListener("input", App.nouvelleContribution);
         App._form.addEventListener("submit", App.submitValid);
       },
       
+      periodeVerification: ()=>{
+        Object.keys(periodes).forEach(key => {
+          const p = periodes[key];
+          const debutCadavre = App._dateDebutCadavre.value;
+          const finCadavre = App._dateFinCadavre.value;
+
+          function dateConvertisseur(dateString) {
+            let components = dateString.split('-');
+            if (components.length === 3) {
+              // Rearrange the components to the "dd-mm-yyyy" format
+              let dd_mm_yyyy = components[2] + '/' + components[1] + '/' + components[0];
+              return dd_mm_yyyy;
+            } else {
+              return "Invalid date format";
+            }
+          }
+                    
+          if(debutCadavre >= p['debut_cadavre'] && debutCadavre <=p['fin_cadavre'] ){
+            App._errorFinCadavre.textContent = "Un cadavre exquis existe déjà pour la période du "+ dateConvertisseur(p['debut_cadavre'])+" au "+dateConvertisseur(p['fin_cadavre']);
+          }else if(finCadavre>=p['debut_cadavre'] && finCadavre<=p['fin_cadavre']){
+            App._errorFinCadavre.textContent = "Un cadavre exquis existe déjà pour la période du "+ dateConvertisseur(p['debut_cadavre'])+" au "+dateConvertisseur(p['fin_cadavre']);
+          }else if(debutCadavre<=p['debut_cadavre'] && finCadavre>=p['fin_cadavre']){
+            App._errorFinCadavre.textContent = "Un cadavre exquis existe déjà pour la période du "+ dateConvertisseur(p['debut_cadavre'])+" au "+dateConvertisseur(p['fin_cadavre']);
+          }
+        });
+      },
+
+      titreVerification: () =>{
+        App._errorTitreCadavre.textContent = "";  
+        titres.forEach(titre => {
+          const titreCadavre = App._titreCadavre.value.trim().toLowerCase();
+          const titreEnCours = titre.trim().toLowerCase();
+          if(titreEnCours === titreCadavre){
+            App._errorTitreCadavre.textContent = "Un cadavre exquis porte déjà le titre de «"+ titreEnCours + "»";
+          }
+          
+        });
+        
+      },
+
       submitValid: (e) => {
         switch (true) {
           case App._errorContribution.innerHTML != "":

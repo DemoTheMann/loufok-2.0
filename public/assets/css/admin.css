@@ -51,9 +51,13 @@ html{
   background: #1c576963;
 }
 
-.newCadavre__errors, .newContribution__info{
+.newCadavre__errors, .newContribution__info, .newCadavre__message{
     font-style: italic;
     color: gray;
+}
+
+.newCadavre__success{
+  color: var(--bleu);
 }
 
 .newCadavre__errors{
