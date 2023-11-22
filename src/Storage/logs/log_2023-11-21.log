@@ -1,3 +1,4 @@
+
 [2023-11-21 11:34:13]	[ALERT]	404 - commande non existante :: /loufok/login/admin
 [2023-11-21 11:35:10]	[ALERT]	404 - commande non existante :: /loufok/nouveau_cadavre
 [2023-11-21 11:35:29]	[ALERT]	404 - commande non existante :: /loufok/nouveau_cadavre
@@ -437,4 +438,4 @@
     )
     exception-line: 213
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Entity\Base.php'
-    exception-code: 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`loufok2.0`.`contribution`, CONSTRAINT `contribution_ibfk_3` FOREIGN KEY (`id_cadavre`) REFERENCES `cadavre` (`id_cadavre`))'
+    exception-code: 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`loufok2.0`.`contribution`, CONSTRAINT `contribution_ibfk_3` FOREIGN KEY (`id_cadavre`) REFERENCES `cadavre` (`id_cadavre
