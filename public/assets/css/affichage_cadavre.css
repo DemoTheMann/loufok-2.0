@@ -30,3 +30,7 @@
 .contributions, .cadavreExquis__title, .cadavreExquisHead{
     padding-bottom: 1.5rem;
 }
+
+.contributions__content{
+    font-size: 1.2rem;
+}

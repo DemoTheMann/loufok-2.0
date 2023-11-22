@@ -181,7 +181,7 @@ class CadavreModel extends Model
         
         $texte_contribution = $_POST['contribution'];
         $ajd = date('Y-m-d');
-        $contribition = Contribution::getInstance()->create(
+        Contribution::getInstance()->create(
             [
                 'texte_contribution' => $texte_contribution,
                 'date_soumission' => $ajd,
@@ -236,9 +236,6 @@ class CadavreModel extends Model
     public static function validationForm()
     {
         $validator = Validation::createValidator();
-
-        //$timestamp = date("Y-m-d", strtotime($_POST['debut_cadavre']));
-        //var_dump($debut_cadavre);
 
         // Créez un tableau associatif avec les données du formulaire
         $formData = [
