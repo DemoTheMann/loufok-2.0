@@ -29,7 +29,9 @@
                 placeholder="Votre contribution..." 
                 id="contribution" 
                 cols="30" 
-                rows="10" 
+                rows="10"
+                maxlength="280"
+                minlength="50"
                 required
             ></textarea>
             <span class="newContrib__info" id="newContrib__info"></span>
@@ -38,10 +40,17 @@
             <input id="btn_submit" type="submit" value="Valider" class="newContrib__submit">
         </form>
 
+        {% elseif userContribText %}
+
+        <div>
+            <h2>{{ msg }}</h2>
+            <p>{{ userContribText }}</p>
+        </div>
+
         {% else %}
 
         <div>
-            <h2>Vous avez déjà participé, voici votre participation :</h2>
+            <h2>{{ msg }}</h2>
         </div>
 
         {% endif %}

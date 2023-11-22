@@ -1,0 +1,27 @@
+[2023-11-22 10:34:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 59
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "texte_contribution"'
+[2023-11-22 10:38:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 54
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-22 10:40:33]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 76
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $userContribText'

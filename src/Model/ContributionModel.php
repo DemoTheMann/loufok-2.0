@@ -48,4 +48,28 @@ class ContributionModel extends Model
         $cadavreCountContrib = count(Contribution::getInstance()->findBy(['id_cadavre' => $activeCadavre['id_cadavre']]));
         return $cadavreCountContrib;
     }
+
+    public static function newContrib($user_id, $cadavre, $ordre){
+        
+        $textContrib = $_POST['contribution'];
+        $id_cadavre = $cadavre['id_cadavre'];
+        $now = date('Y-m-d');
+        $contribition = Contribution::getInstance()->create(
+            [
+                'texte_contribution' => $textContrib,
+                'date_soumission' => $now,
+                'ordre_soumission' => $ordre,
+                'id_joueur' => $user_id,
+                'id_administrateur' => null,
+                'id_cadavre' => $id_cadavre
+            ]);
+    }
+
+    public static function getUserContrib(int $user_id)
+    {
+        $activeCadavre = CadavreModel::getInstance()->getActiveCadavre();
+        $id_cadavre = $activeCadavre['id_cadavre'];
+        $userContrib = Contribution::getInstance()->findBy(['id_joueur'=>$user_id,'id_cadavre'=>$id_cadavre]);
+        return $userContrib;
+    }
 }
