@@ -1,5 +1,9 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Contribution Loufok{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="../assets/css/admin.css" >
+  <link rel="stylesheet" href="../assets/css/menu.css" >
+{% endblock %}
 {% block content %}
 <body>
     <header>
@@ -8,7 +12,47 @@
     </header>
     <main>
 
-    <h1>{{ title }}</h1>
+    {% if title %}
+    <div>
+        <h1>{{ title }}</h1>
+        <p>{{ randContrib }}</p>
+    </div>
+
+        {% if canAddContrib %}
+        <form id="newContrib__form" class="newContrib__form" action="" method="POST">
+            
+            <div class="newCadavre__formItem">
+            <label for="contribution"> Votre contribution </label>
+            <textarea 
+                name="contribution" 
+                class="input__textarea input"
+                placeholder="Votre contribution..." 
+                id="contribution" 
+                cols="30" 
+                rows="10" 
+                required
+            ></textarea>
+            <span class="newContrib__info" id="newContrib__info"></span>
+            <small class="newContrib__errors error__contrib">{{ errors.contribution }}</small>
+            </div>
+            <input id="btn_submit" type="submit" value="Valider" class="newContrib__submit">
+        </form>
+
+        {% else %}
+
+        <div>
+            <h2>Vous avez déjà participé, voici votre participation :</h2>
+        </div>
+
+        {% endif %}
+
+    {% else %}
+
+    <div>
+        <h2>Nous sommes désolés, mais il n'y à pas de Cadavre Exquis en construction aujourd'hui.</h2>
+    </div>
+
+    {% endif %}
 
     </main>
 </body>
