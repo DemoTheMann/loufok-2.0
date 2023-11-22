@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Model;
+
+use App\Helper\HTTP;
+
 use App\Entity\Cadavre;
 use App\Entity\Contribution;
 use App\Entity\ContributionAleatoire;
-use DateTime;
+
 use App\Model\CadavreModel;
+
+use DateTime;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -40,6 +45,7 @@ class ContributionModel extends Model
                 return $c;
             }
         }
+        return [];
     }
 
     public static function countContrib(int $id_cadavre)
@@ -54,7 +60,7 @@ class ContributionModel extends Model
         $textContrib = $_POST['contribution'];
         $id_cadavre = $cadavre['id_cadavre'];
         $now = date('Y-m-d');
-        $contribition = Contribution::getInstance()->create(
+        Contribution::getInstance()->create(
             [
                 'texte_contribution' => $textContrib,
                 'date_soumission' => $now,
@@ -63,6 +69,10 @@ class ContributionModel extends Model
                 'id_administrateur' => null,
                 'id_cadavre' => $id_cadavre
             ]);
+        if($ordre+1 >= $cadavre['nb_contributions']){
+            Cadavre::getInstance()->update($id_cadavre,['date_fin_cadavre'=>$now]);
+            HTTP::redirect('/loufok');
+        }
     }
 
     public static function getUserContrib(int $user_id)

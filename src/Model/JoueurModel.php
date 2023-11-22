@@ -22,6 +22,12 @@ class JoueurModel extends Model
         return $contribAleatoire;
     }
 
+    public static function getUser(int $id_joueur)
+    {
+        $userInfo = Joueur::getInstance()->findBy(['id_joueur' => $id_joueur]);
+        return $userInfo;
+    }
+
     public static function setRandom(int $id_joueur)
     {
         $activeCadavre = CadavreModel::getInstance()->getActiveCadavre();
@@ -38,8 +44,17 @@ class JoueurModel extends Model
         return $contribAleatoire;
     }
 
-    public static function getlatest()
+    public static function getlatest(int $user_id)
     {
+        $latestContrib = Contribution::getInstance()->getUserLatest($user_id);
+        if($latestContrib)
+        {
+            $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $latestContrib['id_cadavre']])[0];
+            $allLatestCadavreContrib = Contribution::getInstance()->findBy(['id_cadavre'=> $latestCadavre['id_cadavre']]);
+            return $allLatestCadavreContrib;
+        }
+        
+        return $latestContrib;
 
     }
     
@@ -57,6 +72,7 @@ class JoueurModel extends Model
                 return $c;
             }
         }
+        return [];
     }
 
 }

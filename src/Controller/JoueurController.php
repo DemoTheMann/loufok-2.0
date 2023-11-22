@@ -26,8 +26,10 @@ class JoueurController extends Controller
 
         $title = false;
         $latest = false;
+        $user = "";
         
         $current_cadavre = $joueurModel->getActiveCadavre();
+        $user = $joueurModel->getUser($id_joueur)[0];
 
         if($current_cadavre)
         {
@@ -42,13 +44,16 @@ class JoueurController extends Controller
         }
 
         
-        var_dump($_SESSION['user_id']);
-        var_dump($current_cadavre['id_cadavre']);
-        var_dump($contribAleatoire);
+        if($joueurModel->getLatest($id_joueur))
+        {
+            $latest = $joueurModel->getLatest($id_joueur);
+            var_dump($latest);
+        }
         
         $data= [
             "title" => $title,
-            "latest" => $latest
+            "latest" => $latest,
+            "user" => $user['nom_plume'],
         ];
         $this->display('joueur/joueur.html.twig',$data);
     }
