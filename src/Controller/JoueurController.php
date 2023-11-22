@@ -5,7 +5,8 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Entity\Cadavre;
+use App\Model\JoueurModel;
+use DateTime;
 
 class JoueurController extends Controller
 {
@@ -18,19 +19,41 @@ class JoueurController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $cadavreModel = Cadavre::getInstance();
+        $id_joueur = $_SESSION['user_id'];
 
+        $joueurModel = JoueurModel::getInstance();
+        // $cadavreModel = CadavreModel::getInstance();
 
-        var_dump($_SESSION);
+        $title = false;
+        $latest = false;
+        $user = "";
+        
+        $current_cadavre = $joueurModel->getActiveCadavre();
+        $user = $joueurModel->getUser($id_joueur)[0];
 
-        $status = false;
+        if($current_cadavre)
+        {
+            $title = $current_cadavre['titre_cadavre'];
 
+            $contribAleatoire = $joueurModel->getRandom($id_joueur);
 
+            if(!$contribAleatoire)
+            {
+                $contribAleatoire = $joueurModel->setRandom($id_joueur);
+            }
+        }
 
-
-
+        
+        if($joueurModel->getLatest($id_joueur))
+        {
+            $latest = $joueurModel->getLatest($id_joueur);
+            var_dump($latest);
+        }
+        
         $data= [
-            "status" => $status,
+            "title" => $title,
+            "latest" => $latest,
+            "user" => $user['nom_plume'],
         ];
         $this->display('joueur/joueur.html.twig',$data);
     }

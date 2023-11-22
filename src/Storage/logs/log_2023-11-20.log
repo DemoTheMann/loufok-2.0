@@ -1,18 +1,9 @@
-[2023-11-20 8:47:18]	[ALERT]	404 - commande non existante :: /loufok/admintitre=scq
-[2023-11-20 8:47:18]	[ALERT]	404 - commande non existante :: /loufok/admintitre=scq
-[2023-11-20 8:47:18]	[ALERT]	404 - commande non existante :: /loufok/admintitre=scq
-[2023-11-20 8:47:26]	[ALERT]	404 - commande non existante :: /loufok/admintitre=gr
-[2023-11-20 8:47:26]	[ALERT]	404 - commande non existante :: /loufok/admintitre=gr
-[2023-11-20 8:49:43]	[ALERT]	404 - commande non existante :: /loufok/admintitre=R
-[2023-11-20 8:49:44]	[ALERT]	404 - commande non existante :: /loufok/admintitre=RE
-[2023-11-20 8:49:45]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REG
-[2023-11-20 8:49:46]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGAR
-[2023-11-20 8:49:46]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGAR
-[2023-11-20 8:49:47]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGARDE
-[2023-11-20 8:49:47]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGARDE
-[2023-11-20 8:49:48]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGARDE
-[2023-11-20 8:49:49]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REGARDE
-[2023-11-20 8:50:16]	[ALERT]	404 - commande non existante :: /loufok/admintitre=RES
-[2023-11-20 8:50:16]	[ALERT]	404 - commande non existante :: /loufok/admintitre=RES
-[2023-11-20 8:50:16]	[ALERT]	404 - commande non existante :: /loufok/admintitre=RES
-[2023-11-20 8:50:18]	[ALERT]	404 - commande non existante :: /loufok/admintitre=REST
+[2023-11-20 17:55:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'

@@ -170,7 +170,7 @@ class Base
             $sql .= " {$k} = :{$k} ,";
         }
         $sql = substr($sql, 0, strlen($sql) - 1);
-        $sql .= ' WHERE id =:id';
+        $sql .= ' WHERE id_' . $this->tableName . ' =:id';
 
         foreach (array_keys($datas) as $k) {
             $attributes[':' . $k] = $datas[$k];
