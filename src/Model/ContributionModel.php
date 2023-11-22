@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Model;
+
+use App\Helper\HTTP;
+
 use App\Entity\Cadavre;
 use App\Entity\Contribution;
 use App\Entity\ContributionAleatoire;
-use DateTime;
+
 use App\Model\CadavreModel;
+
+use DateTime;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -40,6 +45,7 @@ class ContributionModel extends Model
                 return $c;
             }
         }
+        return [];
     }
 
     public static function countContrib(int $id_cadavre)
@@ -47,5 +53,33 @@ class ContributionModel extends Model
         $activeCadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id_cadavre])[0];
         $cadavreCountContrib = count(Contribution::getInstance()->findBy(['id_cadavre' => $activeCadavre['id_cadavre']]));
         return $cadavreCountContrib;
+    }
+
+    public static function newContrib($user_id, $cadavre, $ordre){
+        
+        $textContrib = $_POST['contribution'];
+        $id_cadavre = $cadavre['id_cadavre'];
+        $now = date('Y-m-d');
+        Contribution::getInstance()->create(
+            [
+                'texte_contribution' => $textContrib,
+                'date_soumission' => $now,
+                'ordre_soumission' => $ordre,
+                'id_joueur' => $user_id,
+                'id_administrateur' => null,
+                'id_cadavre' => $id_cadavre
+            ]);
+        if($ordre+1 >= $cadavre['nb_contributions']){
+            Cadavre::getInstance()->update($id_cadavre,['date_fin_cadavre'=>$now]);
+            HTTP::redirect('/loufok');
+        }
+    }
+
+    public static function getUserContrib(int $user_id)
+    {
+        $activeCadavre = CadavreModel::getInstance()->getActiveCadavre();
+        $id_cadavre = $activeCadavre['id_cadavre'];
+        $userContrib = Contribution::getInstance()->findBy(['id_joueur'=>$user_id,'id_cadavre'=>$id_cadavre]);
+        return $userContrib;
     }
 }
