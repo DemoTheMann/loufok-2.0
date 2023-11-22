@@ -19,12 +19,6 @@ class LoginController extends Controller
 
         $loginModel->authAdmin($_POST['login'], $_POST['password']);
         $loginModel->authJoueur($_POST['login'], $_POST['password']);
-
-        // if(!$admin && !$joueur)
-        // {
-        //   $this->display('login.html.twig');
-        // }
-
       }
       
       if(isset($_SESSION['auth']))

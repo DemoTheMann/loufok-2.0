@@ -19,14 +19,18 @@ class AdminController extends Controller
         }else{
 
             if(!isset($_SESSION['auth']))
-            {
+           {
                 HTTP::redirect('/loufok/login');
             }
-        $error = 0; 
+        
+        $periodes = CadavreModel::getInstance()->periodes();
+        $titres = CadavreModel::getInstance()->titres();
         $this->display('admin/admin.html.twig', 
             [
                 'user' => $_SESSION['user'],
-                'error' => $error
+                'error' => 0,
+                'periodes' => json_encode($periodes),
+                'titres' => json_encode($titres)
             ]);
         }
     }
@@ -47,40 +51,82 @@ class AdminController extends Controller
 
              /**
               * la logique de traitement : 
-                vérifier la vadilité : s'il y a des erreurs, alors elles sont renvoyés, sinon rien
+                vérifier la vadilité : s'il y a des erreurs, alors elles sont renvoyés, sinon rien.
                 si rien n'est renvoyé, formulaire valide : 
                     vérification titre identiques puis périodes
               */
             $cadavre = CadavreModel::getInstance();
             
+            //variables pour les vérifications en front
+            $periodes = CadavreModel::getInstance()->periodes();
+            $titres = CadavreModel::getInstance()->titres();            
+
             //validationForm renvoie errors[] si problèmes de validation, sinon rien 
             $formulaire_errors = $cadavre->validationform();
-            if ($formulaire_errors) {
-                $this->display('admin/admin.html.twig', ['user' => $_SESSION['user'], 'errors' => $formulaire_errors, 'errors_message' => 0]);
+            if ($formulaire_errors = null) {
+                $this->display('admin/admin.html.twig', 
+                [
+                    'user' => $_SESSION['user'],
+                    'global_message' => "Le cadavre exquis n'a pas été enregistré 
+                                            car des erreurs ont été rencontrées. Merci
+                                            de bien vouloir recommencer.",
+                    'errors_message' => $formulaire_errors,
+                    'periodes' => json_encode($periodes),
+                    'titres' => json_encode($titres)
+                ]);
             }else{
-
                 //vérification qu'il n'y ai pas de doublons de titres dans la BDD
                 $verif_titre = $cadavre->titreUnique();
+                
                 if($verif_titre){
-                    $this->display('admin/admin.html.twig', ['user' => $_SESSION['user'], 'errors' => 0, 'errors_message' => $verif_titre]);
+                    $this->display('admin/admin.html.twig', 
+                    [
+                    'user' => $_SESSION['user'],
+                    'global_message' => "Le cadavre exquis n'a pas été enregistré car
+                                            un cadavre exquis a déjà ce titre.",
+                    'errors_message' => $verif_titre,
+                    'periodes' => json_encode($periodes),
+                    'titres' => json_encode($titres)
+                    ]);
                 }else{
-
                     //verificationPeriode renvoie un message d'erreur s'il y a chevauchement de période 
                     $verif_periode = $cadavre->verificationPeriode();
                     if ($verif_periode) {
-                        $this->display('admin/admin.html.twig', ['user' => $_SESSION['user'], 'errors' => 0, 'errors_message' => $verif_periode]);
+                        $this->display('admin/admin.html.twig',
+                        [
+                            'user' => $_SESSION['user'],
+                            'global_message' => "Le cadavre exquis n'a pas été enregistré car
+                                                    il chevauche une période déjà enregistrée.",
+                            'errors_message' => $verif_periode,
+                            'periodes' => json_encode($periodes),
+                            'titres' => json_encode($titres)
+                        ]);
                     }else{
-
                         //toutes les conditions ont été vérifiées; le nouveau cadavre exquis peut être enregistré
-                        $cadavre->nouveauCadavre($_SESSION['user']);
-                        $cadavre->nouvelleContribution($_SESSION['user'], $cadavre);
-                    }
+                        $creationCadavre = $cadavre->nouveauCadavre($_SESSION['user']);
+                        $cadavre->nouvelleContribution($_SESSION['user'], $creationCadavre[0]);
+                        $this->display('admin/admin.html.twig',
+                        [
+                            'user' => $_SESSION['user'],
+                            'global_message' => "Le cadavre exquis a bien été créé !",
+                            'errors_message' => 0,
+                            'periodes' => json_encode($periodes),
+                            'titres' => json_encode($titres)
+                        ]);
+                    }    
                 }
             }
         }else{
 
             //méthode GET, aucune donnée à traiter
-            $this->display('admin/admin.html.twig', ['user' => $_SESSION['user']]);
+            $this->display('admin/admin.html.twig', 
+            [
+                'user' => $_SESSION['user'],
+                'errors' => 0,
+                'errors_message' => 0,
+                'periodes' => json_encode($periodes),
+                'titres' => json_encode($titres)
+            ]);
         }
     }
 
