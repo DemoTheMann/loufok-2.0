@@ -36,3 +36,13 @@
     exception-line: 22
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
     exception-code: 'Undefined array key "user_id"'
+
+[2023-11-23 10:04:19]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 108
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'The block 'js' has already been defined line 64.'

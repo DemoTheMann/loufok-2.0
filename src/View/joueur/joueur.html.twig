@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Joueur Loufok{% endblock %}
 {% block css %}  
-  <link rel="stylesheet" href="../assets/css/admin.css" >
+  <link rel="stylesheet" href="../assets/css/style.css" >
 {% endblock %}
 {% block content %}
  <!-- menu -->
@@ -46,11 +46,9 @@
       <li><a href="/loufok/contribution"> participer au Cadavre Exquis en cours</a></li>
     {% endif %}
     {% if latest %}
-      <li><a href="/loufok"> Consulter mes Cadavres Exquis précédents</a></li>
+      <li><a href="/loufok/lastCadavre"> Consulter mes Cadavres Exquis précédents</a></li>
     {% endif %}
   </main>
 
-{% endblock %}
-
-{% block js %}
+</body>
 {% endblock %}
