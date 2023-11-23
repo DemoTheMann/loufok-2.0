@@ -8,8 +8,18 @@ use DateTime;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class CadavreModel extends Model
+class CadavreModel
 {
+    protected static $instance;
+
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new (get_called_class())();
+        }
+
+        return self::$instance;
+    }
 
     /**
      * Renvoie les périodes de tous les cadavres exquis
@@ -86,7 +96,7 @@ class CadavreModel extends Model
             if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
             
                 //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
-                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user']['id_'.$_SESSION['role']], 'id_cadavre'=> $c['id_cadavre']]);
+                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user_id'], 'id_cadavre'=> $c['id_cadavre']]);
                 $max_contribution = 0;
                 foreach ($contributions as $contribution) {
                     $max_contribution = $max_contribution + 1; 
@@ -101,6 +111,8 @@ class CadavreModel extends Model
                 }
             }
         }
+
+        return null;
     }
 
     /**
@@ -149,21 +161,6 @@ class CadavreModel extends Model
         }
     }
 
-    public static function getActiveCadavre(): ?array
-    {
-        $now = time();
-        $cadavres = Cadavre::getInstance()->findAll();
-        foreach($cadavres as $cadavre => $c)
-        {
-            $date_debut = strtotime($c['date_debut_cadavre']);
-            $date_fin = strtotime($c['date_fin_cadavre']);
-            
-            if($date_debut < $now && $date_fin > $now)
-            {
-                return $c;
-            }
-        }
-    }
     /**
     * Ne renvoie rien si aucune période ne se chevauche, renvoie un string de l'erreur si chevauchement
     */

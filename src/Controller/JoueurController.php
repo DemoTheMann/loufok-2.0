@@ -4,8 +4,11 @@ declare (strict_types = 1); // strict mode
 
 namespace App\Controller;
 
-use App\Helper\HTTP;
 use App\Model\JoueurModel;
+use App\Model\CadavreModel;
+use App\Model\ContributionModel;
+
+use App\Helper\HTTP;
 use DateTime;
 
 class JoueurController extends Controller
@@ -19,34 +22,40 @@ class JoueurController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $id_joueur = $_SESSION['user_id'];
+        if($_SESSION['role'] !== 'joueur')
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        $userId = $_SESSION['user_id'];
 
         $joueurModel = JoueurModel::getInstance();
-        // $cadavreModel = CadavreModel::getInstance();
+        $contribModel = ContributionModel::getInstance();
+        $cadavreModel = CadavreModel::getInstance();
 
         $title = false;
         $latest = false;
         $user = "";
         
-        $current_cadavre = $joueurModel->getActiveCadavre();
-        $user = $joueurModel->getUser($id_joueur)[0];
+        $current_cadavre = $cadavreModel->cadavreEnCours();
+        $user = $joueurModel->getUser($userId)[0];
 
         if($current_cadavre)
         {
             $title = $current_cadavre['titre_cadavre'];
 
-            $contribAleatoire = $joueurModel->getRandom($id_joueur);
+            $contribAleatoire = $contribModel->getRandom($userId);
 
             if(!$contribAleatoire)
             {
-                $contribAleatoire = $joueurModel->setRandom($id_joueur);
+                $contribAleatoire = $contribModel->setRandom($userId);
             }
         }
 
         
-        if($joueurModel->getLatest($id_joueur))
+        if($joueurModel->getLatest($userId))
         {
-            $latest = $joueurModel->getLatest($id_joueur);
+            $latest = $joueurModel->getLatest($userId);
         }
         
         $data= [
@@ -68,14 +77,19 @@ class JoueurController extends Controller
             HTTP::redirect('/loufok/login');
         }
 
-        $id_joueur = $_SESSION['user_id'];
+        if($_SESSION['role'] !== 'joueur')
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        $userId = $_SESSION['user_id'];
         $joueurModel = JoueurModel::getInstance();
-        $user = $joueurModel->getUser($id_joueur)[0];
+        $user = $joueurModel->getUser($userId)[0];
 
         $title = "";
         $contribs = "";
 
-        $latest = $joueurModel->getLatest($id_joueur);
+        $latest = $joueurModel->getLatest($userId);
 
         if(!$latest)
         {
