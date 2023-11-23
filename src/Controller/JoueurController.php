@@ -38,7 +38,7 @@ class JoueurController extends Controller
         $user = "";
         
         $current_cadavre = $cadavreModel->cadavreEnCours();
-        $user = $joueurModel->getUser($userId)[0];
+        $username = $joueurModel->getUserName($userId);
 
         if($current_cadavre)
         {
@@ -52,6 +52,8 @@ class JoueurController extends Controller
             }
         }
 
+        var_dump($contribAleatoire);
+
         
         if($joueurModel->getLatest($userId))
         {
@@ -61,7 +63,7 @@ class JoueurController extends Controller
         $data= [
             "title" => $title,
             "latest" => $latest,
-            "user" => $user['nom_plume'],
+            "username" => $username,
         ];
         $this->display('joueur/joueur.html.twig',$data);
     }
@@ -84,12 +86,15 @@ class JoueurController extends Controller
 
         $userId = $_SESSION['user_id'];
         $joueurModel = JoueurModel::getInstance();
-        $user = $joueurModel->getUser($userId)[0];
+        $contribModel = ContributionModel::getInstance();
+        $username = $joueurModel->getUserName($userId)[0];
 
         $title = "";
         $contribs = "";
 
         $latest = $joueurModel->getLatest($userId);
+
+        // var_dump($latest);
 
         if(!$latest)
         {
@@ -97,12 +102,12 @@ class JoueurController extends Controller
         }
 
         $title = $latest['titre_cadavre'];
-        $contribs = $joueurModel->getContribs($latest['id_cadavre']);
+        $contribs = $contribModel->getContribs($latest['id_cadavre']);
 
         $data= [
             "title" => $title,
             "contribs" => $contribs,
-            "user" => $user['nom_plume'],
+            "username" => $username,
         ];
         $this->display('joueur/lastCadavre.html.twig',$data);
     }

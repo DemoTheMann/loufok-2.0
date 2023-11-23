@@ -5,8 +5,9 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Entity\Contribution;
+use App\Model\AdminModel;
 use App\Model\CadavreModel;
+use App\Model\ContributionModel;
 
 class AdminController extends Controller
 {
@@ -29,17 +30,18 @@ class AdminController extends Controller
         }else{
 
             $userId = $_SESSION['user_id'];
+            $username = AdminModel::getInstance()->GetAdminName($userId);
         
-        $periodes = CadavreModel::getInstance()->periodes();
-        $titres = CadavreModel::getInstance()->titres();
+            $periodes = CadavreModel::getInstance()->periodes();
+            $titres = CadavreModel::getInstance()->titres();
 
-        $this->display('admin/admin.html.twig', 
-            [
-                'user' => $_SESSION['user'],
-                'error' => 0,
-                'periodes' => json_encode($periodes),
-                'titres' => json_encode($titres)
-            ]);
+            $this->display('admin/admin.html.twig', 
+                [
+                    'username' => $username,
+                    'error' => 0,
+                    'periodes' => json_encode($periodes),
+                    'titres' => json_encode($titres)
+                ]);
         }
     }
 
@@ -56,6 +58,9 @@ class AdminController extends Controller
         {
             HTTP::redirect('/loufok/login');
         }
+
+        $userId = $_SESSION['user_id'];
+        $username = AdminModel::getInstance()->GetAdminName($userId);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
@@ -92,7 +97,7 @@ class AdminController extends Controller
             if ($formulaire_errors = null) {
                 $this->display('admin/admin.html.twig', 
                 [
-                    'user' => $_SESSION['user'],
+                    'username' => $username,
                     'global_message' => "Le cadavre exquis n'a pas été enregistré 
                                             car des erreurs ont été rencontrées. Merci
                                             de bien vouloir recommencer.",
@@ -107,7 +112,7 @@ class AdminController extends Controller
                 if($verif_titre){
                     $this->display('admin/admin.html.twig', 
                     [
-                    'user' => $_SESSION['user'],
+                    'username' => $username,
                     'global_message' => "Le cadavre exquis n'a pas été enregistré car
                                             un cadavre exquis a déjà ce titre.",
                     'errors_message' => $verif_titre,
@@ -120,7 +125,7 @@ class AdminController extends Controller
                     if ($verif_periode) {
                         $this->display('admin/admin.html.twig',
                         [
-                            'user' => $_SESSION['user'],
+                            'username' => $username,
                             'global_message' => "Le cadavre exquis n'a pas été enregistré car
                                                     il chevauche une période déjà enregistrée.",
                             'errors_message' => $verif_periode,
@@ -129,11 +134,11 @@ class AdminController extends Controller
                         ]);
                     }else{
                         //toutes les conditions ont été vérifiées; le nouveau cadavre exquis peut être enregistré
-                        $creationCadavre = $cadavre->nouveauCadavre($_SESSION['user']);
-                        $cadavre->nouvelleContribution($_SESSION['user'], $creationCadavre[0], $formData['contribution']);
+                        $creationCadavre = $cadavre->nouveauCadavre($userId, $formData);
+                        $cadavre->nouvelleContribution($userId, $creationCadavre[0], $formData['contribution']);
                         $this->display('admin/admin.html.twig',
                         [
-                            'user' => $_SESSION['user'],
+                            'username' => $username,
                             'global_message' => "Le cadavre exquis a bien été créé !",
                             'errors_message' => 0,
                             'periodes' => json_encode($periodes),
@@ -147,7 +152,7 @@ class AdminController extends Controller
             //méthode GET, aucune donnée à traiter
             $this->display('admin/admin.html.twig', 
             [
-                'user' => $_SESSION['user'],
+                'username' => $username,
                 'errors' => 0,
                 'errors_message' => 0,
                 'periodes' => json_encode($periodes),
@@ -160,6 +165,9 @@ class AdminController extends Controller
     public function affichageCadavre()
     {
         session_start();
+
+        $userId = $_SESSION['user_id'];
+        $username = AdminModel::getInstance()->GetAdminName($userId);
 
         if(!isset($_SESSION['auth']))
         {
@@ -177,15 +185,15 @@ class AdminController extends Controller
         if(!$cadavre){
             //*dateProchainCadavre* renvoie la phrase avec la prochaine date, ou rien si aucun cadavre prévu dans l'année qui suit
             $prochaine_date = CadavreModel::getInstance()->dateProchainCadavre(); 
-            $this->display('admin/affichage_cadavre.html.twig', ['user' => $_SESSION['user'], 'prochaine_date' => $prochaine_date]);
+            $this->display('admin/affichage_cadavre.html.twig', ['username' => $username, 'prochaine_date' => $prochaine_date]);
         }else{
             /**
              * La méthode *contributions* renvoie un array composé de 2 arrays:
              *   contributions : texte de la contribution
              *   joueurs : pseudo du joueur
              */
-            $contributions = CadavreModel::getInstance()->contributions($cadavre["id_cadavre"]);
-            $this->display('admin/affichage_cadavre.html.twig', ['user' => $_SESSION['user'], 'cadavre' => $cadavre, 'contributions' => $contributions]);
+            $contributions = ContributionModel::getInstance()->getContribs($cadavre["id_cadavre"]);
+            $this->display('admin/affichage_cadavre.html.twig', ['username' => $username, 'cadavre' => $cadavre, 'contributions' => $contributions]);
         }
         
     }
