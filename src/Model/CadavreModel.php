@@ -70,7 +70,8 @@ class CadavreModel
             if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
             
                 //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
-                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user_id'], 'id_cadavre'=> $c['id_cadavre']]);
+                $contributions = Contribution::getInstance()->findBy(['id_cadavre'=> $c['id_cadavre']]);
+                
                 $max_contribution = 0;
                 foreach ($contributions as $contribution) {
                     $max_contribution = $max_contribution + 1; 
@@ -100,6 +101,7 @@ class CadavreModel
                 //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
                 $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user_id'], 'id_cadavre'=> $cadavre['id_cadavre']]);
                 $max_contribution = 0;
+
                 foreach ($contributions as $contribution) {
                     $max_contribution = $max_contribution + 1; 
                 }

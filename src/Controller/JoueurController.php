@@ -51,15 +51,13 @@ class JoueurController extends Controller
                 $contribAleatoire = $contribModel->setRandom($userId);
             }
         }
-
-        var_dump($contribAleatoire);
-
-        
-        if($joueurModel->getLatest($userId))
+        /* if()
         {
             $latest = $joueurModel->getLatest($userId);
         }
-        
+         */
+        $latest = $joueurModel->getLatest($userId);
+
         $data= [
             "title" => $title,
             "latest" => $latest,
@@ -91,10 +89,7 @@ class JoueurController extends Controller
 
         $title = "";
         $contribs = "";
-
         $latest = $joueurModel->getLatest($userId);
-
-        // var_dump($latest);
 
         if(!$latest)
         {

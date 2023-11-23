@@ -32,9 +32,7 @@ class JoueurModel
         if($latestContrib)
         {
             $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($latestContrib['id_cadavre']);
-            
-            if($isCadavreOn)
-            {
+            if(!$isCadavreOn){
                 return null;
             }
 

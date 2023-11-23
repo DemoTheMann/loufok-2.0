@@ -25,7 +25,6 @@ class ContributionModel
         if (!isset(self::$instance)) {
             self::$instance = new (get_called_class())();
         }
-
         return self::$instance;
     }
 
@@ -40,10 +39,8 @@ class ContributionModel
                 'id_joueur' => $id_joueur,
                 'id_cadavre' => $activeCadavre['id_cadavre'],
             ]);
-            // var_dump($contribAleatoire);
-        if($contribAleatoire){
-            $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire['num_contribution']])[0];
-            var_dump($contribAleatoire);
+            if($contribAleatoire){
+                $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire[0]['num_contribution']])[0];
         }
         return $random;
     }
@@ -73,7 +70,6 @@ class ContributionModel
     }
 
     public static function newContrib($user_id, $cadavre, $text, $ordre){
-        
         $textContrib = $text;
         $id_cadavre = $cadavre['id_cadavre'];
         $now = date('Y-m-d');
@@ -86,8 +82,8 @@ class ContributionModel
                 'id_administrateur' => null,
                 'id_cadavre' => $id_cadavre
             ]);
-        if($ordre+1 >= $cadavre['nb_contributions']){
-            Cadavre::getInstance()->update($id_cadavre,['date_fin_cadavre'=>$now]);
+        if($ordre + 1 >= $cadavre['nb_contributions']){
+            $cadavre = Cadavre::getInstance()->update($id_cadavre,['date_fin_cadavre'=>$now]);
         }
     }
 

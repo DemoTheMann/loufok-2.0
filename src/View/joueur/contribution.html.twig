@@ -35,7 +35,15 @@
     {% if title %}
     <div>
         <h1>{{ title }}</h1>
-        <p>{{ randContrib }}</p>
+
+        {% for contribution in contributions %}
+          {% if contribution is same as(randContrib) %}
+            <p>{{ randContrib }}</p>
+          {% else %}
+            <img src="../assets/images/texte.svg" >
+          {% endif %}
+        {% endfor %}
+        
     </div>
 
         {% if canAddContrib %}
@@ -65,16 +73,14 @@
         {% endblock js %}
 
         {% elseif userContribText %}
-
-        <div>
-            <h2>{{ msg }}</h2>
-            <p>{{ userContribText }}</p>
-        </div>
-
+          <div>
+              <p>{{ msg }}</p>
+              <p>{{ userContribText }}</p>
+          </div>
         {% else %}
 
         <div>
-            <h2>{{ msg }}</h2>
+            <p>{{ msg }}</p>
         </div>
 
         {% endif %}
@@ -82,8 +88,8 @@
     {% else %}
 
     <div>
-        <h2>Nous sommes désolés, mais il n'y a pas de Cadavre Exquis en construction aujourd'hui.</h2>
-        <h2>{{ error }}</h2>
+        <p>Nous sommes désolés, mais il n'y a pas de Cadavre Exquis en construction aujourd'hui.</p>
+        <p>{{ error }}</p>
     </div>
 
     {% endif %}
