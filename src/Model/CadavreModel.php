@@ -57,32 +57,6 @@ class CadavreModel
     }
 
     /**
-     * Renvoie un array d'arrays avec deux données:
-     *   contributions : texte de la contribution
-     *   joueurs : pseudo du joueur
-     */
-    public static function contributions($id_cadavre): array
-    {
-        $contributions = Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
-        $datas = [];
-        $i = 0;
-        foreach ($contributions as $c) {
-            $i = $i+1;
-            if ($c['id_joueur']) {
-                $joueur = Joueur::getInstance()->findBy(['id_joueur' => $c['id_joueur']]);
-                $joueur = $joueur[0]['nom_plume'];
-            }else{
-                $joueur = "";
-            }
-            $datas[$i] = [
-                'contributions' => $c['texte_contribution'],
-                'joueurs' => $joueur
-            ];
-        }
-        return $datas;
-    }
-
-    /**
      * Renvoie le cadavre exquis en cours ou rien
      */
     public static function cadavreEnCours()
@@ -110,6 +84,33 @@ class CadavreModel
                     return $c;
                 }
             }
+        }
+
+        return null;
+    }
+
+    public static function isCadavreOn(int $id_cadavre)
+    {
+        $ajd = date('Y-m-d');
+        $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id_cadavre])[0];
+
+            //si un cadavre exquis est en cours aujourd'hui
+            if($cadavre['date_debut_cadavre']<= $ajd && $cadavre['date_fin_cadavre']>=$ajd){
+            
+                //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
+                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user_id'], 'id_cadavre'=> $cadavre['id_cadavre']]);
+                $max_contribution = 0;
+                foreach ($contributions as $contribution) {
+                    $max_contribution = $max_contribution + 1; 
+                }
+
+                //si le max de contributions a été atteint : renvoie null
+                if ($max_contribution >=$cadavre['nb_contributions']) {
+                    return null;
+                }else{
+                    //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
+                    return $cadavre;
+                }
         }
 
         return null;
@@ -190,7 +191,7 @@ class CadavreModel
     /**
      * Ajout d'une nouvelle contribution
      */
-    public static function nouvelleContribution($user, $cadavre, $contribution){
+    public static function nouvelleContribution($userId, $cadavre, $contribution){
         
         $texte_contribution = $contribution;
         $ajd = date('Y-m-d');
@@ -199,7 +200,7 @@ class CadavreModel
                 'texte_contribution' => $texte_contribution,
                 'date_soumission' => $ajd,
                 'ordre_soumission' => 1,
-                'id_administrateur' => $user['id_administrateur'],
+                'id_administrateur' => $userId,
                 'id_cadavre' => $cadavre["id_cadavre"]
             ]);
     }    
@@ -207,9 +208,9 @@ class CadavreModel
     /**
      * Ajout d'un nouveau cadavre exquis
      */
-    public static function nouveauCadavre($user, $formData){
+    public static function nouveauCadavre($userId, $formData){
         $titre_cadavre = trim(ucfirst(strtolower($formData['titre'])));
-        $nb_contributions = $formData['nb_contributions'];
+        $nb_contributions = $formData['nb_contributions_max'];
         $date_debut = $formData['debut_cadavre'];
         $date_fin = $formData['fin_cadavre'];
         Cadavre::getInstance()->create( 
@@ -220,12 +221,11 @@ class CadavreModel
                 'date_fin_cadavre' => $date_fin,
                 'nb_contributions' => $nb_contributions,
                 'nb_jaime' => 0,
-                'id_administrateur' => $user['id_administrateur']
+                'id_administrateur' => $userId
             ]);
         //la je dois récup celui la et le return pour pouvoir le prendre dans nouvelleContribution
         return Cadavre::getInstance()->findBy(['titre_cadavre'=>$titre_cadavre]);
     }
-    
     /**
      * Vérification des inputs du formulaire : 
      *      tous les champs doivent être remplis,

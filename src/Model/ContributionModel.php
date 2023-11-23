@@ -7,6 +7,7 @@ use App\Helper\HTTP;
 use App\Entity\Cadavre;
 use App\Entity\Contribution;
 use App\Entity\ContributionAleatoire;
+use App\Entity\Joueur;
 
 use App\Model\CadavreModel;
 
@@ -33,13 +34,16 @@ class ContributionModel
         $random = null;
         $activeCadavre = CadavreModel::getInstance()->cadavreEnCours();
         $contribAleaModel = ContributionAleatoire::getInstance();
+        // var_dump($activeCadavre);
         $contribAleatoire = $contribAleaModel->findBy(
             [
                 'id_joueur' => $id_joueur,
                 'id_cadavre' => $activeCadavre['id_cadavre'],
-            ])[0];
+            ]);
+            // var_dump($contribAleatoire);
         if($contribAleatoire){
             $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire['num_contribution']])[0];
+            var_dump($contribAleatoire);
         }
         return $random;
     }
@@ -47,6 +51,7 @@ class ContributionModel
     public static function setRandom(int $id_joueur)
     {
         $activeCadavre = CadavreModel::getInstance()->cadavreEnCours();
+        //var_dump($activeCadavre);
         $cadavreCountContrib = count(Contribution::getInstance()->findBy(['id_cadavre' => $activeCadavre['id_cadavre']]));
         $random = random_int(1, $cadavreCountContrib);
         $randomContrib = Contribution::getInstance()->findBy(['ordre_soumission' => $random])[0];
@@ -56,7 +61,7 @@ class ContributionModel
                 'id_cadavre' => $randomContrib['id_cadavre'],
                 'num_contribution' => $randomContrib['id_contribution']
             ]); 
-
+            // var_dump($randomContrib);
         return $contribAleatoire;
     }
 
@@ -92,5 +97,31 @@ class ContributionModel
         $id_cadavre = $activeCadavre['id_cadavre'];
         $userContrib = Contribution::getInstance()->findBy(['id_joueur'=>$user_id,'id_cadavre'=>$id_cadavre]);
         return $userContrib;
+    }
+
+    /**
+     * Renvoie un array d'arrays avec deux données:
+     *   contributions : texte de la contribution
+     *   joueurs : pseudo du joueur
+     */
+    public static function getContribs($id_cadavre): array
+    {
+        $contribs = Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
+        $datas = [];
+        $i = 0;
+        foreach ($contribs as $contrib) {
+            $i = $i+1;
+            if ($contrib['id_joueur']) {
+                $joueur = Joueur::getInstance()->findBy(['id_joueur' => $contrib['id_joueur']]);
+                $joueur = $joueur[0]['nom_plume'];
+            }else{
+                $joueur = "";
+            }
+            $datas[$i] = [
+                'contributions' => $contrib['texte_contribution'],
+                'joueurs' => $joueur
+            ];
+        }
+        return $datas;
     }
 }

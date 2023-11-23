@@ -69,6 +69,7 @@ class ContributionController extends Controller
             $activeCadavre = $cadavreModel->cadavreEnCours();
 
             $random = $contribModel->getRandom($_SESSION['user_id']);
+            var_dump($random);
             $randContrib = $random['texte_contribution'];
 
             $title = $activeCadavre['titre_cadavre'];
