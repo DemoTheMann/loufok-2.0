@@ -1063,40 +1063,4 @@
     )
     exception-line: 72
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
-    exception-code: 'Undefined array key "texte_contribution"'
-[2023-11-23 15:26:45]	[ALERT]	404 - erreur dans le processus de traitement du routage
-    routeInfo: array(
-        0 => 1,
-        1 => 'admin@admin',
-        2 => array(),
-    )
-    exception-line: 38
-    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
-    exception-code: 'Undefined array key "user"'
-[2023-11-23 17:32:02]	[ALERT]	404 - erreur dans le processus de traitement du routage
-    routeInfo: array(
-        0 => 1,
-        1 => 'admin@admin',
-        2 => array(),
-    )
-    exception-line: 38
-    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
-    exception-code: 'Undefined array key "user"'
-[2023-11-23 17:32:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
-    routeInfo: array(
-        0 => 1,
-        1 => 'admin@admin',
-        2 => array(),
-    )
-    exception-line: 38
-    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
-    exception-code: 'Undefined array key "user"'
-[2023-11-23 17:32:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
-    routeInfo: array(
-        0 => 1,
-        1 => 'admin@admin',
-        2 => array(),
-    )
-    exception-line: 38
-    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\AdminController.php'
-    exception-code: 'Undefined array key "user"'
+    exception-code: 'Undefined array key "texte_contribution"
