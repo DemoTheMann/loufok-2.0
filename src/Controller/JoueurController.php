@@ -47,7 +47,6 @@ class JoueurController extends Controller
         if($joueurModel->getLatest($id_joueur))
         {
             $latest = $joueurModel->getLatest($id_joueur);
-            var_dump($latest);
         }
         
         $data= [
@@ -56,5 +55,41 @@ class JoueurController extends Controller
             "user" => $user['nom_plume'],
         ];
         $this->display('joueur/joueur.html.twig',$data);
+    }
+
+
+    public function last()
+    {
+
+        session_start();
+
+        if(!isset($_SESSION['auth']))
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        $id_joueur = $_SESSION['user_id'];
+        $joueurModel = JoueurModel::getInstance();
+        $user = $joueurModel->getUser($id_joueur)[0];
+
+        $title = "";
+        $contribs = "";
+
+        $latest = $joueurModel->getLatest($id_joueur);
+
+        if(!$latest)
+        {
+            HTTP::redirect('/loufok');
+        }
+
+        $title = $latest['titre_cadavre'];
+        $contribs = $joueurModel->getContribs($latest['id_cadavre']);
+
+        $data= [
+            "title" => $title,
+            "contribs" => $contribs,
+            "user" => $user['nom_plume'],
+        ];
+        $this->display('joueur/lastCadavre.html.twig',$data);
     }
 }
