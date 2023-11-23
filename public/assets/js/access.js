@@ -12,6 +12,7 @@
             _accessShadow: document.querySelector('.access__shadow'),
             _textElements: document.querySelectorAll('p, span, input, label, h1, h2, button, a, li, textarea'),
             _fontSizeComparison: document.querySelector('.navbar__title'),
+            _accessButtons: document.querySelectorAll('.footer__button'),
             _buttonAccessVal: false,
 
             //init
@@ -32,6 +33,9 @@
             toggleAccessContent: () => {
                 App._accessContainer.classList.toggle('access__display');
                 App._accessShadow.classList.toggle('access__shadow__display');
+                App._accessButtons.forEach( button =>{
+                    button.classList.toggle('footer__button__display');
+                });
             },
 
             //change la police en police dyslexique friendly
@@ -82,10 +86,8 @@
             tabNav: (e) => {
                 if ( e.key === 'Enter') {
                     App._buttonAccessVal = !App._buttonAccessVal;
-                    console.log(App._buttonAccessVal);
                     if(App._buttonAccessVal){
                         App.toggleAccessContent();
-                        console.log('App._buttonAccessVal');
                         App._accessDys.setAttribute('tabindex', '0');
                         App._accessDecrease.setAttribute('tabindex', '0');
                         App._accessIncrease.setAttribute('tabindex', '0');

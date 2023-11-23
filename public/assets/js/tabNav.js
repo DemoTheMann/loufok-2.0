@@ -24,7 +24,6 @@
                     if (e.key === 'Enter') {
                         App._menu.checked = !App._menu.checked;
 
-                        console.log("App._menu.checked:", App._menu.checked);
                         if(App._menu.checked){
                             App._allTabNav.forEach(elm => {
                                 elm.setAttribute('tabindex', '-1');
