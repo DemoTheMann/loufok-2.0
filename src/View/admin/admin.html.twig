@@ -1,7 +1,6 @@
 {% extends 'layout.html.twig' %}
-{% block css %}  
-  <link rel="stylesheet" href="../assets/css/admin.css" >
-  <link rel="stylesheet" href="../assets/css/menu.css" >
+{% block css %}
+  <link rel="stylesheet" href="/assets/css/admin.css" >
 {% endblock %}
 {% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
@@ -11,21 +10,21 @@
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input class="navbar__burger" id="burger" type="checkbox" />
-          <label for="burger" class="navbar__cross">
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
           </label>
 
-        <div class="menu">
-          <nav class="menu__hidden">
+          <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="">
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
           </nav>
+        <div class="menu">
         </div>
       </div>
   </header>
@@ -84,22 +83,24 @@
       </form>
     </div>
   </main>
-  
+
+  <footer class="footer">
+    <div class="access">
+      <div class="access__shadow">
+        <span class="access__dys">Dyslexique</span>
+        <img class="access__increase" src="/assets/images/increase.svg" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" />
+        <img class="access__decrease" src="/assets/images/decrease.svg" alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" />
+      </div>
+    </div>
+    <img class="access__icon" src="/assets/images/access_icon.png" alt="Accessibilité" aria-label="accessibilité" />
+  </footer>
+
 </body>
 {% endblock %}
 {% block js %}
 <script>
-  /* 
-  if({{global_message}} ==="Le cadavre exquis a bien été créé !"){
-    document.querySelector(".newCadavre__message").classList.add(.newCadavre__success);
-    document.querySelector(".newCadavre__message").classList.remove(.newCadavre__errors);
-  }else{
-    document.querySelector(".newCadavre__message").classList.remove(.newCadavre__success);
-    document.querySelector(".newCadavre__message").classList.add(.newCadavre__errors);
-  } */
   let titres={{titres | raw}};
   let periodes={{periodes | raw}};
 </script>
-<script src="/assets/js/nouveau_cadavre.js">
-</script>
+<script src="/assets/js/nouveauCadavre.js"></script>
 {% endblock %}

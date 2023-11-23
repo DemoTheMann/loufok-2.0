@@ -21,7 +21,7 @@ html{
 }
 .newCadavre__formItem>label{
   padding-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .input__empty{
   height: 1.7rem;
@@ -36,6 +36,7 @@ html{
   border: none;
   border-right: 0.5px solid rgba(30, 30, 30, 0.50);
   border-bottom: 0.5px solid rgba(30, 30, 30, 0.50);
+  font-size: 1.2rem;
 }
 
 .newCadavre__submit{
@@ -46,6 +47,7 @@ html{
   color: var(--rose-clair);
   padding: 0.2rem;
 }
+
 .newCadavre__submit:disabled{
   color: #fff3f2ab;
   background: #1c576963;
@@ -62,8 +64,4 @@ html{
 
 .newCadavre__errors{
   color: var(--red);
-}
-
-.affichage__contributions{
-  padding: 15px 0;
 }
