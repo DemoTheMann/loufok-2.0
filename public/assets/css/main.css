@@ -1,11 +1,20 @@
 @import url(./reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
-html {
+/* @import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+@font-face {
+  font-family: "Open Dyslexic";
+  src:
+   local("Open Dyslexic"),
+   url(../fonts/OpenDyslexic-Regular.otf);
+}
+:root {
   --main-font : 'Kurale', serif;
   --title-font : 'Qwitcher Grypen', cursive;
-  --highlight-font : 'Qwigley', cursive;
+  --highlight-font : 'Rouge script', cursive;
   --ombre: 10px 10px 30px 0px rgba(16, 16, 16, 0.15), -10px -10px 30px 0px #fff;
   --blanc: #f5f5f5;
   --rose-clair:#F7CAC9;
@@ -14,6 +23,7 @@ html {
   /* --green: #00bac5; */
   --red: #ff453a;
   --jaune: #FFF3D6;
+  /* --dys-font:; */
   background-color: var(--blanc);
   font-family: var(--main-font);
 }
@@ -27,7 +37,11 @@ input, button, a, label, textarea {
 }
 
 
-/****     navbar    ****/
+
+/********************************************/
+/****               navbar              ****/
+/********************************************/
+
 .navbar{
   width: 100%;
   height: 100%;
@@ -60,7 +74,174 @@ main {
 }
 
 .welcome__name{
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 700;
   font-family: var(--highlight-font);
+}
+
+
+/********************************************/
+/****           Affichage menu           ****/
+/********************************************/
+
+.navbar__cross{
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 900;
+}
+
+.navbar__burger{
+  visibility: hidden;
+}
+.navbar__burger + .navbar__cross {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+.navbar__burger:checked + .navbar__cross>span:first-child{
+  transform-origin: top left;
+  transform: rotate(35deg);
+}
+.navbar__burger:checked + .navbar__cross>span:last-child{
+  transform-origin: bottom left;
+  transform: rotate(-35deg);
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+
+.navbar__cross span{
+  display: block;
+  height: 1px;
+  width: 28px;
+  background-color: var(--bleu-fonce);
+}
+
+.navbar__cross1{}
+
+.navbar__cross2{}
+
+.menu{
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: #082c377a;
+  transition: opacity 0.3s ease-in;
+  z-index: 1;
+}
+
+.navbar__burger:checked ~ .menu{
+  opacity: 100%;
+  transition: opacity 0.3s ease-in;
+  width: 100vw;
+  height: 100vh;
+}
+.navbar__burger:checked ~ .menu__hidden{
+  top: 0vh;
+  transition: all 0.2s ease-in;
+}
+
+.menu__hidden{
+  z-index: 500;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 60vh;
+  width: 75vw;
+  top: -100vh;
+  background-color: var(--jaune);
+  transition: all 0.2s ease-in;
+}
+
+
+.menu__hidden__list{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image:url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+  mix-blend-mode: multiply;
+  padding: 1.5rem;
+  text-align: center;
+}
+.menu__hidden__listItem{
+  font-size: 1.3rem;
+}
+.menu__hidden__link{
+  text-decoration: none;
+  color: var(--bleu-fonce);
+}
+.menu__end{
+  transform: scale(1.3);
+}
+
+/********************************************/
+/****           Accessibilité            ****/
+/********************************************/
+
+.footer{
+  padding: 1rem;
+  display: flex;
+  justify-content:end;
+  height: 10vh;
+}
+
+.access__icon{
+  height: 2.5rem;
+  width: auto;
+  margin: 0 1.7rem 1.6rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.access{
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 2rem 1.5rem 1.5rem 2.2rem;
+  width: 15vw;
+  transition:all 0.1s 0.3s ease-in-out;
+  position: fixed;
+  background-color: #FFF3D6;
+  border: 1px solid #AEA389;
+  height: 3.5rem;
+  bottom: 0;
+  right: 0;
+}
+
+.access__shadow{
+  opacity: 0;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  gap: 1.5rem;
+}
+.access__dys{}
+.access__increase{}
+.access__decrease{}
+
+.access__display{
+  padding: 1rem 1rem 1rem 2rem;
+  transition: all 0.3s ease-in-out;
+  width: 70vw;
+}
+
+.access__shadow__display{
+  transition: opacity 0.3s 0.3s ease-in-out;
+  opacity: 100;
+}
+
+.access__disabled{
+  opacity: 0.5;
+}
+
+.dys{
+  font-family: Open Dyslexic;
 }

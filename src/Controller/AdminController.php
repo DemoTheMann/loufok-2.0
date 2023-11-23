@@ -62,7 +62,15 @@ class AdminController extends Controller
             $titres = CadavreModel::getInstance()->titres();            
 
             //validationForm renvoie errors[] si problèmes de validation, sinon rien 
-            $formulaire_errors = $cadavre->validationform();
+            // Créez un tableau associatif avec les données du formulaire
+            $formData = [
+                'titre' => $_POST['titre_cadavre'],
+                'debut_cadavre' => $_POST['debut_cadavre'],
+                'fin_cadavre' => $_POST['fin_cadavre'],
+                'nb_contributions_max' => $_POST['nb_contributions'],
+                'contribution' => $_POST['contribution'],
+            ];
+            $formulaire_errors = $cadavre->validationform($formData);
             if ($formulaire_errors = null) {
                 $this->display('admin/admin.html.twig', 
                 [
@@ -76,7 +84,7 @@ class AdminController extends Controller
                 ]);
             }else{
                 //vérification qu'il n'y ai pas de doublons de titres dans la BDD
-                $verif_titre = $cadavre->titreUnique();
+                $verif_titre = $cadavre->titreUnique($formData['titre']);
                 
                 if($verif_titre){
                     $this->display('admin/admin.html.twig', 
@@ -90,7 +98,7 @@ class AdminController extends Controller
                     ]);
                 }else{
                     //verificationPeriode renvoie un message d'erreur s'il y a chevauchement de période 
-                    $verif_periode = $cadavre->verificationPeriode();
+                    $verif_periode = $cadavre->verificationPeriode($formData['debut_cadavre'], $formData['fin_cadavre']);
                     if ($verif_periode) {
                         $this->display('admin/admin.html.twig',
                         [
@@ -104,7 +112,7 @@ class AdminController extends Controller
                     }else{
                         //toutes les conditions ont été vérifiées; le nouveau cadavre exquis peut être enregistré
                         $creationCadavre = $cadavre->nouveauCadavre($_SESSION['user']);
-                        $cadavre->nouvelleContribution($_SESSION['user'], $creationCadavre[0]);
+                        $cadavre->nouvelleContribution($_SESSION['user'], $creationCadavre[0], $formData['contribution']);
                         $this->display('admin/admin.html.twig',
                         [
                             'user' => $_SESSION['user'],
