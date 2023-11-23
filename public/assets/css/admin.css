@@ -29,7 +29,6 @@ html{
 .input__textarea{
   resize: vertical;
   height: 8rem;
-  color:red;
 }
 .input{
   padding: 5px;

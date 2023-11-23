@@ -6,11 +6,45 @@
 {% endblock %}
 {% block content %}
 <body>
+  <!-- menu -->
+  <header>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <input class="navbar__burger" id="burger" type="checkbox" />
+          <label for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+        <div class="menu">
+          <nav class="menu__hidden">
+            <ul class="menu__hidden__list">
+              {# <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok">Retour</a></li> #}
+              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
+          </nav>
+        </div>
+      </div>
+  </header>
+{# 
   <header>
     <a href="/loufok/logout"> Se déconnecter </a>
-  </header>
+  </header> #} 
   <main class="container vh-100">
     
   </main>
+
+    <footer class="footer">
+    <div class="access">
+      <div class="access__shadow">
+        <span class="access__dys">Dyslexique</span>
+        <img class="access__increase" src="../../assets/images/increase.svg" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" />
+        <img class="access__decrease" src="../../assets/images/decrease.svg" alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" />
+      </div>
+    </div>
+    <img class="access__icon" src="../../assets/images/access_icon.png" alt="Accessibilité" aria-label="accessibilité" />
+  </footer>
+
 </body>
 {% endblock %}

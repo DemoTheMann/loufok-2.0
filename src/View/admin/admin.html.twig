@@ -1,7 +1,5 @@
 {% extends 'layout.html.twig' %}
 {% block css %}  
-  <link rel="stylesheet" href="../assets/css/admin.css" >
-  <link rel="stylesheet" href="../assets/css/menu.css" >
 {% endblock %}
 {% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
@@ -24,7 +22,7 @@
               <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
               <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="">
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
           </nav>
         </div>
       </div>
@@ -84,7 +82,18 @@
       </form>
     </div>
   </main>
-  
+
+  <footer class="footer">
+    <div class="access">
+      <div class="access__shadow">
+        <span class="access__dys">Dyslexique</span>
+        <img class="access__increase" src="../assets/images/increase.svg" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" />
+        <img class="access__decrease" src="../assets/images/decrease.svg" alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" />
+      </div>
+    </div>
+    <img class="access__icon" src="../assets/images/access_icon.png" alt="Accessibilité" aria-label="accessibilité" />
+  </footer>
+
 </body>
 {% endblock %}
 {% block js %}
@@ -100,6 +109,6 @@
   let titres={{titres | raw}};
   let periodes={{periodes | raw}};
 </script>
-<script src="/assets/js/nouveau_cadavre.js">
-</script>
+<script src="/assets/js/nouveau_cadavre.js"></script>
+<script src="/assets/js/access.js"></script>
 {% endblock %}
