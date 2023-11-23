@@ -2,7 +2,7 @@
 {% block title %}Contribution Loufok{% endblock %}
 {% block css %}  
   <link rel="stylesheet" href="../assets/css/admin.css" >
-{% endblock %}
+{% endblock css %}
 {% block content %}
 <body>
 
@@ -56,10 +56,14 @@
                 required
             ></textarea>
             <span class="newContrib__info" id="newContrib__info"></span>
-            <small class="newContrib__errors error__contrib">{{ errors.contribution }}</small>
+            <small class="newContrib__errors error__contrib"></small>
             </div>
             <input id="btn_submit" type="submit" value="Valider" class="newContrib__submit">
         </form>
+
+        {% block js %}
+            <script type="text/javascript" src="../assets/js/newContrib.js" defer></script>
+        {% endblock js %}
 
         {% elseif userContribText %}
 
