@@ -133,9 +133,9 @@ class CadavreModel extends Model
     /**
      * Ne renvoie rien si aucun doublon dans les titres de cadavre exquis, renvoie un string de l'erreur si doublon
      */
-    public static function titreUnique()
+    public static function titreUnique($titre)
     {
-        $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
+        $titre_cadavre = trim(ucfirst(strtolower($titre)));
         $cadavres_existants = Cadavre::getInstance()->findAll();
         $errors = 0;
         foreach ($cadavres_existants as $cadavre => $c) {
@@ -167,9 +167,9 @@ class CadavreModel extends Model
     /**
     * Ne renvoie rien si aucune période ne se chevauche, renvoie un string de l'erreur si chevauchement
     */
-    public static function verificationPeriode(){
-        $debut_cadavre = $_POST['debut_cadavre'];
-        $fin_cadavre = $_POST['fin_cadavre'];
+    public static function verificationPeriode($debut, $fin){
+        $debut_cadavre = $debut;
+        $fin_cadavre = $fin;
         $errors = 0;
         $cadavres_existants = Cadavre::getInstance()->findAll();
         foreach ($cadavres_existants as $cadavre => $c) {
@@ -193,9 +193,9 @@ class CadavreModel extends Model
     /**
      * Ajout d'une nouvelle contribution
      */
-    public static function nouvelleContribution($user, $cadavre){
+    public static function nouvelleContribution($user, $cadavre, $contribution){
         
-        $texte_contribution = $_POST['contribution'];
+        $texte_contribution = $contribution;
         $ajd = date('Y-m-d');
         Contribution::getInstance()->create(
             [
@@ -210,11 +210,11 @@ class CadavreModel extends Model
     /**
      * Ajout d'un nouveau cadavre exquis
      */
-    public static function nouveauCadavre($user){
-        $titre_cadavre = trim(ucfirst(strtolower($_POST['titre_cadavre'])));
-        $nb_contributions = $_POST['nb_contributions'];
-        $date_debut = $_POST['debut_cadavre'];
-        $date_fin = $_POST['fin_cadavre'];
+    public static function nouveauCadavre($user, $formData){
+        $titre_cadavre = trim(ucfirst(strtolower($formData['titre'])));
+        $nb_contributions = $formData['nb_contributions'];
+        $date_debut = $formData['debut_cadavre'];
+        $date_fin = $formData['fin_cadavre'];
         Cadavre::getInstance()->create( 
             [
                 'titre_cadavre' => $titre_cadavre,
@@ -249,19 +249,9 @@ class CadavreModel extends Model
      *      ]
      *      ( min : une erreur, max : 5 erreurs )
      */
-    public static function validationForm()
+    public static function validationForm($formData)
     {
         $validator = Validation::createValidator();
-
-        // Créez un tableau associatif avec les données du formulaire
-        $formData = [
-            'titre' => $_POST['titre_cadavre'],
-            'debut_cadavre' => $_POST['debut_cadavre'],
-            'fin_cadavre' => $_POST['fin_cadavre'],
-            'nb_contributions_max' => $_POST['nb_contributions'],
-            'contribution' => $_POST['contribution'],
-        ];
-
         $ajd = date('Y-m-d', strtotime('today UTC'));
 
         // Créez un objet de contraintes de validation
