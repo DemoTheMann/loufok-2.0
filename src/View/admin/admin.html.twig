@@ -4,23 +4,21 @@
 {% endblock %}
 {% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
-<body>
-
   <!-- menu -->
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
           <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
-          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
+          <label tabindex="0" role="button" aria-label="Ouvrir le menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
           </label>
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
             </ul>
               <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
           </nav>
@@ -40,28 +38,28 @@
     <span class="newCadavre__message">{{global_message}}</span>
     {% endif %}
 
-      <form id="newCadavre__form" class="newCadavre__form" action="" method="POST">
+      <form arial-label="formulaire d'ajout de cadavre" id="newCadavre__form" class="newCadavre__form" action="" method="POST">
         
         <div class="newCadavre__formItem">
           <label for="titre_cadavre">Titre du cadavre exquis :</label>
-          <input type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
+          <input aria-label="champ de remplissage pour titre" type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
           <small class="newCadavre__errors error__titre_cadavre">{{ errors_message.titre }}</small>
         </div>
         <div class="newCadavre__formItem">
           <label for="debut_cadavre">Lancement du cadavre exquis :</label>
-          <input type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
+          <input aria-label="champ de remplissage pour date de début" type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
           <small class="newCadavre__errors error__debut_cadavre">{{ errors_message.debut_cadavre }}</small>
         </div>
 
         <div class="newCadavre__formItem">
           <label for="fin_cadavre">Fin du cadavre exquis :</label>
-          <input type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
+          <input aria-label="champ de remplissage date de fin" type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
           <small class="newCadavre__errors error__fin_cadavre">{{ errors_message.fin_cadavre }}</small>
         </div>
         
         <div class="newCadavre__formItem">
           <label for="nb_contributions">Contributions maximum :</label>
-          <input type="number" class="input__empty input" id="nb_contributions" name="nb_contributions" required >
+          <input aria-label="champ de remplissage nombre maximum de contributions" type="number" class="input__empty input" id="nb_contributions" name="nb_contributions" required >
           <small class="newCadavre__errors error__nb_contributions">{{ errors.nb_contributions_max }}</small>
         </div>
         
@@ -79,23 +77,10 @@
           <span class="newContribution__info" id="newContribution__info"></span>
           <small class="newCadavre__errors error__contribution">{{ errors.contribution }}</small>
         </div>
-        <input id="btn_submit" type="submit" value="Valider" class="newCadavre__submit">
+        <input aria-label="soumettre le formulaire" id="btn_submit" type="submit" value="Valider" class="newCadavre__submit">
       </form>
     </div>
   </main>
-
-  <footer class="footer">
-    <div class="access">
-      <div class="access__shadow">
-        <span class="access__dys">Dyslexique</span>
-        <img class="access__increase" src="/assets/images/increase.svg" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" />
-        <img class="access__decrease" src="/assets/images/decrease.svg" alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" />
-      </div>
-    </div>
-    <img class="access__icon" src="/assets/images/access_icon.png" alt="Accessibilité" aria-label="accessibilité" />
-  </footer>
-
-</body>
 {% endblock %}
 {% block js %}
 <script>

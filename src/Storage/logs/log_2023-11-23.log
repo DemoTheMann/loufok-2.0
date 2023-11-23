@@ -1,3 +1,42 @@
+[2023-11-23 11:36:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'
+[2023-11-23 11:36:37]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-23 11:36:39]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'
+[2023-11-23 11:36:44]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'
+[2023-11-23 11:36:50]	[ALERT]	404 - commande non existante :: /loufok/joueur/admin
+[2023-11-23 11:36:58]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'
+
 [2023-11-23 10:04:19]	[ALERT]	404 - erreur dans le processus de traitement du routage
     routeInfo: array(
         0 => 1,

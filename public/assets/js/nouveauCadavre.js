@@ -45,7 +45,7 @@
           function dateConvertisseur(dateString) {
             let components = dateString.split('-');
             if (components.length === 3) {
-              // Rearrange the components to the "dd-mm-yyyy" format
+              // date format "dd-mm-yyyy"
               let dd_mm_yyyy = components[2] + '/' + components[1] + '/' + components[0];
               return dd_mm_yyyy;
             } else {

@@ -4,17 +4,16 @@
   <link rel="stylesheet" href="../assets/css/login.css" >
 {% endblock %}
 {% block content %}
-<body>
   <main>
     <h1 class="title">Loufok<br>Se connecter</h1>
-    <form class="loginForm" method="POST" accept-charset="UTF-8">
+    <form aria-label="formulaire de connexion" class="loginForm" method="POST" accept-charset="UTF-8">
       <div class="loginForm__item">
         <label class="loginForm__label" for="login">Email</label>
-        <input class="loginForm__input" id="login" type="text" name="login" value="" required>
+        <input aria-label="Champ identifiant" class="loginForm__input" id="login" type="text" name="login" value="" required>
       </div>
       <div class="loginForm__item">
         <label class="loginForm__label" for="password">Mot de passe</label>
-        <input class="loginForm__input" id="password" type="password" name="password" value="" required>
+        <input aria-label="Champ identifiant" class="loginForm__input" id="password" type="password" name="password" value="" required>
       </div>
     
       {% if errors is not empty %}
@@ -25,8 +24,7 @@
         </ul>
       {% endif %}
     
-      <input class="loginForm__submit" type="submit" value="Se connecter">
+      <input aria-label="soumettre le formulaire" role="button" class="loginForm__submit" type="submit" value="Se connecter">
     </form>
   </main>
-</body>
 {% endblock %}
