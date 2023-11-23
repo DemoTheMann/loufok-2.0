@@ -24,6 +24,7 @@
   --red: #ff453a;
   --jaune: #FFF3D6;
   /* --dys-font:; */
+  
   background-color: var(--blanc);
   font-family: var(--main-font);
 }
@@ -31,6 +32,7 @@ html{
   font-family: var(--main-font);
   font-size: 1rem;
   color: var(--bleu-fonce);
+  max-width: 800px;
 }
 input, button, a, label, textarea {
   font-family: inherit;
@@ -207,7 +209,7 @@ label:hover {
   border-radius: 2rem;
   margin: 1rem;
   padding: 2rem 1.5rem 1.5rem 2.2rem;
-  width: 15vw;
+  width: 0;
   transition:all 0.1s 0.3s ease-in-out;
   position: fixed;
   background-color: #FFF3D6;
@@ -220,17 +222,30 @@ label:hover {
 .access__shadow{
   opacity: 0;
   display: flex;
+  align-content: center;
   transition: all 0.3s ease-in-out;
   gap: 1.5rem;
+  height: 1rem;
 }
-.access__dys{}
-.access__increase{}
-.access__decrease{}
+.access__dys{
+  width: 4.5rem;
+}
+.access__increase>img, .access__decrease>img{
+  padding-top: 0.2rem;
+  height: 1.1rem;
+}
 
 .access__display{
-  padding: 1rem 1rem 1rem 2rem;
+  padding: 1rem 1rem 0.5rem 2rem;
   transition: all 0.3s ease-in-out;
   width: 70vw;
+}
+
+.footer__button{
+  border: none;
+  background:none;
+  display: flex;
+  align-content: center;
 }
 
 .access__shadow__display{

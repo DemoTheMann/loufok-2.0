@@ -75,4 +75,8 @@ class JoueurModel extends Model
         return [];
     }
 
+    public static function test(){
+        return "tout marche";
+    }
+
 }

@@ -47,7 +47,6 @@ class JoueurController extends Controller
         if($joueurModel->getLatest($id_joueur))
         {
             $latest = $joueurModel->getLatest($id_joueur);
-            var_dump($latest);
         }
         
         $data= [

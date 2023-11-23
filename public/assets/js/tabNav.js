@@ -15,33 +15,52 @@
 
             //gestionnaire d'ev
             app_handlers: function () {
-                App._burger.addEventListener("keydown", App.openMenu);
+                App._burger.addEventListener("keydown", App.toggleMenu);
             },
 
             //déroule le menu à la touche "entrée"
             //permet la navigation au tab
-            openMenu: (e) =>{
-                if (e.key === 'Enter') {
-                    App._menu.checked = !App._menu.checked;
-                  }
-                if(App._menu.checked){
-                    App._allTabNav.forEach(elm => {
-                        elm.setAttribute('tabindex', '-1');
-                    })
-                    App._menuTabNav.forEach(menuElm => {
-                        menuElm.setAttribute('tabindex', '0');
-                    });
-                }else if(!App._menu.checked){
-                    App._allTabNav.forEach(elm => {
-                        elm.setAttribute('tabindex', '0');
-                    })
-                    App._menuTabNav.forEach(menuElm => {
-                        menuElm.setAttribute('tabindex', '-1');
-                    });
-                }
-            },
+           toggleMenu: (e) =>{
+                    if (e.key === 'Enter') {
+                        App._menu.checked = !App._menu.checked;
 
+                        console.log("App._menu.checked:", App._menu.checked);
+                        if(App._menu.checked){
+                            App._allTabNav.forEach(elm => {
+                                elm.setAttribute('tabindex', '-1');
+                            })
+                            App._menuTabNav.forEach(menuElm => {
+                                menuElm.setAttribute('tabindex', '0');
+                            });
+                        }else{
+                            App._allTabNav.forEach(elm => {
+                                elm.setAttribute('tabindex', '0');
+                            })
+                            App._menuTabNav.forEach(menuElm => {
+                                menuElm.setAttribute('tabindex', '-1');
+                            });
+                        }
+                    }
+            },
         };
+
+  /*       giveTabElements: (toggleElement, interactiveElements) => {
+            if(toggleELement.checked){
+                App._allTabNav.forEach(elm => {
+                    elm.setAttribute('tabindex', '-1');
+                })
+                App._menuTabNav.forEach(menuElm => {
+                    menuElm.setAttribute('tabindex', '0');
+                });
+            }else{
+                App._allTabNav.forEach(elm => {
+                    elm.setAttribute('tabindex', '0');
+                })
+                App._menuTabNav.forEach(menuElm => {
+                    menuElm.setAttribute('tabindex', '-1');
+                });
+            }
+        }, */
 
     window.addEventListener('DOMContentLoaded', App.app_init());
     })();
