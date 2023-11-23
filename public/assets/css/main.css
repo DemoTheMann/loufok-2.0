@@ -192,11 +192,12 @@ label:hover {
 }
 .button{
   padding: 0.6rem;
+  text-decoration: none;
   border: none;
   border-radius: 4px;
   background: var(--bleu-fonce);
   color: var(--rose-clair);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /********************************************/
 /****           Accessibilité            ****/
