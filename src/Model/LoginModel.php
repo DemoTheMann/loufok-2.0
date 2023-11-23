@@ -5,14 +5,19 @@ use App\Entity\Joueur;
 use App\Entity\Admin;
 use App\Helper\HTTP;
 
-class LoginModel extends Model
+class LoginModel
 {
 
-    public function returnAll(): array {
-        $joueurEntity = Joueur::getInstance();
-        return $joueurEntity->findAll();
-    }
+    protected static $instance;
 
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new (get_called_class())();
+        }
+
+        return self::$instance;
+    }
 
     public function authAdmin(string $email, string $password):void
     {
@@ -21,7 +26,7 @@ class LoginModel extends Model
         if ($admin && $password === $admin[0]['mot_de_passe_administrateur']) {
             $_SESSION['auth'] = true;
             $_SESSION['role'] = 'administrateur';
-            $_SESSION['user'] = $admin[0];
+            $_SESSION['user_id'] = $admin[0]['id_administrateur'];
         }
     }
 

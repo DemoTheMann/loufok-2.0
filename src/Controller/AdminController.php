@@ -14,14 +14,21 @@ class AdminController extends Controller
     {
         session_start();
 
+        if(!isset($_SESSION['auth']))
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        if($_SESSION['role'] !== 'administrateur')
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             
         }else{
 
-            if(!isset($_SESSION['auth']))
-           {
-                HTTP::redirect('/loufok/login');
-            }
+            $userId = $_SESSION['user_id'];
         
         $periodes = CadavreModel::getInstance()->periodes();
         $titres = CadavreModel::getInstance()->titres();
@@ -38,6 +45,16 @@ class AdminController extends Controller
     public function nouveauCadavre()
     {
         session_start();
+
+        if(!isset($_SESSION['auth']))
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        if($_SESSION['role'] !== 'administrateur')
+        {
+            HTTP::redirect('/loufok/login');
+        }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
@@ -142,6 +159,16 @@ class AdminController extends Controller
     public function affichageCadavre()
     {
         session_start();
+
+        if(!isset($_SESSION['auth']))
+        {
+            HTTP::redirect('/loufok/login');
+        }
+
+        if($_SESSION['role'] !== 'administrateur')
+        {
+            HTTP::redirect('/loufok/login');
+        }
 
         //*CadavreEnCours* renvoie le cadavre ou rien s'il n'y en a pas en cours actuellement
         $cadavre = CadavreModel::getInstance()->cadavreEnCours();

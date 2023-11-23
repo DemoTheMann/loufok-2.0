@@ -9,9 +9,9 @@ les routes
 
 return [
 
+  ['GET', '/loufok', 'login@login'],
   [['GET','POST'], '/loufok/login', 'login@login'],
   ['GET', '/loufok/logout', 'logout@logout'],
-  ['GET', '/loufok', 'joueur@joueur'],
   [['GET','POST'], '/loufok/joueur', 'joueur@joueur'],
   ['GET', '/loufok/lastCadavre', 'joueur@last'],
   ['GET', '/loufok/admin', 'admin@admin'],
