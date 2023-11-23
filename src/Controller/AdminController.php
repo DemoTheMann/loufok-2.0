@@ -32,6 +32,7 @@ class AdminController extends Controller
         
         $periodes = CadavreModel::getInstance()->periodes();
         $titres = CadavreModel::getInstance()->titres();
+
         $this->display('admin/admin.html.twig', 
             [
                 'user' => $_SESSION['user'],
