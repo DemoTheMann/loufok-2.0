@@ -1,34 +1,33 @@
 {% extends 'layout.html.twig' %}
 {% block css %}  
   <link rel="stylesheet" href="../../assets/css/affichage_cadavre.css" >
-  <link rel="stylesheet" href="../../assets/css/menu.css" >
 {% endblock %}
 {% block title %}Loufok login{% endblock %}
 {% block content %}
 <body>
-
-  <!-- menu -->
+ <!-- menu -->
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input class="navbar__burger" id="burger" type="checkbox" />
-          <label for="burger" class="navbar__cross">
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
           </label>
 
-        <div class="menu">
-          <nav class="menu__hidden">
+          <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="">
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
           </nav>
+        <div class="menu">
         </div>
       </div>
   </header>
+
 
   <!-- Main Content -->
   <main>
@@ -86,6 +85,4 @@
 {% endblock %}
 {% block js %}
 <script src="/assets/js/nouveau_cadavre.js" ></script>
-<script src="/assets/js/access.js" ></script>
-
 {% endblock %}

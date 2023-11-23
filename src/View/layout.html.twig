@@ -6,13 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS -->
-  <link rel="stylesheet" href="../assets/css/admin.css" >
+  <link rel="text/stylesheet" link="/assets/css/main.css">
   {% block css %}{% endblock %}
   <title>{% block title %}Loufok{% endblock %}</title>
  </head>
  <body>
   {% block content %}{% endblock %}
+  
   <!-- JS -->
-  {% block js %}{% endblock -%}
+  {% block js %}
+  {% endblock -%}
+    <script src="/assets/js/access.js"></script>
+    <script src="/assets/js/tabNav.js"></script>
  </body>
  </html>
