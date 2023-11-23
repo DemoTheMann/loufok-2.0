@@ -11,6 +11,15 @@
    local("Open Dyslexic"),
    url(../fonts/OpenDyslexic-Regular.otf);
 }
+
+.light-theme #favicon {
+  src: url(../images/logo_black.ico);
+}
+@media (prefers-color-scheme: dark) {
+  .dark-theme #favicon {
+    src: url(../images/logo_white.ico);
+  }
+}
 :root {
   --main-font : 'Kurale', serif;
   --title-font : 'Qwitcher Grypen', cursive;
