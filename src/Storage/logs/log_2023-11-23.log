@@ -1578,3 +1578,12 @@
     exception-line: 102
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
     exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 23:49:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 72
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $contributions'

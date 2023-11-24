@@ -67,16 +67,13 @@ class CadavreModel
         foreach ($cadavres as $cadavre => $c) {
 
             //si un cadavre exquis est en cours aujourd'hui
-            if($c['date_debut_cadavre']<= $ajd && $c['date_fin_cadavre']>=$ajd){
-            
+            if($c['date_debut_cadavre']<= $ajd  && $c['date_fin_cadavre']>=$ajd){
                 //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
                 $contributions = Contribution::getInstance()->findBy(['id_cadavre'=> $c['id_cadavre']]);
-                
                 $max_contribution = 0;
                 foreach ($contributions as $contribution) {
                     $max_contribution = $max_contribution + 1; 
                 }
-
                 //si le max de contributions a été atteint : renvoie null
                 if ($max_contribution >=$c['nb_contributions']) {
                     return null;
@@ -97,17 +94,15 @@ class CadavreModel
 
             //si un cadavre exquis est en cours aujourd'hui
             if($cadavre['date_debut_cadavre']<= $ajd && $cadavre['date_fin_cadavre']>=$ajd){
-            
                 //récupérer les contributions du cadavre en cours pour vérif si le max n'a pas été atteint
-                $contributions = Contribution::getInstance()->findBy(['id_'.$_SESSION['role'] => $_SESSION['user_id'], 'id_cadavre'=> $cadavre['id_cadavre']]);
+                $contributions = Contribution::getInstance()->findBy(['id_cadavre'=> $cadavre['id_cadavre']]);
                 $max_contribution = 0;
-
+                
                 foreach ($contributions as $contribution) {
                     $max_contribution = $max_contribution + 1; 
                 }
-
                 //si le max de contributions a été atteint : renvoie null
-                if ($max_contribution >=$cadavre['nb_contributions']) {
+                if ($max_contribution >= $cadavre['nb_contributions']) {
                     return null;
                 }else{
                     //si le max de contributions n'a pas été atteint : affichage du cadavre en cours
@@ -126,12 +121,13 @@ class CadavreModel
     {
         $cadavres = Cadavre::getInstance()->findAll();
         //Si le prochain cadavre exquis commence dans + d'1 an, date de référence
+        $ajd = date('Y-m-d');
         $future_date = date('Y-m-d', strtotime('+1 year'));
         $min_date = $future_date;
         //récupérer les dates de chaque cadavre
         foreach ($cadavres as $cadavre => $c) {   
             //si la date de début est plus récente que la date de réf, on attribue sa valeur à min_date
-            if($c['date_debut_cadavre']< $min_date){
+            if($c['date_debut_cadavre']< $min_date && $c['date_debut_cadavre'] !== $ajd ){
                 $min_date = $c['date_debut_cadavre'];
             }
         }
