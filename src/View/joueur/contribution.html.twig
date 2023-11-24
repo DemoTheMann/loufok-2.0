@@ -2,6 +2,7 @@
 {% block title %}Contribution Loufok{% endblock %}
 {% block css %}  
   <link rel="stylesheet" href="../assets/css/style.css" >
+  <link rel="stylesheet" href="../assets/css/affichage_cadavre.css" >
 {% endblock css %}
 {% block content %}
 
@@ -31,64 +32,69 @@
         <a href="/loufok"> Retour </a>
     </header> #}
     <main>
-
+      <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+      {# si le titre existe, affichage du cadavre exquis #}
     {% if title %}
-    <div>
-        <h1>{{ title }}</h1>
-        <p>{{ randContrib }}</p>
-    </div>
+      <section class="cadavreExquis">
+        <div class="cadavreExquis__background">
+          <h2 class="cadavreExquis__title">{{ title }}</h2>
+          <div class="cadavreExquisHead">
 
-        {% if canAddContrib %}
-        <form id="newContrib__form" class="newContrib__form" action="" method="POST">
-            
-            <div class="newCadavre__formItem">
-            <label for="contribution"> Votre contribution </label>
-            <textarea 
-                name="contribution" 
-                class="input__textarea input"
-                placeholder="Votre contribution..." 
-                id="contribution" 
-                cols="30" 
-                rows="10"
-                maxlength="280"
-                minlength="50"
-                required
-            ></textarea>
-            <span class="newContrib__info" id="newContrib__info"></span>
-            <small class="newContrib__errors error__contrib"></small>
+          </div>
+          {% for contribution in contributions %}
+            <div class="contributions">
+              {% if contribution is same as(randContrib) %}
+                  <p class="contributions__content">{{ randContrib }}</p>
+              {% elseif userContribText %}
+                <p class="contributions__content">{{ userContribText }}</p>
+              {% else %}
+                <img class="contributions__content" src="../assets/images/texte.svg" >
+              {% endif %}
             </div>
-            <input id="btn_submit" type="submit" value="Valider" class="newContrib__submit">
+          {% endfor %} 
+
+        </div>
+      </section>
+      <div>
+      </div>
+
+      {% if canAddContrib %}
+        <form id="newContrib__form" class="newContribution__form" action="" method="POST">
+            
+            <div class="newContribution__formItem">
+              <label for="contribution"> Votre contribution </label>
+              <textarea 
+                  name="contribution" 
+                  class="input__textarea input"
+                  placeholder="Votre contribution..." 
+                  id="contribution" 
+                  cols="30" 
+                  rows="10"
+                  maxlength="280"
+                  minlength="50"
+                  required
+              ></textarea>
+              <span class="newContribution__info" id="newContrib__info"></span>
+              <small class="newContribution__errors error__contribution"></small>
+            </div>
+            <input class="newContribution__submit" id="btn_submit" type="submit" value="Valider">
         </form>
-
-        {% block js %}
-            <script type="text/javascript" src="../assets/js/newContrib.js" defer></script>
-        {% endblock js %}
-
-        {% elseif userContribText %}
-
         <div>
-            <h2>{{ msg }}</h2>
-            <p>{{ userContribText }}</p>
+            <p>{{ msg }}</p>
         </div>
 
-        {% else %}
-
-        <div>
-            <h2>{{ msg }}</h2>
-        </div>
-
-        {% endif %}
-
+      {% endif %}
     {% else %}
-
-    <div>
-        <h2>Nous sommes désolés, mais il n'y a pas de Cadavre Exquis en construction aujourd'hui.</h2>
-        <h2>{{ error }}</h2>
-    </div>
-
+      <div>
+          <p>Nous sommes désolés, mais il n'y a pas de Cadavre Exquis en construction aujourd'hui.</p>
+          <p>{{ error }}</p>
+      </div>
     {% endif %}
 
     </main>
-
-</body>
 {% endblock %}
+{% block js %}
+    <script type="text/javascript" src="../assets/js/newContrib.js" defer></script>
+{% endblock js %}

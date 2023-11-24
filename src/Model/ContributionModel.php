@@ -25,7 +25,6 @@ class ContributionModel
         if (!isset(self::$instance)) {
             self::$instance = new (get_called_class())();
         }
-
         return self::$instance;
     }
 
@@ -34,35 +33,35 @@ class ContributionModel
         $random = null;
         $activeCadavre = CadavreModel::getInstance()->cadavreEnCours();
         $contribAleaModel = ContributionAleatoire::getInstance();
-        // var_dump($activeCadavre);
+
         $contribAleatoire = $contribAleaModel->findBy(
             [
                 'id_joueur' => $id_joueur,
-                'id_cadavre' => $activeCadavre['id_cadavre'],
+                'id_cadavre' => $activeCadavre['id_cadavre']
             ]);
-            // var_dump($contribAleatoire);
         if($contribAleatoire){
-            $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire['num_contribution']])[0];
-            var_dump($contribAleatoire);
+            $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire[0]['num_contribution']]);
+            if($random){
+                return $random[0]['texte_contribution'];
+            }
+        }else{
+            return null;
         }
-        return $random;
     }
 
     public static function setRandom(int $id_joueur)
     {
         $activeCadavre = CadavreModel::getInstance()->cadavreEnCours();
-        //var_dump($activeCadavre);
         $cadavreCountContrib = count(Contribution::getInstance()->findBy(['id_cadavre' => $activeCadavre['id_cadavre']]));
         $random = random_int(1, $cadavreCountContrib);
-        $randomContrib = Contribution::getInstance()->findBy(['ordre_soumission' => $random])[0];
-        $contribAleatoire = ContributionAleatoire::getInstance()->create(
+        $randomContrib = Contribution::getInstance()->findBy(['ordre_soumission' => $random, 'id_cadavre'=>$activeCadavre['id_cadavre']])[0];
+        ContributionAleatoire::getInstance()->create(
             [ 
                 'id_joueur' => $id_joueur,
                 'id_cadavre' => $randomContrib['id_cadavre'],
                 'num_contribution' => $randomContrib['id_contribution']
             ]); 
-            // var_dump($randomContrib);
-        return $contribAleatoire;
+        $contribAleatoire = ContributionAleatoire::getInstance()->findBy(['id_joueur' => $id_joueur])[0];        
     }
 
     public static function countContrib(int $id_cadavre)
@@ -74,10 +73,15 @@ class ContributionModel
 
     public static function newContrib($user_id, $cadavre, $text, $ordre){
         
+        if(Contribution::getInstance()->findBy(['id_joueur' => $user_id, 'id_cadavre' => $cadavre["id_cadavre"]])){
+            return null;
+        }
+        
         $textContrib = $text;
         $id_cadavre = $cadavre['id_cadavre'];
-        $now = date('Y-m-d');
-        Contribution::getInstance()->create(
+        $now = Date('Y-m-d');
+        
+         Contribution::getInstance()->create(
             [
                 'texte_contribution' => $textContrib,
                 'date_soumission' => $now,
@@ -86,8 +90,8 @@ class ContributionModel
                 'id_administrateur' => null,
                 'id_cadavre' => $id_cadavre
             ]);
-        if($ordre+1 >= $cadavre['nb_contributions']){
-            Cadavre::getInstance()->update($id_cadavre,['date_fin_cadavre'=>$now]);
+        if($ordre + 1 >= $cadavre['nb_contributions']){
+            $cadavre = Cadavre::getInstance()->update($id_cadavre, ['date_fin_cadavre'=> $now]);
         }
     }
 
