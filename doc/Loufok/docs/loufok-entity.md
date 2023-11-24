@@ -1,27 +1,26 @@
-<?php
+---
+    sidebar_position: 2
+---
 
-//
-// Fichier: src\Model\Model.php
-//
-namespace App\Entity;
+# Entitées Loufok
 
-/**
- * Classe CRUD modèle qui contient les 7 méthodes :
- *   - findAll()                        pour rechercher toutes les données
- *   - find( int $id )                  pour rechercher un identifiant
- *   - findBy( array $criterias )       pour rechercher en fonction d'un/ou plusieurs critères
- *   - create( array $datas )           pour ajouter une donnée
- *   - update( int $id, array $datas )  pour mettre à jour une donnée
- *   - delete( int $id )                pour effacer une donnée
- *   - exist( int $id )                 pour vérifier si une donnée existe
- */
-class Contribution
-{
-    protected $tableName = APP_TABLE_PREFIX . 'contribution';
-    // instance de la classe
-    protected static $dbh;
+Les entitées sont responsable de la liaison entre la base de donnée MySQL et l'application.
 
-    public function __construct()
+## tableName
+
+Chaque entitée comporte une variable qui contient le nom de la table avec la quelle elle comunique dans la base de donnée MySQL.
+Si le nom de la table venait à changer, il suffit de changer le valeure de cette variable pour que l'application continue de fonctioner.
+
+## Méthodes
+
+Méthodes des entitées Loufok.
+
+### __construct()
+
+La méthode __construc() est appelé à l'instantiation de la classe, il va récupérer les informations de connexion à la base de donnée et tenter d'établir la liaison avec la table au nom spécifié dans `tableName`.
+
+```php title="Entity"
+public function __construct()
     {
         if (!self::$dbh) {
             try {
@@ -56,8 +55,14 @@ class Contribution
             }
         }
     }
+```
 
-    protected static $instance;
+### getInstance()
+
+La méthode getInstance() ne prend pas de paramètres et renvoie l'instance de la classe statique de l'entitée en question.
+
+```php title="Entity"
+protected static $instance;
 
     public static function getInstance()
     {
@@ -67,7 +72,13 @@ class Contribution
 
         return self::$instance;
     }
+```
 
+### find()
+
+La méthode find() prend en paramètre un identifiant et renvoit le tuple qui comporte cet identifiant dans sa table, si elle ne trouve rien, elle renvoit `null`.
+
+```php title="Entity"
     /**
      * @param  integer  $id identifiant
      * @return array
@@ -82,7 +93,13 @@ class Contribution
 
         return null;
     }
+```
 
+### findAll()
+
+La méthode findAll() ne prend pas de paramètres et renvoit l'entièreté des tuples contenu dans sa table.
+
+```php title="Entity"
     /**
      * Retourne toutes les informations.
      *
@@ -98,7 +115,15 @@ class Contribution
 
         return [];
     }
+```
 
+### findBy()
+
+La méthode FindBy() prend en paramètre un tableau associatif où la clé est un nom de champs et la valeur lié à cette clé la valeur attendu pour ce champs.
+
+La méthode renvoit un tableau des tuples où ces critères ont été vérifiés.
+
+```php title="Entity"
     /**
      * Retourne les informations associées à un/des critères.
      *
@@ -118,7 +143,13 @@ class Contribution
 
         return $this->query($sql, $values)->fetchAll();
     }
+```
 
+### exists()
+
+La méthode exists() prend en paramètre un identifiant et renvoit `true` si cet identifiant existe dans la table, et `false` si il n'existe pas.
+
+```php title="Entity"
     /**
      * Indique si l'identifiant existe déjà dans la base.
      *
@@ -135,7 +166,13 @@ class Contribution
 
         return false;
     }
+```
 
+### create()
+
+La méthode create() est utilisée pour ajouter un tuple dans une table de la base de donnée, elle prend en paramètre un tableau associatif où les clés correspondent aux champs et les valeurs correspondent aux valeurs à inclure dans ces champs.
+
+```php title="Entity"
     /**
      * Ajoute les nouvelles informations.
      *
@@ -164,7 +201,13 @@ class Contribution
 
         return null;
     }
+```
 
+### update()
+
+La méthode update() est utilisée pour modifier un tuple dans la table, prend en paramètre un tableau associatif où les clés correspondent aux champs à modifier et les valeurs correspondent aux valeurs à inclure dans ces champs.
+
+```php title="Entity"
     /**
      * Édite les  informations d'un identifiant.
      *
@@ -189,9 +232,13 @@ class Contribution
 
         return $sth->rowCount() > 0;
     }
+```
 
+### delete()
 
+La méthode delete() prend un identifiant en paramètre et supprime de la table le tuple contenant cet identifiant.
 
+```php title="Entity"
     /**
      * Efface l'identifiant.
      *
@@ -205,8 +252,16 @@ class Contribution
 
         return $sth->rowCount() > 0;
     }
+```
 
-    /**
+### query()
+
+La méthode query() prend une requête SQL et des attributs si ils existent en paramètres et effectue en requête préparée cette opération.
+
+Elle est utilisée dans les autres méthodes de la classe pour effectuer toutes les opérations vers la base de donnée MySQL.
+
+```php title="Entity"
+/**
      * Excécute une requète.
      *
      * @param string $sql           expression SQL à traiter
@@ -227,8 +282,16 @@ class Contribution
             return self::$dbh->query($sql);
         }
     }
+```
 
-    public function getUserLatest(int $id_joueur): ?array
+### getUserLatest()
+
+La méthode getUserLatest() est seulement disponible dans l'entitée : `Contribution`, et prend un identifiant d'utilisateur en paramètre.
+
+Elle est utilisée dans le `JoueurModel` afin de récupérer toutes les contributions ratachées à un utilisateur dans l'ordre des plus récentes aux plus anciennes.
+
+```php title="Contribution.php"
+public function getUserLatest(int $id_joueur): ?array
     {
         $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC";
         $sth = $this->query($sql, [':id' => $id_joueur]);
@@ -238,4 +301,4 @@ class Contribution
 
         return null;
     }
-}
+```

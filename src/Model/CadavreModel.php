@@ -189,7 +189,7 @@ class CadavreModel
     }
 
     /**
-     * Ajout d'une nouvelle contribution
+     * Ajout de la première contribution d'un nouveau cadavre
      */
     public static function nouvelleContribution($userId, $cadavre, $contribution){
         
