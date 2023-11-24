@@ -3,8 +3,9 @@
  
  <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/images/logo_pink.ico" type="image/x-icon" id="favicon" >
   <!-- CSS -->
   <link rel="text/stylesheet" link="/assets/css/main.css">
   {% block css %}{% endblock %}
@@ -29,5 +30,17 @@
   {% endblock -%}
     <script src="/assets/js/access.js"></script>
     <script src="/assets/js/tabNav.js"></script>
+    <script>
+    //changer la couleur de la favicon en fonction du thème
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
+      const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const favicon = document.querySelector('#favicon');
+      if (isDarkMode) {
+        favicon.href = "/assets/images/logo_white.ico";
+      } else {
+        favicon.href = "/assets/images/logo_black.ico";
+      }
+    });
+    </script>
  </body>
  </html>
