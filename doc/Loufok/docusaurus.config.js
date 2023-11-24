@@ -100,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/intro',
+                to: '/docs/introduction',
               },
               // {
               //   label: 'Modèle',
@@ -130,7 +130,7 @@ const config = {
             items: [
               {
                 label: 'Application Loufok',
-                to: '/',
+                to: 'https://jbienvenu.alwaysdata.net/loufok',
               },
               {
                 label: 'GitHub',
