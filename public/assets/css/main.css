@@ -1,8 +1,6 @@
 @import url(./reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
 
 @font-face {
@@ -20,7 +18,7 @@
     src: url(../images/logo_white.ico);
   }
 }
-:root {
+html {
   --main-font : 'Kurale', serif;
   --title-font : 'Qwitcher Grypen', cursive;
   --highlight-font : 'Rouge script', cursive;
@@ -192,11 +190,12 @@ label:hover {
 }
 .button{
   padding: 0.6rem;
+  text-decoration: none;
   border: none;
   border-radius: 4px;
   background: var(--bleu-fonce);
   color: var(--rose-clair);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /********************************************/
 /****           Accessibilité            ****/

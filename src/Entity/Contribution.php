@@ -19,44 +19,7 @@ class Contribution
 {
     protected $tableName = APP_TABLE_PREFIX . 'contribution';
     // instance de la classe
-    protected static $dbh;
-
-    public function __construct()
-    {
-        if (!self::$dbh) {
-            try {
-                $dsn = 'mysql:host=' . APP_DB_HOST . ';dbname=' . APP_DB_NAME . ';charset=UTF8';
-                self::$dbh = new \PDO(
-                    $dsn,
-                    // nom de l'utilisateur MYSQL
-                    APP_DB_USER,
-                    // mot de passe de dl'utilisateur MYSQL
-                    APP_DB_PASSWORD,
-                    // réglage d'options qui permet de récupérer les informations de la base
-                    // sous forme de tableau associatif
-                    // et de demander de déclencher une exception quand une erreur de SQL est détectée
-                    [
-                        \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
-                        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
-                    ]
-                );
-            } catch (\Exception $e) {
-                // ICI on vient écrire le message qui doit s'afficher quand
-                // une erreur de connexion à la base est produite
-                // ou quand une erreur de syntaxe SQL est rencontrée
-
-                // affichage d'un message résumé en couleur
-                echo '<div style="font-size: 22px;color: red;padding: 2rem">';
-                echo "<h1>ERREUR</h1><p>{$e->getMessage()}</p>";
-                // si on ne veut pas donner trop de détail à l'internaute, alors on peut écrire
-                // echo "<h1>ERREUR</h1></p>";
-                echo '</div>';
-                // arrêt du script
-                die();
-            }
-        }
-    }
-
+  
     protected static $instance;
 
     public static function getInstance()
@@ -227,7 +190,7 @@ class Contribution
             return self::$dbh->query($sql);
         }
     }
-
+  
     public function getUserLatest(int $id_joueur): ?array
     {
         $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC";

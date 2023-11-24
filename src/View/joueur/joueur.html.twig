@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Joueur Loufok{% endblock %}
 {% block css %}  
-  <link rel="stylesheet" href="../assets/css/style.css" >
+  <link rel="stylesheet" href="../assets/css/style.css">
 {% endblock %}
 {% block content %}
  <!-- menu -->
@@ -18,7 +18,7 @@
             <ul class="menu__hidden__list">
               <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
+              <img class="menu__end" src="/assets/images/manuscrit.svg" alt=""/>
           </nav>
         <div class="menu">
         </div>
@@ -29,11 +29,11 @@
   <header>
     <a href="/loufok/logout"> Se déconnecter </a>
   </header> #}
-  <main class="container vh-100">
-    
-    <h1>{{ username }}</h1>
-    <h3> Connexion sécurisée </h3>
-    <div class="container current_cadavre">
+  <main>
+      <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+
     {% if title %}
       <p>Titre du cadavre exquis en cours : {{ title }}</p>
     {% else %}
@@ -43,10 +43,10 @@
 
     <ul>
     {% if title %}
-      <li><a href="/loufok/contribution"> participer au Cadavre Exquis en cours</a></li>
+      <li class="joueur__button"><a class="joueur__buttonLink" href="/loufok/contribution">Participer au cadavre exquis</a></li>
     {% endif %}
     {% if latest %}
-      <li><a href="/loufok/lastCadavre"> Consulter mes Cadavres Exquis précédents</a></li>
+      <li class="joueur__button"><a class="joueur__buttonLink" href="/loufok/lastCadavre">Consulter mon dernier cadavre exquis</a></li>
     {% endif %}
   </main>
 

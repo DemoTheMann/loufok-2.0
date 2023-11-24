@@ -1063,4 +1063,527 @@
     )
     exception-line: 72
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\ContributionController.php'
-    exception-code: 'Undefined array key "texte_contribution"
+    exception-code: 'Undefined array key "texte_contribution"[2023-11-23 18:23:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "num_contribution"'
+[2023-11-23 18:24:06]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "num_contribution"'
+[2023-11-23 18:42:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "num_contribution"'
+[2023-11-23 18:44:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 45
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "num_contribution"'
+[2023-11-23 18:58:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 54
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-23 20:38:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 94
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "contributions"'
+[2023-11-23 20:43:19]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "c" ("end of print statement" expected).'
+[2023-11-23 20:44:01]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:45:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:45:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:48:19]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 95
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:48:28]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 95
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:48:45]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 96
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:49:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:49:29]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:50:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:50:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 96
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:51:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 96
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:51:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 96
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:52:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:52:39]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:52:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:53:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 96
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-23 20:53:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:53:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:53:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 97
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $contributionsNumber'
+[2023-11-23 20:54:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key 1'
+[2023-11-23 20:54:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key 1'
+[2023-11-23 20:54:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key 1'
+[2023-11-23 20:55:17]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:55:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "contribution" ("end of print statement" expected).'
+[2023-11-23 20:56:44]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 20:57:21]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 20:59:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 20:59:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 21:00:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 21:00:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 99
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endblock" tag (expecting closing tag for the "if" tag defined near line 36).'
+[2023-11-23 21:07:54]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-23 21:08:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-23 21:09:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-23 21:10:04]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected "endifs" tag (expecting closing tag for the "if" tag defined near line 43).'
+[2023-11-23 21:11:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-23 21:11:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected operator of value "=". Did you try to use "===" or "!==" for strict comparison? Use "is same as(value)" instead.'
+[2023-11-23 21:41:51]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 21:41:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:11:04]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:13:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:28:42]	[ALERT]	404 - commande non existante :: /loufok/lastCadaver
+[2023-11-23 22:28:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 101
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:30:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 101
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:48:57]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:51:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:53:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:53:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 43
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:55:20]	[ALERT]	404 - commande non existante :: /loufok/cadavre
+[2023-11-23 22:55:56]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:56:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:57:13]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 22:58:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 102
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Trying to access array offset on value of type null'
+[2023-11-23 23:49:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@affichageCadavre',
+        2 => array(),
+    )
+    exception-line: 72
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\CadavreModel.php'
+    exception-code: 'Undefined variable $contributions'

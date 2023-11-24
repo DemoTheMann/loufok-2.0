@@ -30,7 +30,10 @@
   <header>
     <a href="/loufok/logout"> Se déconnecter </a>
   </header> #} 
-  <main class="container vh-100">
+  <main>
+    <div class="welcome">
+      <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
 
     <section>
     {% if title %}

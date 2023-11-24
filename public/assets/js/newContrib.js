@@ -5,7 +5,7 @@
             _textArea: document.querySelector('#contribution'),
             _contribInfo: document.querySelector('#newContrib__info'),
             _submit: document.querySelector('#btn_submit'),
-            _contribError: document.querySelector('.error__contrib'),
+            _contribError: document.querySelector('.error__contribution'),
 
             init: () => {
                 console.log('init');

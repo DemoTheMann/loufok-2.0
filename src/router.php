@@ -39,7 +39,7 @@ case FastRoute\Dispatcher::NOT_FOUND:
   $twig->display(
     'error.html.twig',
     [
-      'message' => 'La vue n\'existe pas',
+      'message' => 'La page que vous cherchez ne semble pas être disponible ! ',
     ]
   );
 

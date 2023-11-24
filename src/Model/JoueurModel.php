@@ -25,19 +25,16 @@ class JoueurModel
         return $userInfo[0]['nom_plume'];
     }
 
-    public static function getlatest(int $user_id): ?array
+    public static function getLatest(int $user_id): ?array
     {
         $latestContrib = Contribution::getInstance()->getUserLatest($user_id);
         $latestCadavre = null;
         if($latestContrib)
         {
             $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($latestContrib['id_cadavre']);
-            
-            if($isCadavreOn)
-            {
+            if($isCadavreOn){
                 return null;
             }
-
             $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $latestContrib['id_cadavre']])[0];
         }
         
