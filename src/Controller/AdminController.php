@@ -181,7 +181,6 @@ class AdminController extends Controller
 
         //*CadavreEnCours* renvoie le cadavre ou rien s'il n'y en a pas en cours actuellement
         $cadavre = CadavreModel::getInstance()->cadavreEnCours();
-        var_dump($cadavre);
         //si aucun cadavre en cours, alors prévenir l'utilisateur du début du prochain cadavre
         if(!$cadavre){
             //*dateProchainCadavre* renvoie la phrase avec la prochaine date, ou rien si aucun cadavre prévu dans l'année qui suit

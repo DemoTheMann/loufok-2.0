@@ -40,7 +40,6 @@ class ContributionModel
                 'id_cadavre' => $activeCadavre['id_cadavre']
             ]);
         if($contribAleatoire){
-            //var_dump($contribAleatoire[0]['num_contribution']);
             $random = Contribution::getInstance()->findBy(['id_contribution'=>$contribAleatoire[0]['num_contribution']]);
             if($random){
                 return $random[0]['texte_contribution'];
@@ -62,10 +61,7 @@ class ContributionModel
                 'id_cadavre' => $randomContrib['id_cadavre'],
                 'num_contribution' => $randomContrib['id_contribution']
             ]); 
-        $contribAleatoire = ContributionAleatoire::getInstance()->findBy(['id_joueur' => $id_joueur])[0];
-        var_dump($contribAleatoire);
-        var_dump(Contribution::getInstance()->findBy(['id_contribution' => $contribAleatoire['num_contribution']]));
-        
+        $contribAleatoire = ContributionAleatoire::getInstance()->findBy(['id_joueur' => $id_joueur])[0];        
     }
 
     public static function countContrib(int $id_cadavre)
