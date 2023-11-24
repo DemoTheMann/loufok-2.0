@@ -2,15 +2,16 @@
 
 {% block title %}404 - Page non trouvée{% endblock %}
 
-{% block css %} 
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="../assets/css/error.css" >
 {% endblock %}
 
 {% block content %}
   <main>
-    <div class="">
-    <h1 class="">404 - Page non trouvée</h1>
-    <p class="">{{ message }}</p>
-    <a href="/loufok/login" class="">Revenir sur la page d'accueil</a>
+    <div class="container">
+      <h1 class="container__title">404</h1>
+      <p class="container__content">{{ message }}</p>
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/loufok/login">Revenir sur la page d'accueil</a></span>
     </div>
 
   </main>
