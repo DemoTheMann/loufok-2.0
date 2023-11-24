@@ -10,7 +10,7 @@ main{
 .container{
     display: flex;    
     flex-direction: column;
-    height: 80vw;
+    height:80vw;
     gap: 2rem;
 }
 .container__title{
