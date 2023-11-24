@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Model\ContributionModel;
 use App\Model\CadavreModel;
+use App\Model\JoueurModel;
 
 use App\Helper\HTTP;
 use DateTime;
@@ -28,7 +29,7 @@ class ContributionController extends Controller
 
         $contribModel = ContributionModel::getInstance();
         $cadavreModel = CadavreModel::getInstance();
-
+        $user = JoueurModel::getInstance()->getUserName($_SESSION['user_id']);
         $title = "";
         $randContrib = "";
         $canAddContrib = true;
@@ -40,6 +41,7 @@ class ContributionController extends Controller
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
             $activeCadavre = $cadavreModel->cadavreEnCours();
+            
             if($activeCadavre){
                 
                 $totalContrib = $contribModel->countContrib($activeCadavre['id_cadavre']);
@@ -60,6 +62,7 @@ class ContributionController extends Controller
                     "msg" => $msg,
                     "userContribText" => $userContribText,
                     "error" => $error,
+                    "username" => $user,
                     "contributions" => 0,
                 ];
             }}
@@ -113,6 +116,7 @@ class ContributionController extends Controller
                 "canAddContrib" => $canAddContrib,
                 "msg" => $msg,
                 "userContribText" => $userContribText,
+                "username" => $user,
                 "error" => $error,
                 "contributions" => $contributions
             ];

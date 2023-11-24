@@ -73,6 +73,7 @@
   border-radius: 1rem;
   width: auto;
   transition: border 0.3s ease-in-out;
+  margin-bottom:0.3rem;
 }
 
 .joueur__buttonLink:after {
