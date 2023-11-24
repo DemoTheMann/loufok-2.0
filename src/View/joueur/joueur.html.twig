@@ -30,10 +30,10 @@
     <a href="/loufok/logout"> Se déconnecter </a>
   </header> #}
   <main>
-    
-    <h1>{{ username }}</h1>
-    <h3> Connexion sécurisée </h3>
-    <div class="container current_cadavre">
+      <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+
     {% if title %}
       <p>Titre du cadavre exquis en cours : {{ title }}</p>
     {% else %}
@@ -43,10 +43,10 @@
 
     <ul>
     {% if title %}
-      <li><a class="button" href="/loufok/contribution"> participer au Cadavre Exquis en cours</a></li>
+      <li class="joueur__button"><a class="joueur__buttonLink" href="/loufok/contribution">Participer au cadavre exquis</a></li>
     {% endif %}
     {% if latest %}
-      <li><a class="button" href="/loufok/lastCadavre"> Consulter mes Cadavres Exquis précédents</a></li>
+      <li class="joueur__button"><a class="joueur__buttonLink" href="/loufok/lastCadavre">Consulter mon dernier cadavre exquis</a></li>
     {% endif %}
   </main>
 

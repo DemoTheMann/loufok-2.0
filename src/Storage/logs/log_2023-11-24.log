@@ -1178,3 +1178,46 @@
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
     exception-code: 'Undefined array key 0'
 [2023-11-24 11:52:13]	[ALERT]	404 - commande non existante :: /admin/nouveau_cadavre
+[2023-11-24 13:50:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 41
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected token "name" of value "if" ("end of statement block" expected).'
+[2023-11-24 15:11:10]	[ALERT]	404 - commande non existante :: /loufok/contributionel,fokezoef
+[2023-11-24 15:11:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'admin@admin',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\AdminModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-24 15:14:28]	[ALERT]	404 - commande non existante :: /loufok/contributionhyefghfefeh
+[2023-11-24 15:14:39]	[ALERT]	404 - commande non existante :: /loufok/contributionhyefghfefeh
+[2023-11-24 15:16:28]	[ALERT]	404 - commande non existante :: /loufok/contributionhyefghfefeh
+[2023-11-24 15:17:03]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:20:06]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:21:45]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:22:10]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:22:28]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:22:40]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:25:06]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:25:17]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:26:04]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:27:00]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:27:31]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:27:48]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:27:52]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:27:56]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:02]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:06]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:09]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:16]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:19]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:25]	[ALERT]	404 - commande non existante :: /loufok/joueurff
+[2023-11-24 15:28:30]	[ALERT]	404 - commande non existante :: /loufok/joueurff

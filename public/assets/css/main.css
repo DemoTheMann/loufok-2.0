@@ -18,7 +18,7 @@
     src: url(../images/logo_white.ico);
   }
 }
-:root {
+html {
   --main-font : 'Kurale', serif;
   --title-font : 'Qwitcher Grypen', cursive;
   --highlight-font : 'Rouge script', cursive;
