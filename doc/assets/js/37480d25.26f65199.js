@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkloufok=self.webpackChunkloufok||[]).push([[2383],{7933:l=>{l.exports=JSON.parse('{"label":"hola","permalink":"/loufok/doc/blog/tags/hola","allTagsPath":"/loufok/doc/blog/tags","count":1,"unlisted":false}')}}]);

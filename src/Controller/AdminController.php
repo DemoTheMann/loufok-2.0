@@ -17,12 +17,12 @@ class AdminController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'administrateur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -51,12 +51,12 @@ class AdminController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'administrateur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         $userId = $_SESSION['user_id'];
@@ -171,12 +171,12 @@ class AdminController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'administrateur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         //*CadavreEnCours* renvoie le cadavre ou rien s'il n'y en a pas en cours actuellement

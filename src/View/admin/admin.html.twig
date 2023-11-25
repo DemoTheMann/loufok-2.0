@@ -15,11 +15,11 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Nouveau cadavre exquis</a></li>
-              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/admin/affichage">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>
         <div class="menu">
         </div>
@@ -88,5 +88,5 @@
   let titres={{titres | raw}};
   let periodes={{periodes | raw}};
 </script>
-<script src="/assets/js/nouveauCadavre.js"></script>
+<script src="{{ url('/assets/js/nouveauCadavre.js')}}"></script>
 {% endblock %}

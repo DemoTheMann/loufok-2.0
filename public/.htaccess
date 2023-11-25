@@ -1,3 +1,9 @@
-<Files *.*>
-	allow from all
-</Files>
+
+Options -Indexes
+
+RewriteEngine On
+
+RewriteBase /loufok/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

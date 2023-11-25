@@ -1,0 +1,28 @@
+[2023-11-25 17:03:36]	[ALERT]	404 - commande non existante :: /loufok/admin
+[2023-11-25 17:04:19]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-25 17:06:02]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-25 17:06:05]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-25 17:06:09]	[ALERT]	404 - commande non existante :: /loufok/admin
+[2023-11-25 17:06:21]	[ALERT]	404 - commande non existante :: /loufok/
+[2023-11-25 17:06:24]	[ALERT]	404 - commande non existante :: /loufok/admin
+[2023-11-25 17:10:07]	[ALERT]	404 - commande non existante :: /loufok/admin
+[2023-11-25 17:54:37]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-25 17:57:49]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-25 17:58:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 100
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "titre_cadavre"'
+[2023-11-25 17:58:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 100
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "titre_cadavre"'

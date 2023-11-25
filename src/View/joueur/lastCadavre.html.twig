@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Dernier Cadavre Exquis Loufok{% endblock %}
 {% block css %}  
-  <link rel="stylesheet" href="../assets/css/affichage_cadavre.css" >
+  <link rel="stylesheet" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
 {% endblock %}
 {% block content %}
  <!-- menu -->
@@ -16,10 +16,10 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok">Retour</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>
         <div class="menu">
         </div>
@@ -34,14 +34,10 @@
     <div class="welcome">
       <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-
-    <section>
-    {% if title %}
-      <h2> Consultation de votre dernier Cadavre Exquis en date : {{ title }}</h2>
-    {% endif %}
-    </section>
-
-    <section>
+{% if title %}
+      <section class="cadavreExquis">
+      <div class="cadavreExquis__background">
+        <h2 class="cadavreExquis__title"> Consultation de votre dernier Cadavre Exquis en date :  {{ title }}</h2>
     {% for contrib in contribs %}
       <div class="contributions">
           <p class="contributions__content">{{ contrib.contributions}}</p>
@@ -50,7 +46,9 @@
           {% endif %}
           </div>
     {% endfor %}
+      </div>
     </section>
+    {% endif %}
     
   </main>
 {% endblock %}

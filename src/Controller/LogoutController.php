@@ -15,6 +15,6 @@ class LogoutController extends Controller
 
         $loginModel = LoginModel::getInstance();
         $loginModel->logout();
-        HTTP::redirect('/loufok/login');
+        HTTP::redirect('/login');
     }
 }
