@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Joueur Loufok{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="{{ url('/assets/css/style.css') }}">
+{% endblock %}
+{% block content %}
+ <!-- menu -->
+  <header>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+          <nav class="menu__hidden" >
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt=""/>
+          </nav>
+        <div class="menu">
+        </div>
+      </div>
+  </header>
+
+{# 
+  <header>
+    <a href="/loufok/logout"> Se déconnecter </a>
+  </header> #}
+  <main>
+      <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+
+    {% if title %}
+      <p>Titre du cadavre exquis en cours : {{ title }}</p>
+    {% else %}
+      <p>Pas de Cadavre Exquis en cours pour le moment.<p>
+    {% endif %}
+    </div>
+    
+    {% if title %}
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/contribution">Participer au cadavre exquis</a></span>
+    {% endif %}
+    {% if latest %}
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
+    {% endif %}
+  </main>
+
+</body>
+{% endblock %}

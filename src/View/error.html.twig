@@ -1,12 +1,17 @@
 {% extends 'layout.html.twig' %}
-{% block title %}les avatars{% endblock %}
+
+{% block title %}404 - Page non trouvée{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/error.css') }}" >
+{% endblock %}
+
 {% block content %}
-<body>
-  <main class="container vh-100">
-    <div class="content h-100 d-flex justify-content-center align-items-center flex-column">
-    <h1 class="display-1">Zut</h1>
-    <p class="message">{{ message }}</p>
-    <a href="/" class="btn btn-primary btn-lg">Revenir sur la page d'accueil</a>
+  <main>
+    <div class="container">
+      <h1 class="container__title">404</h1>
+      <p class="container__content">{{ message }}</p>
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/login">Revenir sur la page d'accueil</a></span>
     </div>
 
   </main>

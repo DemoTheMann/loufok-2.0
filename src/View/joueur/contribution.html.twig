@@ -1,0 +1,99 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Contribution Loufok{% endblock %}
+{% block css %}  
+  <link rel="stylesheet" href="{{ url('/assets/css/style.css') }}" >
+  <link rel="stylesheet" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
+{% endblock css %}
+{% block content %}
+
+ <!-- menu -->
+  <header>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+          <nav class="menu__hidden" >
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
+          </nav>
+        <div class="menu">
+        </div>
+      </div>
+  </header>
+
+{#      <a href="/loufok/logout"> Se déconnecter </a>
+        <a href="/loufok"> Retour </a>
+    </header> #}
+    <main>
+      <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+      {# si le titre existe, affichage du cadavre exquis #}
+    {% if title %}
+      <section class="cadavreExquis">
+        <div class="cadavreExquis__background">
+          <h2 class="cadavreExquis__title">{{ title }}</h2>
+          <div class="cadavreExquisHead">
+
+          </div>
+          {% for contribution in contributions %}
+            <div class="contributions">
+              {% if contribution is same as(randContrib) %}
+                  <p class="contributions__content">{{ randContrib }}</p>
+              {% elseif userContribText %}
+                <p class="contributions__content">{{ userContribText }}</p>
+                <p class="contributions__pseudo"> Votre contribution :) </p>
+              {% else %}
+                <img class="contributions__content" src="{{ url('/assets/images/texte.svg')}}" >
+              {% endif %}
+            </div>
+          {% endfor %} 
+
+        </div>
+      </section>
+
+      {% if canAddContrib %}
+        <form id="newContrib__form" class="newContribution__form" action="" method="POST">
+            
+            <div class="newContribution__formItem">
+              <label for="contribution"> Votre contribution </label>
+              <textarea 
+                  name="contribution" 
+                  class="input__textarea input"
+                  placeholder="Votre contribution..." 
+                  id="contribution" 
+                  cols="30" 
+                  rows="10"
+                  maxlength="280"
+                  minlength="50"
+                  required
+              ></textarea>
+              <span class="newContribution__info" id="newContrib__info"></span>
+              <small class="newContribution__errors error__contribution"></small>
+            </div>
+            <input class="newContribution__submit" id="btn_submit" type="submit" value="Valider">
+        </form>
+        <div>
+            <p>{{ msg }}</p>
+        </div>
+
+      {% endif %}
+    {% else %}
+      <div>
+          <p>Nous sommes désolés, mais il n'y a pas de Cadavre Exquis en construction aujourd'hui.</p>
+          <p>{{ error }}</p>
+      </div>
+    {% endif %}
+
+    </main>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{{ url('/assets/js/newContrib.js')}}" defer></script>
+{% endblock js %}

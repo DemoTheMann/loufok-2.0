@@ -5,14 +5,16 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
+use App\Model\LoginModel;
 
 class LogoutController extends Controller
 {
     public function logout()
     {
-        $loginModel = Login::getInstance();
+        session_start();
+
+        $loginModel = LoginModel::getInstance();
         $loginModel->logout();
-        $this->display('login.html.twig');
+        HTTP::redirect('/login');
     }
 }

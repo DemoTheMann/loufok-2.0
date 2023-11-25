@@ -5,36 +5,34 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Helper\HTTP;
-use App\Model\Login;
+use App\Model\LoginModel;
 
 class LoginController extends Controller
 {
     public function login()
     {
-
-      $loginModel = Login::getInstance();
-      $joueurs = $loginModel->returnAll();
+      session_start();
 
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
+        $loginModel = LoginModel::getInstance();
 
-        $admin = $loginModel->authAdmin($_POST['login'], $_POST['password']);
-        if($admin) {
-          $this->display('admin/index.html.twig', ['user' => $admin]);          
-        };
-        
-        $joueur = $loginModel->authJoueur($_POST['login'], $_POST['password']);
-        if($joueur){
-          $this->display('joueur/index.html.twig', ['user' => $joueur]);
-        };
-        if(!$admin && !$joueur)
+        $loginModel->authAdmin($_POST['login'], $_POST['password']);
+        $loginModel->authJoueur($_POST['login'], $_POST['password']);
+      }
+      
+      if(isset($_SESSION['auth']))
+      {
+        if($_SESSION['auth'] === true && $_SESSION['role'] === 'administrateur')
         {
-          $this->display('login.html.twig');
+          HTTP::redirect('/admin');
         }
-
-      }else{
-        $this->display('login.html.twig');
+        if($_SESSION['auth'] === true && $_SESSION['role'] === 'joueur')
+        {
+          HTTP::redirect('/joueur');
+        }
       }
 
+      $this->display('login.html.twig');
     }
 }

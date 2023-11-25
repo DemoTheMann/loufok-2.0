@@ -1,0 +1,80 @@
+@import url(./main.css);
+
+.formItem__passwordWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.loginForm__input {
+  border-radius: 1px;
+  font-size: 1rem;
+  border: none;
+  height: 2rem;
+  border-right: 2px solid rgba(100, 100, 100, 0.5);
+  border-bottom: 2px solid rgba(100, 100, 100, 0.5);
+}
+
+.formItem__checkbox {
+  cursor: pointer;
+}
+
+.form-toggle {
+  display: none;
+}
+.eye {
+  color: var(--bleu-fonce);
+  height: 24px;
+  width: 24px;
+}
+.form-toggle ~ .visible {
+  display: none;
+}
+.form-toggle:checked ~ .visible {
+  display: inline-block;
+}
+.form-toggle:checked ~ .hide {
+  display: none;
+}
+.loginForm__submit {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--bleu-fonce);
+  color: var(--rose-clair);
+  font-size: 1.1rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+.loginForm__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  align-self: stretch;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 65vw;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100vw;
+  height: 100vh;
+} 
+h1 {
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-top: 5vh;
+}

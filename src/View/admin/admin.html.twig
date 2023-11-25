@@ -1,0 +1,92 @@
+{% extends 'layout.html.twig' %}
+{% block css %}
+{% endblock %}
+{% block title %}Loufok - administrateur{% endblock %}
+{% block content %}
+  <!-- menu -->
+  <header>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="button" aria-label="Ouvrir le menu" for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+          <nav class="menu__hidden" >
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="/admin">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="/admin/affichage">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
+          </nav>
+        <div class="menu">
+        </div>
+      </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+    <div class="newCadavre">
+
+    {% if global_message != 0 %}
+    <span class="newCadavre__message">{{global_message}}</span>
+    {% endif %}
+
+      <form arial-label="formulaire d'ajout de cadavre" id="newCadavre__form" class="newCadavre__form" action="" method="POST">
+        
+        <div class="newCadavre__formItem">
+          <label for="titre_cadavre">Titre du cadavre exquis :</label>
+          <input aria-label="champ de remplissage pour titre" type="text" class="input__empty input" id="titre_cadavre" name="titre_cadavre" required >
+          <small class="newCadavre__errors error__titre_cadavre">{{ errors_message.titre }}</small>
+        </div>
+        <div class="newCadavre__formItem">
+          <label for="debut_cadavre">Lancement du cadavre exquis :</label>
+          <input aria-label="champ de remplissage pour date de début" type="date" class="input__date input" id="debut_cadavre" name="debut_cadavre" required >
+          <small class="newCadavre__errors error__debut_cadavre">{{ errors_message.debut_cadavre }}</small>
+        </div>
+
+        <div class="newCadavre__formItem">
+          <label for="fin_cadavre">Fin du cadavre exquis :</label>
+          <input aria-label="champ de remplissage date de fin" type="date" class="input__date input" id="fin_cadavre" name="fin_cadavre" required >
+          <small class="newCadavre__errors error__fin_cadavre">{{ errors_message.fin_cadavre }}</small>
+        </div>
+        
+        <div class="newCadavre__formItem">
+          <label for="nb_contributions">Contributions maximum :</label>
+          <input aria-label="champ de remplissage nombre maximum de contributions" type="number" class="input__empty input" id="nb_contributions" name="nb_contributions" required >
+          <small class="newCadavre__errors error__nb_contributions">{{ errors.nb_contributions_max }}</small>
+        </div>
+        
+        <div class="newCadavre__formItem">
+          <label for="contribution"> Lancement du cadavre exquis ! </label>
+          <textarea 
+            name="contribution" 
+            class="input__textarea input"
+            placeholder="Votre contribution..." 
+            id="contribution" 
+            cols="30" 
+            rows="10"
+            maxlength="280"
+            minlength="50"
+            required
+          ></textarea>
+          <span class="newContribution__info" id="newContribution__info"></span>
+          <small class="newCadavre__errors error__contribution">{{ errors.contribution }}</small>
+        </div>
+        <input aria-label="soumettre le formulaire" id="btn_submit" type="submit" value="Valider" class="newCadavre__submit">
+      </form>
+    </div>
+  </main>
+{% endblock %}
+{% block js %}
+<script>
+  let titres={{titres | raw}};
+  let periodes={{periodes | raw}};
+</script>
+<script src="{{ url('/assets/js/nouveauCadavre.js')}}"></script>
+{% endblock %}

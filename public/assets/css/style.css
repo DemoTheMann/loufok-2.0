@@ -1,0 +1,96 @@
+@import url(./main.css);
+
+.input__date {
+  background-color: #f6f6f6;
+  font-size: 1.1rem;
+}
+.newCadavre__form, .newContribution__form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.newCadavre__formItem, .newContribution__formItem{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+.newCadavre__formItem>label{
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.input__empty{
+  height: 1.7rem;
+}
+.input__textarea{
+  resize: vertical;
+  height: 8rem;
+}
+.input{
+  padding: 5px;
+  border-radius: 2px;
+  border: none;
+  border-right: 0.5px solid rgba(30, 30, 30, 0.50);
+  border-bottom: 0.5px solid rgba(30, 30, 30, 0.50);
+  font-size: 1.2rem;
+}
+
+.newCadavre__submit, .newContribution__submit{
+  font-size: 1rem;
+  border-radius: 2px;
+  background: var(--bleu-fonce);
+  border: none;
+  color: var(--rose-clair);
+  padding: 0.2rem;
+}
+
+.newCadavre__submit:disabled, .newContribution__submit:disabled{
+  color: #fff3f2ab;
+  background: #1c576963;
+}
+
+.newCadavre__errors, .newContribution__info, .newCadavre__message{
+    font-style: italic;
+    color: gray;
+}
+
+.newCadavre__success{
+  color: var(--bleu-clair);
+}
+
+.newCadavre__errors, .newContribution__errors{
+  color: var(--red);
+}
+
+/*****************************/
+/****  boutons du joueur  ****/
+/*****************************/
+
+.joueur__button{
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding-left:0.2rem; 
+  border-radius: 1rem;
+  width: auto;
+  transition: border 0.3s ease-in-out;
+  margin-bottom:0.3rem;
+}
+
+.joueur__buttonLink:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--bleu-clair);
+  transition: all .5s ease;
+}
+
+.joueur__buttonLink:focus:after {
+  width: 100%;
+}
+
+.joueur__buttonLink{
+  text-decoration: none;
+  color: var(--bleu-clair);
+  font-weight: 600;
+}

@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+{% block css %}  
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
+{% endblock %}
+{% block title %}Loufok login{% endblock %}
+{% block content %}
+ <!-- menu -->
+  <header>
+      <div class="navbar">
+          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
+            <span class="navbar__cross1"></span>
+            <span class="navbar__cross2"></span>
+          </label>
+
+          <nav class="menu__hidden" >
+            <ul class="menu__hidden__list">
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/admin">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+            </ul>
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
+          </nav>
+        <div class="menu">
+        </div>
+      </div>
+  </header>
+
+
+  <!-- Main Content -->
+  <main>
+    <div class="welcome">
+        <p class="welcome__name"> Bienvenue {{ username }} </p>
+    </div>
+    <div>
+    {% if prochaine_date is not empty %}
+    <section class="noCadavre">
+      <div class="noCadavre__background">
+        <p>Aucun cadavre exquis en cours pour le moment.</p>
+        <p>Date du prochain cadavre exquis : {{prochaine_date}}</p>
+      </div>
+    </section>
+    {% endif %}
+    
+    {% if cadavre is not empty %}
+
+      <!-- affichage du cadavre exquis -->
+      <section class="cadavreExquis">
+        <div class="cadavreExquis__background">
+          <h2 class="cadavreExquis__title"> {{ cadavre.titre_cadavre|capitalize }} </h2>
+          <div class="cadavreExquisHead">
+            <span class="cadavreExquisHead__date"> du {{ cadavre.date_debut_cadavre|date("d/m/Y") }} au {{ cadavre.date_fin_cadavre|date("d/m/Y") }} </span>
+            <p class="cadavreExquisHead__maxContributions"> contributions max : {{ cadavre.nb_contributions }} </p>
+          </div>
+          {% for contribution in contributions %}
+          <div class="contributions">
+            <p class="contributions__content">{{ contribution.contributions}}</p>
+            {% if contribution.joueurs is not empty %}
+            <p class="contributions__pseudo">Par {{ contribution.joueurs}}</p>
+          {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    </div>
+  </main>
+{% endblock %}

@@ -9,7 +9,14 @@ les routes
 
 return [
 
-  [['GET','POST'], '/loufok/login', 'login@login'],
-  ['GET', '/loufok/logout', 'logout@logout']
-
+  [['GET' , 'POST'], '/', 'login@login'],
+  [['GET','POST'], '/login', 'login@login'],
+  ['GET', '/logout', 'logout@logout'],
+  [['GET','POST'], '/joueur', 'joueur@joueur'],
+  ['GET', '/lastCadavre', 'joueur@last'],
+  ['GET', '/admin', 'admin@admin'],
+  ['POST', '/admin', 'admin@nouveauCadavre'],
+  [['GET','POST'], '/contribution', 'contribution@contribution'],
+  ['GET', '/admin/affichage', 'admin@affichageCadavre']
+  
 ];

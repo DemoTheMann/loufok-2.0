@@ -1,0 +1,23 @@
+@import url(main.css);
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;    
+    flex-direction: column;
+    height:80vw;
+    gap: 2rem;
+}
+.container__title{
+    font-size:3rem ;
+    
+}
+.container__content{
+    
+    font-size:1.5rem ;
+}

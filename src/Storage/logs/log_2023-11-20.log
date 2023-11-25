@@ -1,0 +1,9 @@
+[2023-11-20 17:55:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 22
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined array key "user_id"'
