@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/assets/images/logo_pink.ico" type="image/x-icon" id="favicon" >
+  <link rel="shortcut icon" href="{{ url('/assets/images/logo_pink.ico')}}" type="image/x-icon" id="favicon" >
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css" >
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/style.css') }}" >
   {% block css %}{% endblock %}
   <title>{% block title %}Loufok{% endblock %}</title>
  </head>
@@ -16,11 +16,11 @@
   
   <footer class="footer">
     <div class="access">
-    <img  class="access__icon" tabindex="0" src="/assets/images/access_icon.png" alt="Accessibilité" aria-label="accessibilité" />
+    <img  class="access__icon" tabindex="0" src="{{ url('/assets/images/access_icon.png') }}" alt="Accessibilité" aria-label="accessibilité" />
       <div class="access__shadow">
         <button class="footer__button access__dys">Dyslexique</button>
-        <button class="footer__button access__increase" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" ><img src="/assets/images/increase.svg"/></button>
-        <button alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" class="footer__button access__decrease" ><img src="/assets/images/decrease.svg"/></button>
+        <button class="footer__button access__increase" alt="Augmenter la taille du texte" aria-label="Augmenter la taille du texte" ><img src="{{ url('/assets/images/increase.svg') }}"/></button>
+        <button alt="Diminuer la taille du texte" aria-label="Diminuer la taille du texte" class="footer__button access__decrease" ><img src="{{ url('/assets/images/decrease.svg') }}"/></button>
       </div>
     </div>
   </footer>
@@ -28,17 +28,17 @@
   <!-- JS -->
   {% block js %}
   {% endblock -%}
-    <script src="/assets/js/access.js"></script>
-    <script src="/assets/js/tabNav.js"></script>
+    <script src="{{ url('/assets/js/access.js') }}"></script>
+    <script src="{{ url('/assets/js/tabNav.js') }}"></script>
     <script>
     //changer la couleur de la favicon en fonction du thème
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
       const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       const favicon = document.querySelector('#favicon');
       if (isDarkMode) {
-        favicon.href = "/assets/images/logo_white.ico";
+        favicon.href = "{{ url('/assets/images/logo_white.ico')}}";
       } else {
-        favicon.href = "/assets/images/logo_black.ico";
+        favicon.href = "{{ url('/assets/images/logo_black.ico')}}";
       }
     });
     </script>

@@ -19,12 +19,12 @@ class ContributionController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'joueur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         $contribModel = ContributionModel::getInstance();

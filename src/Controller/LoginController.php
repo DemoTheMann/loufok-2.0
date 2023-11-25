@@ -25,11 +25,11 @@ class LoginController extends Controller
       {
         if($_SESSION['auth'] === true && $_SESSION['role'] === 'administrateur')
         {
-          HTTP::redirect('/loufok/admin');
+          HTTP::redirect('/admin');
         }
         if($_SESSION['auth'] === true && $_SESSION['role'] === 'joueur')
         {
-          HTTP::redirect('/loufok/joueur');
+          HTTP::redirect('/joueur');
         }
       }
 

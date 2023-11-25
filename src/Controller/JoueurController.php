@@ -19,12 +19,12 @@ class JoueurController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'joueur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         $userId = $_SESSION['user_id'];
@@ -74,27 +74,26 @@ class JoueurController extends Controller
 
         if(!isset($_SESSION['auth']))
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         if($_SESSION['role'] !== 'joueur')
         {
-            HTTP::redirect('/loufok/login');
+            HTTP::redirect('/login');
         }
 
         $userId = $_SESSION['user_id'];
         $joueurModel = JoueurModel::getInstance();
         $contribModel = ContributionModel::getInstance();
-        $username = $joueurModel->getUserName($userId)[0];
+        $username = $joueurModel->getUserName($userId);
 
         $title = "";
         $contribs = "";
         $latest = $joueurModel->getLatest($userId);
-        var_dump($latest);
 
         if(!$latest)
         {
-            HTTP::redirect('/loufok');
+            HTTP::redirect('/');
         }
 
         $title = $latest['titre_cadavre'];
