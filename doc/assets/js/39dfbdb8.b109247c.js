@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkloufok=self.webpackChunkloufok||[]).push([[6574],{2559:o=>{o.exports=JSON.parse('{"label":"docusaurus","permalink":"/loufok/doc/blog/tags/docusaurus","allTagsPath":"/loufok/doc/blog/tags","count":4,"unlisted":false}')}}]);

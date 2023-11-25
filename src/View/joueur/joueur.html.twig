@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Joueur Loufok{% endblock %}
 {% block css %}  
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="{{ url('/assets/css/style.css') }}">
 {% endblock %}
 {% block content %}
  <!-- menu -->
@@ -16,9 +16,9 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt=""/>
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt=""/>
           </nav>
         <div class="menu">
         </div>
@@ -42,10 +42,10 @@
     </div>
     
     {% if title %}
-      <span class="joueur__button"><a class="joueur__buttonLink" href="/loufok/contribution">Participer au cadavre exquis</a></span>
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/contribution">Participer au cadavre exquis</a></span>
     {% endif %}
     {% if latest %}
-      <span class="joueur__button"><a class="joueur__buttonLink" href="/loufok/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
+      <span class="joueur__button"><a class="joueur__buttonLink" href="/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
     {% endif %}
   </main>
 

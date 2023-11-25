@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
 {% block css %}  
-  <link rel="stylesheet" type="text/css" href="../../assets/css/affichage_cadavre.css" >
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
 {% endblock %}
 {% block title %}Loufok login{% endblock %}
 {% block content %}
@@ -16,11 +16,11 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/admin">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/admin">Retour</a></li>
               <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/loufok/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
             </ul>
-              <img class="menu__end" src="/assets/images/manuscrit.svg" alt="" />
+              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>
         <div class="menu">
         </div>
