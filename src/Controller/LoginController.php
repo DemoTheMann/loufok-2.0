@@ -13,6 +13,7 @@ class LoginController extends Controller
     {
       session_start();
 
+      $errors = "";
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
         $loginModel = LoginModel::getInstance();
@@ -31,8 +32,10 @@ class LoginController extends Controller
         {
           HTTP::redirect('/joueur');
         }
+      }else{
+        $errors = "Les identifiants sont incorrects";
       }
 
-      $this->display('login.html.twig');
+      $this->display('login.html.twig', ['errors' => $errors]);
     }
 }
