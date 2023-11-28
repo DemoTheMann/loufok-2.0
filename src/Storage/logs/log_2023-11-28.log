@@ -16,3 +16,238 @@
     exception-line: 114
     exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
     exception-code: 'Undefined variable $datas'
+[2023-11-28 13:41:17]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 121
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-28 13:43:42]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 119
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined variable $contrib'
+[2023-11-28 13:45:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 122
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-28 13:45:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 122
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "nom_plume"'
+[2023-11-28 13:45:36]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 122
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-28 13:45:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 123
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-28 13:45:54]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 123
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "nom_plume"'
+[2023-11-28 15:11:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 123
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-28 15:22:20]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:22:21]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:22:25]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:22:25]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:22:37]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:22:51]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:22:51]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:23:02]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:24:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-28 15:24:34]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:24:34]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:30:15]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 46
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-28 15:30:15]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:30:15]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:33:28]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'A hash key must be a quoted string, a number, a name, or an expression enclosed in parentheses (unexpected token "punctuation" of value "{".'
+[2023-11-28 15:35:05]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:35:05]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:36:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'A hash key must be a quoted string, a number, a name, or an expression enclosed in parentheses (unexpected token "punctuation" of value "{".'
+[2023-11-28 15:37:11]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:37:12]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:37:58]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:37:59]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:37:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unexpected token "end of print statement" of value "".'
+[2023-11-28 15:39:23]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:39:23]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:39:33]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:39:33]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:42:29]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 105
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined variable $players'
+[2023-11-28 15:42:36]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 105
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\JoueurController.php'
+    exception-code: 'Undefined variable $players'
+[2023-11-28 15:43:42]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-28 15:43:42]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:43:43]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:44:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 44
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-28 15:44:14]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:44:14]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:45:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 47
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'An exception has been thrown during the rendering of a template ("Array to string conversion").'
+[2023-11-28 15:45:37]	[ALERT]	404 - commande non existante :: /"";
+[2023-11-28 15:45:37]	[ALERT]	404 - commande non existante :: /"{{
+[2023-11-28 15:55:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 50
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "if" ("end of statement block" expected).'
+[2023-11-28 15:55:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 50
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "loop" ("end of statement block" expected).'
+[2023-11-28 15:57:49]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 50
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unexpected token "name" of value "if" ("end of statement block" expected).'
+[2023-11-28 15:59:03]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 50
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unknown "index" filter.'
+[2023-11-28 15:59:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 49
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\View\joueur\lastCadavre.html.twig'
+    exception-code: 'Unknown "uppercase" filter.'
