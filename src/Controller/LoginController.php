@@ -20,6 +20,11 @@ class LoginController extends Controller
 
         $loginModel->authAdmin($_POST['login'], $_POST['password']);
         $loginModel->authJoueur($_POST['login'], $_POST['password']);
+        if(!isset($_SESSION['auth'])){
+          $errors = "Les identifiants sont incorrects";
+        }
+      }else{
+        $errors = "";
       }
       
       if(isset($_SESSION['auth']))
@@ -32,8 +37,6 @@ class LoginController extends Controller
         {
           HTTP::redirect('/joueur');
         }
-      }else{
-        $errors = "Les identifiants sont incorrects";
       }
 
       $this->display('login.html.twig', ['errors' => $errors]);

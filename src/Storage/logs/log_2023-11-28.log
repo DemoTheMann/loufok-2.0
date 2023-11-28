@@ -1,0 +1,18 @@
+[2023-11-28 12:20:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 135
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined array key "id_joueur"'
+[2023-11-28 12:21:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@last',
+        2 => array(),
+    )
+    exception-line: 114
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Model\ContributionModel.php'
+    exception-code: 'Undefined variable $datas'

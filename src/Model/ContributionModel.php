@@ -111,21 +111,16 @@ class ContributionModel
     public static function getContribs($id_cadavre): array
     {
         $contribs = Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
-        $datas = [];
-        $i = 0;
+        return $contribs;
+    }
+
+    public static function getAuthors($contribs): array
+    {
+        
         foreach ($contribs as $contrib) {
-            $i = $i+1;
-            if ($contrib['id_joueur']) {
-                $joueur = Joueur::getInstance()->findBy(['id_joueur' => $contrib['id_joueur']]);
-                $joueur = $joueur[0]['nom_plume'];
-            }else{
-                $joueur = "";
-            }
-            $datas[$i] = [
-                'contributions' => $contrib['texte_contribution'],
-                'joueurs' => $joueur
-            ];
+            $joueurs = Joueur::getInstance()->findBy(['id_joueur' => $contrib['id_joueur']]);
+            var_dump($joueurs); 
+            return $joueurs;
         }
-        return $datas;
     }
 }
