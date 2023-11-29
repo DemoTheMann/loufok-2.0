@@ -20,7 +20,7 @@ return [
   ['GET', '/admin/affichage', 'admin@affichageCadavre'],
   ['GET', '/API/cadavres', 'API@getCadavres'],
   ['GET', '/API/cadavres/{id:\d+}', 'API@getCadavreById'],
-  ['GET', '/API/cadavres/{id:\d+}/like', 'API@likeCadavreById'],
+  [['POST', 'GET'], '/API/cadavres/{id:\d+}/like', 'API@likeCadavreById'],
 
   
 ];

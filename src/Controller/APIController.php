@@ -73,11 +73,21 @@ class APIController extends Controller
 
     public function likeCadavreById($id)
     {
-        $id = intval($id);
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
+        {
+            $id = intval($id);
 
-        $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
-        $nb_jaime = $cadavre['nb_jaime'];
-        $nb_jaime ++;
-        Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
+            $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
+            $nb_jaime = $cadavre['nb_jaime'];
+            $nb_jaime ++;
+            $result = Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
+            return $result;
+
+        }
+
+        $data = [
+            "id_cadavre" => intval($id),
+        ];
+        $this->display('testLike.html.twig', $data);
     }
 }
