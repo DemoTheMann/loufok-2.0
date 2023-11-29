@@ -94,3 +94,7 @@
   color: var(--bleu-clair);
   font-weight: 600;
 }
+
+.joueur__buttonBack{
+  width: fit-content;
+}
