@@ -1,0 +1,13 @@
+[2023-11-27 8:31:27]	[ALERT]	404 - commande non existante :: /loufok/lastCadavre
+[2023-11-27 8:49:50]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'login@login',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\loufok-2.0\src\Controller\LoginController.php'
+    exception-code: 'Undefined variable $login'
+[2023-11-27 8:51:11]	[ALERT]	404 - commande non existante :: /logi
+[2023-11-27 8:51:19]	[ALERT]	404 - commande non existante :: /log
+[2023-11-27 9:14:49]	[ALERT]	404 - commande non existante :: /lo

@@ -74,9 +74,9 @@ class AdminController extends Controller
 
              /**
               * la logique de traitement : 
-                vérifier la vadilité : s'il y a des erreurs, alors elles sont renvoyés, sinon rien.
-                si rien n'est renvoyé, formulaire valide : 
-                    vérification titre identiques puis périodes
+              *  vérifier la vadilité : s'il y a des erreurs, alors elles sont renvoyés, sinon rien.
+              *  si rien n'est renvoyé, formulaire valide : 
+              *  vérification titre identiques puis périodes
               */
             $cadavre = CadavreModel::getInstance();
             
@@ -136,6 +136,11 @@ class AdminController extends Controller
                         //toutes les conditions ont été vérifiées; le nouveau cadavre exquis peut être enregistré
                         $creationCadavre = $cadavre->nouveauCadavre($userId, $formData);
                         $cadavre->nouvelleContribution($userId, $creationCadavre[0], $formData['contribution']);
+                        
+                        
+                        $periodes = CadavreModel::getInstance()->periodes();
+                        $titres = CadavreModel::getInstance()->titres();
+                        
                         $this->display('admin/admin.html.twig',
                         [
                             'username' => $username,

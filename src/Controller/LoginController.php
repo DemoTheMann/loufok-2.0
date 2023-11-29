@@ -13,12 +13,18 @@ class LoginController extends Controller
     {
       session_start();
 
+      $errors = "";
       if($_SERVER['REQUEST_METHOD'] === 'POST')
       {
         $loginModel = LoginModel::getInstance();
 
         $loginModel->authAdmin($_POST['login'], $_POST['password']);
         $loginModel->authJoueur($_POST['login'], $_POST['password']);
+        if(!isset($_SESSION['auth'])){
+          $errors = "Les identifiants sont incorrects";
+        }
+      }else{
+        $errors = "";
       }
       
       if(isset($_SESSION['auth']))
@@ -33,6 +39,6 @@ class LoginController extends Controller
         }
       }
 
-      $this->display('login.html.twig');
+      $this->display('login.html.twig', ['errors' => $errors]);
     }
 }
