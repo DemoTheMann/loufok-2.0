@@ -164,3 +164,4 @@
     exception-line: 61
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
     exception-code: 'Undefined array key 0'
+[2023-11-29 11:30:59]	[ALERT]	404 - commande non existante :: /API/cadavres/lol
