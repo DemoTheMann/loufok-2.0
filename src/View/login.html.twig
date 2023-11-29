@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Loufok login{% endblock %}
 {% block css %}  
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="{{url('/manifest.json')}}">
   <link rel="stylesheet" href="{{ url('/assets/css/login.css') }}" >
 {% endblock %}
 {% block content %}
@@ -25,5 +25,36 @@
     
       <input aria-label="soumettre le formulaire" role="button" class="loginForm__submit" type="submit" value="Se connecter">
     </form>
+    <button style="cursor: pointer;" class="installPWA" id="installPWA"> Installer la PWA </button>
   </main>
+{% endblock %}
+{% block js %}
+  <script>
+    let installPrompt;
+    const pwaInstallButton = document.getElementById("installPWA");
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.prevaultDefault();
+      installPrompt = event;
+      pwaInstallButton.removeAttribute("hidden");
+    })
+
+    pwaInstallButton.addEventListener("click", async()=>{
+      if(!installPrompt) return;
+
+      const result = await installPrompt.prompt();
+      console.log("install prompt result", result);
+
+      Notification.requestPermission().then((result => {
+        if(result === "granted") {
+          console.log("Notifications granted");
+        }else{
+          console.log("Notifications refusées");
+        }
+      }))
+
+      installPrompt = null;
+      pwaInstallButton.setAttribute("hidden", "");
+    })
+
+  </script>
 {% endblock %}

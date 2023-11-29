@@ -9,5 +9,6 @@ const assets = [
   "/assets/css/main.css",
   "/assets/css/login.css",
   "/login",
+  "/loufok",
   "/loufok/login",
 ];
