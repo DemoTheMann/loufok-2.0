@@ -96,5 +96,10 @@
 }
 
 .joueur__buttonBack{
-  width: fit-content;
+  width: fit-0content;
+}
+
+.content{
+  font-size: 1.3rem;
+  padding-bottom: 1.5rem;
 }

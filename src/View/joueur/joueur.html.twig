@@ -2,6 +2,7 @@
 {% block title %}Joueur Loufok{% endblock %}
 {% block css %}  
   <link rel="stylesheet" href="{{ url('/assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
 {% endblock %}
 {% block content %}
 
@@ -16,23 +17,27 @@
   </header>
     
   <main>
-      <div class="welcome">
+    <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-
-    {% if title %}
-      <p>Titre du cadavre exquis en cours : {{ title }}</p>
-    {% else %}
-      <p>Pas de Cadavre Exquis en cours pour le moment.<p>
-    {% endif %}
+    <div class="cadavreExquis">
+    <div class="cadavreExquis__background">
+      <div class="content">
+        {% if title %}
+          <p >Titre du cadavre exquis en cours : {{ title }}</p>
+        {% else %}
+          <p>Pas de Cadavre Exquis en cours pour le moment.<p>
+        {% endif %}
+      </div>
+      
+      {% if title %}
+        <span class="joueur__button"><a class="joueur__buttonLink" href="/contribution">Participer au cadavre exquis</a></span>
+      {% endif %}
+      {% if latest %}
+        <span class="joueur__button"><a class="joueur__buttonLink" href="/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
+      {% endif %}
     </div>
-    
-    {% if title %}
-      <span class="joueur__button"><a class="joueur__buttonLink" href="/contribution">Participer au cadavre exquis</a></span>
-    {% endif %}
-    {% if latest %}
-      <span class="joueur__button"><a class="joueur__buttonLink" href="/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
-    {% endif %}
+    </div>
   </main>
 
 </body>
