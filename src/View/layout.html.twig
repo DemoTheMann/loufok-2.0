@@ -29,8 +29,8 @@
   <!-- JS -->
   {% block js %}
   {% endblock -%}
-    <script src="{{ url('/assets/js/access.js') }}"></script>
-    <script src="{{ url('/assets/js/tabNav.js') }}"></script>
+    <script src="{{ url('/assets/js/access.js') }}" defer ></script>
+    
     <script>
     //changer la couleur de la favicon en fonction du thème
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
