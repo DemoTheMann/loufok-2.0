@@ -110,7 +110,7 @@ class ContributionModel
      */
     public static function getContribs($id_cadavre): array
     {
-        $contribs = Contribution::getInstance()->findBy(['id_cadavre' => $id_cadavre]);
+        $contribs = Contribution::getInstance()->findByOrderedContribs(['id_cadavre' => $id_cadavre]);
         $datas = [];
         $i = 0;
         foreach ($contribs as $contrib) {
