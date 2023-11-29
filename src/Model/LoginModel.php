@@ -19,7 +19,7 @@ class LoginModel
         return self::$instance;
     }
 
-    public function authAdmin(string $email, string $password):void
+    public function authAdmin(string $email, string $password): void
     {
         $admin = Admin::getInstance()->findBy(['ad_mail_administrateur' => $email]);
 
@@ -31,7 +31,7 @@ class LoginModel
     }
 
 
-    public function authJoueur(string $username, string $password):void
+    public function authJoueur(string $username, string $password): void
     {
         $joueur = Joueur::getInstance()->findBy(['nom_plume' => $username]);
 

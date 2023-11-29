@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Loufok login{% endblock %}
 {% block css %}  
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="{{ url('/assets/css/login.css') }}" >
 {% endblock %}
 {% block content %}
@@ -17,10 +18,8 @@
       </div>
     
       {% if errors is not empty %}
-        <ul class="errors">
-          {% for error in errors %}
-            <li>{{ error }}</li>
-          {% endfor %}
+        <ul class="newCadavre__errors">
+            <li>{{ errors }}</li>
         </ul>
       {% endif %}
     
