@@ -16,5 +16,16 @@ class Cadavre extends Base
         return self::$instance;
     }
 
+    public function findAllEnded(): ?array
+    {
+        $now = date('Y-m-d');
+        $sql = "SELECT * FROM `{$this->tableName}` wHERE date_fin_cadavre < $now";
+        $sth = $this->query($sql);
+        if ($sth) {
+            return $sth->fetchAll();
+        }
+
+        return [];
+    }
 
 }
