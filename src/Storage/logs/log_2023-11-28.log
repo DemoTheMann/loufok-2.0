@@ -1,0 +1,50 @@
+[2023-11-28 13:42:46]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 227
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\vendor\twig\twig\src\Loader\FilesystemLoader.php'
+    exception-code: 'Unable to find template "[{"id_cadavre":92,"titre_cadavre":"Premier","date_debut_cadavre":"2023-10-17","date_fin_cadavre":"2023-10-30","nb_contributions":4,"nb_jaime":0,"id_administrateur":1},{"id_cadavre":93,"titre_cadavre":"Le Deuxi/u00e8me","date_debut_cadavre":"2023-11-21","date_fin_cadavre":"2023-11-24","nb_contributions":12,"nb_jaime":0,"id_administrateur":1},{"id_cadavre":94,"titre_cadavre":"Troisi/u00e8me","date_debut_cadavre":"2023-09-01","date_fin_cadavre":"2023-09-16","nb_contributions":5,"nb_jaime":0,"id_administrateur":1},{"id_cadavre":95,"titre_cadavre":"Quatri/u00e8me","date_debut_cadavre":"2023-12-28","date_fin_cadavre":"2023-12-31","nb_contributions":5,"nb_jaime":0,"id_administrateur":1}]" (looked into: C:\Users\joshu\Documents\dev\github\loufok-2.0\src\View).'
+[2023-11-28 14:31:38]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 23
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-28 15:11:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 26
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key "contributions"'
+[2023-11-28 15:25:18]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 36
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key "contributions"'
+[2023-11-28 16:29:29]	[ALERT]	500 - la méthode getCadavreById n'existe pas
+[2023-11-28 16:30:12]	[ALERT]	404 - commande non existante :: /API/cadavres/1
+[2023-11-28 16:33:02]	[ALERT]	404 - commande non existante :: /API/cadavres/1
+[2023-11-28 16:33:05]	[ALERT]	404 - commande non existante :: /API/cadavres/
+[2023-11-28 16:33:16]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(),
+    )
+    exception-line: 62
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-28 16:33:31]	[ALERT]	404 - commande non existante :: /API/cadavres/

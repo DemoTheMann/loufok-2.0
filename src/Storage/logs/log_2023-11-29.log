@@ -1,0 +1,166 @@
+[2023-11-29 10:07:04]	[ALERT]	404 - commande non existante :: /API/cadavres/2
+[2023-11-29 10:10:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 62
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 65
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 65
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:16:51]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:17:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:19:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:20:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:21:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 71
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 72
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:23:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 70
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:39:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '9',
+        ),
+    )
+    exception-line: 61
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 0'
