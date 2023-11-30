@@ -90,6 +90,8 @@
 }
 
 .joueur__buttonLink{
+  background: none;
+  border: none;
   text-decoration: none;
   color: var(--bleu-clair);
   font-weight: 600;
