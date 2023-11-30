@@ -75,8 +75,6 @@ class ContributionController extends Controller
                 if(!$random){
                     $random = $contribModel->setRandom($_SESSION['user_id']);
                 }
-                //var_dump($random);
-                //var_dump($contribModel->findBy(['id_contribution' => $random['num_contribution']]));
                 $randContrib = $random;
                 $title = $activeCadavre['titre_cadavre'];
                 $maxContrib = $activeCadavre['nb_contributions'];
@@ -109,7 +107,6 @@ class ContributionController extends Controller
             if(!$activeCadavre){
                 $contributions = 0;
             }
-            
             $data= [
                 "title" => $title,
                 "randContrib" => $randContrib,

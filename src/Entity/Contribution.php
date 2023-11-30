@@ -33,10 +33,10 @@ class Contribution extends Base
 
     public function getUserLatest(int $id_joueur): ?array
     {
-        $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC";
+        $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC LIMIT 2";
         $sth = $this->query($sql, [':id' => $id_joueur]);
         if ($sth && $sth->rowCount()) {
-            return $sth->fetch();
+            return $sth->fetchAll();
         }
 
         return null;

@@ -29,16 +29,17 @@ class JoueurModel
     {
         $latestContrib = Contribution::getInstance()->getUserLatest($user_id);
         $latestCadavre = null;
-        if($latestContrib)
-        {
-            $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($latestContrib['id_cadavre']);
-            if($isCadavreOn){
-                return null;
+        if($latestContrib){
+            foreach ($latestContrib as $contrib) {
+                $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($contrib['id_cadavre']);
+                if(!$isCadavreOn){
+                    return $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $contrib['id_cadavre']])[0];
+                }
             }
-            $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $latestContrib['id_cadavre']])[0];
+        }else{
+            return null;
         }
         
-        return $latestCadavre;
 
     }
 
