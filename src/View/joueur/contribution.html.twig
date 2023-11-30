@@ -33,7 +33,7 @@
             <div class="contributions">
               {% if contribution is same as(randContrib) %}
                   <p class="contributions__content">{{ randContrib }}</p>
-              {% elseif userContribText %}
+              {% elseif contribution is same as(userContribText) %}
                 <p class="contributions__content">{{ userContribText }}</p>
                 <p class="contributions__pseudo"> Votre contribution :) </p>
               {% else %}

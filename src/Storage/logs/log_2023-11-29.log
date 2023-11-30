@@ -168,3 +168,35 @@
     exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
     exception-code: 'Undefined array key 0'
 [2023-11-29 11:30:59]	[ALERT]	404 - commande non existante :: /API/cadavres/lol
+[2023-11-29 14:25:22]	[ALERT]	404 - commande non existante :: /API/cadavre
+[2023-11-29 14:30:41]	[ALERT]	404 - commande non existante :: /API/cadavres/97/contributions
+[2023-11-29 14:30:44]	[ALERT]	404 - commande non existante :: /API/cadavres/97/contribution
+[2023-11-29 14:30:53]	[ALERT]	404 - commande non existante :: /API/contributions
+[2023-11-29 14:30:57]	[ALERT]	404 - commande non existante :: /API/contributions/97
+[2023-11-29 14:46:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-29 14:48:52]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-29 14:48:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
