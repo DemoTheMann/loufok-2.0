@@ -86,7 +86,6 @@ class JoueurController extends Controller
         $title = "";
         $contribs = "";
         $latest = $joueurModel->getLatest($userId);
-
         if(!$latest)
         {
             HTTP::redirect('/');
