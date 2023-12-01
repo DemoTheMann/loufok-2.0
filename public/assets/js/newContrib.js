@@ -6,6 +6,7 @@
             _contribInfo: document.querySelector('#newContrib__info'),
             _submit: document.querySelector('#btn_submit'),
             _contribError: document.querySelector('.error__contribution'),
+            _btnDraft: document.querySelector('#saveDraft'),
 
             init: () => {
                 console.log('init');
@@ -14,7 +15,8 @@
             },
 
             handlers: () => {
-                window.addEventListener('beforeunload', APP.saveDraft);
+                APP._btnDraft.addEventListener('click', APP.saveDraft);
+                APP._submit.addEventListener('click', APP.removeDraft);
                 window.addEventListener('input', APP.charContrib)
                 console.log('handlers');
             },
