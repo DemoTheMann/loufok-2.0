@@ -7,3 +7,15 @@
     exception-line: 72
     exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
     exception-code: 'Undefined variable $dates'
+[2023-12-01 10:46:58]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 10:47:06]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 10:48:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 25
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "role"'
+[2023-12-01 11:18:47]	[ALERT]	404 - commande non existante :: /index.php

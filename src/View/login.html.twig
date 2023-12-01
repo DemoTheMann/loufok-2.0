@@ -32,10 +32,12 @@
   <script defer>
     let installPrompt;
     const pwaInstallButton = document.getElementById("installPWA");
+    pwaInstallButton.removeAttribute("hidden");
+    if (!window.navigator.userAgent.includes("Chrome")) {
+      pwaInstallButton.setAttribute("hidden", "");
+    }
     window.addEventListener("beforeinstallprompt", (event) => {
-      event.prevaultDefault();
       installPrompt = event;
-      pwaInstallButton.removeAttribute("hidden");
     })
 
     pwaInstallButton.addEventListener("click", async()=>{
@@ -43,14 +45,6 @@
 
       const result = await installPrompt.prompt();
       console.log("install prompt result", result);
-
-      Notification.requestPermission().then((result => {
-        if(result === "granted") {
-          console.log("Notifications granted");
-        }else{
-          console.log("Notifications refusées");
-        }
-      }))
 
       installPrompt = null;
       pwaInstallButton.setAttribute("hidden", "");
