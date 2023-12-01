@@ -16,7 +16,7 @@
   </div>
 </header>
 
-    <main>
+    <main class="joueur__main">
       <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
@@ -60,6 +60,7 @@
 
       {% if canAddContrib %}
         {% if joueur.date_debut is same as "now"|date("Y-m-d") or joueur.date_fin is same as "now"|date("Y-m-d") %}
+        <div class="newContribution">
           <form id="newContrib__form" class="newContribution__form" action="" method="POST">
               
               <div class="newContribution__formItem">
@@ -80,6 +81,7 @@
               </div>
               <input class="newContribution__submit" id="btn_submit" type="submit" value="Valider">
           </form>
+          </div>
           <div>
               <p>{{ msg }}</p>
           </div>
