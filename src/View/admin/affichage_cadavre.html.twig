@@ -16,9 +16,9 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/admin">Retour</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/admin')}}">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/')}}">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/logout')}}">Déconnexion</a></li>
             </ul>
               <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>

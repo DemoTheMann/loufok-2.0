@@ -31,10 +31,10 @@
       </div>
       
       {% if title %}
-        <span class="joueur__button"><a class="joueur__buttonLink" href="/contribution">Participer au cadavre exquis</a></span>
+        <span class="joueur__button"><a class="joueur__buttonLink" href="{{ url('/contribution')}}">Participer au cadavre exquis</a></span>
       {% endif %}
       {% if latest %}
-        <span class="joueur__button"><a class="joueur__buttonLink" href="/lastCadavre">Consulter mon dernier cadavre exquis</a></span>
+        <span class="joueur__button"><a class="joueur__buttonLink" href="{{ url('/lastCadavre')}}">Consulter mon dernier cadavre exquis</a></span>
       {% endif %}
     </div>
     </div>
