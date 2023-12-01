@@ -25,11 +25,11 @@
     
       <input aria-label="soumettre le formulaire" role="button" class="loginForm__submit" type="submit" value="Se connecter">
     </form>
-    <button style="cursor: pointer;" class="installPWA" id="installPWA"> Installer la PWA </button>
+    <button class="installPWA" id="installPWA"> Installer la PWA </button>
   </main>
 {% endblock %}
 {% block js %}
-  <script>
+  <script defer>
     let installPrompt;
     const pwaInstallButton = document.getElementById("installPWA");
     window.addEventListener("beforeinstallprompt", (event) => {

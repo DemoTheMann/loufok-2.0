@@ -3,6 +3,7 @@
 {% endblock %}
 {% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
+
   <!-- menu -->
   <header>
       <div class="navbar">
@@ -31,8 +32,8 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-    <div class="newCadavre">
 
+    <div class="newCadavre">
     {% if global_message != 0 %}
     <span class="newCadavre__message">{{global_message}}</span>
     {% endif %}

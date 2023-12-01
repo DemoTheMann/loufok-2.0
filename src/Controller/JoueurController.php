@@ -36,9 +36,9 @@ class JoueurController extends Controller
         $title = false;
         $latest = false;
         $user = "";
-        
         $current_cadavre = $cadavreModel->cadavreEnCours();
         $username = $joueurModel->getUserName($userId);
+        
         
         if($current_cadavre)
         {
