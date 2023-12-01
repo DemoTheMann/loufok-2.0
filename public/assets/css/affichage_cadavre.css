@@ -34,3 +34,15 @@
 .contributions__content{
     font-size: 1.2rem;
 }
+
+.play__message{
+    opacity: 100%;
+    height: auto;
+    transition: all 0.1s ease-in-out;
+}
+
+.d-none{
+    height: 0;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}

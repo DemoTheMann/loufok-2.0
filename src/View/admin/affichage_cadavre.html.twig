@@ -33,8 +33,9 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-    
-    <div class="play__message">
+    <button class="button__players" id="buttonPlay"> Afficher le planning </button>
+
+    <div class="play__message d-none" id="play__message">
       <div>
         <p>Les étudiants qui peuvent participer du 07/12/2023 au 08/12/2023 :</p>
         <ul>
@@ -43,7 +44,6 @@
           <li>Janice</li>
         </ul>
       </div>
-      <button ></button>
       <div>
         <p>Les étudiants qui peuvent participer du 09/12/2023 au 10/12/2023 :</p>
         <ul>
@@ -106,4 +106,14 @@
 
     </div>
   </main>
+{% endblock %}
+{% block js %}
+  <script defer>
+    const button = document.querySelector("#buttonPlay"); 
+    const div = document.querySelector("#play__message"); 
+    button.addEventListener("click", ()=>{
+      div.classList.toggle("d-none");
+    })
+
+  </script>
 {% endblock %}

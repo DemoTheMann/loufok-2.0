@@ -284,11 +284,11 @@ label:hover {
 /****              buttons               ****/
 /********************************************/
 
-.joueur__buttonLink:focus:after, .installPWA:focus:after {
+.joueur__buttonLink:focus:after, .installPWA:focus:after, .button__players:focus:after {
   width: 100%;
 }
 
-.joueur__buttonLink, .installPWA{
+.joueur__buttonLink, .installPWA, .button__players{
   background-color: unset;
   border: none;
   text-decoration: none;
@@ -296,7 +296,7 @@ label:hover {
   font-weight: 600;
 }
 
-.joueur__buttonBack{
+.joueur__buttonBack, .button__players{
   width: fit-content;
   align-self: flex-start;
 }
