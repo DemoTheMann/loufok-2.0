@@ -199,6 +199,7 @@ label:hover {
   color: var(--rose-clair);
   font-size: 1rem;
 }
+
 /********************************************/
 /****           Accessibilité            ****/
 /********************************************/
@@ -279,4 +280,23 @@ label:hover {
   font-family: Open Dyslexic;
 }
 
+/********************************************/
+/****              buttons               ****/
+/********************************************/
 
+.joueur__buttonLink:focus:after, .installPWA:focus:after {
+  width: 100%;
+}
+
+.joueur__buttonLink, .installPWA{
+  background-color: unset;
+  border: none;
+  text-decoration: none;
+  color: var(--bleu-clair);
+  font-weight: 600;
+}
+
+.joueur__buttonBack{
+  width: fit-content;
+  align-self: flex-start;
+}

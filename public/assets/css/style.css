@@ -96,28 +96,13 @@
   margin-bottom:0.3rem;
 }
 
-.joueur__buttonLink:after {
+.joueur__buttonLink:after, .installPWA:after {
   content: '';
   display: block;
   width: 0;
   height: 2px;
   background: var(--bleu-clair);
   transition: all .5s ease;
-}
-
-.joueur__buttonLink:focus:after {
-  width: 100%;
-}
-
-.joueur__buttonLink{
-  text-decoration: none;
-  color: var(--bleu-clair);
-  font-weight: 600;
-}
-
-.joueur__buttonBack{
-  width: fit-content;
-  align-self: flex-start;
 }
 
 .content{
