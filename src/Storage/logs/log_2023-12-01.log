@@ -1,0 +1,9 @@
+[2023-12-01 8:51:31]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 72
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined variable $dates'

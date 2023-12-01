@@ -4,6 +4,10 @@
   background-color: #f6f6f6;
   font-size: 1.1rem;
 }
+.newCadavre{
+  max-width: 800px;
+  width: 100%;
+}
 .newCadavre__form, .newContribution__form{
   display: flex;
   flex-direction: column;
@@ -48,7 +52,7 @@
   background: #1c576963;
 }
 
-.newCadavre__errors, .newContribution__info, .newCadavre__message{
+.newCadavre__errors, .newContribution__info, .newCadavre__message, .play__message{
     font-style: italic;
     color: gray;
 }

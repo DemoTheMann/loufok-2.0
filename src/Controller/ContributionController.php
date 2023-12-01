@@ -28,6 +28,7 @@ class ContributionController extends Controller
         }
 
         $contribModel = ContributionModel::getInstance();
+        $joueurModel = JoueurModel::getInstance();
         $cadavreModel = CadavreModel::getInstance();
         $user = JoueurModel::getInstance()->getUserName($_SESSION['user_id']);
         $title = "";
@@ -37,6 +38,8 @@ class ContributionController extends Controller
         $userContribText = "";
         $error = "";
         $activeCadavre = $cadavreModel->cadavreEnCours();
+        //$joueurDates = $joueurModel->canPlayId($_SESSION['user_id']);
+        $joueurDates = $joueurModel->canPlay($user);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
@@ -64,6 +67,7 @@ class ContributionController extends Controller
                     "error" => $error,
                     "username" => $user,
                     "contributions" => 0,
+                    "joueur" => $joueurDates,
                 ];
             }}
                 if(!$activeCadavre || $error || $msg){
@@ -83,9 +87,8 @@ class ContributionController extends Controller
                 if($totalContrib >= $maxContrib)
                 {
                     
-                    $msg="Impossible d'ajouer une nouvelle contribution, le maximum pour ce Cadavre Exquis à déjà été atteint!";
+                    $msg="Impossible d'ajouer une nouvelle contribution, le maximum pour ce cadavre exquis à déjà été atteint!";
                     $canAddContrib = false;
-                    
                 }
                 
                 $userContrib = $contribModel->getUserContrib($_SESSION['user_id']);
@@ -94,7 +97,7 @@ class ContributionController extends Controller
                 {
                     $canAddContrib = false;
                     $userContribText = $userContrib[0]['texte_contribution'];
-                    $msg = 'Vous ne pouvez pas participer une deuxième fois à ce Cadavre Exquis';
+                    $msg = 'Vous ne pouvez pas participer une deuxième fois à ce cadavre exquis';
                 }
                 $contributionsContent = ContributionModel::getInstance()->getContribs($activeCadavre['id_cadavre']);
                 $i =0;
@@ -115,7 +118,8 @@ class ContributionController extends Controller
                 "userContribText" => $userContribText,
                 "username" => $user,
                 "error" => $error,
-                "contributions" => $contributions
+                "contributions" => $contributions,
+                "joueur" => $joueurDates,
             ];
 
             $this->display('joueur/contribution.html.twig', $data);
