@@ -3,3 +3,30 @@
 [2023-11-30 11:00:48]	[ALERT]	404 - commande non existante :: /loufok/API/cadavres
 [2023-11-30 13:40:28]	[ALERT]	404 - commande non existante :: /loufok/login
 [2023-11-30 14:45:41]	[ALERT]	404 - commande non existante :: /loufok/login
+[2023-11-30 15:45:48]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined variable $joueurModel'
+[2023-11-30 16:10:24]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 60
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\View\joueur\contribution.html.twig'
+    exception-code: 'Unexpected character "!".'
+[2023-11-30 18:38:23]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'contribution@contribution',
+        2 => array(),
+    )
+    exception-line: 42
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Controller\ContributionController.php'
+    exception-code: 'Undefined array key "nom_plume"'

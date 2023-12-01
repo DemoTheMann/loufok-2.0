@@ -16,11 +16,24 @@
   </div>
 </header>
 
-    <main>
+    <main class="joueur__main">
       <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
     <a href="{{ url('/') }}" class="joueur__buttonLink joueur__buttonBack">← Retour</a>
+    
+    {# si les dates de participations du joueur sont ajd, il peut contributer #}
+    {% if joueur.date_debut is same as "now"|date("Y-m-d") or joueur.date_fin is same as "now"|date("Y-m-d") %}
+      <div class="play">
+        <p class="play__message">Vous avez 2 jours pour contribuer ! </p>
+      </div>
+    {# si non, il doit encore attendre un peu #}
+    {% else %}
+      <div class="play">
+        <p class="play__message">Vous pourrez jouer du {{joueur.date_debut|date("d/m/Y")}} au {{joueur.date_fin|date("d/m/Y")}}</p>
+      </div>
+    {% endif %}
+    
       {# si le titre existe, affichage du cadavre exquis #}
     {% if title %}
       <section class="cadavreExquis">
@@ -46,31 +59,34 @@
       </section>
 
       {% if canAddContrib %}
-        <form id="newContrib__form" class="newContribution__form" action="" method="POST">
-            
-            <div class="newContribution__formItem">
-              <label for="contribution"> Votre contribution </label>
-              <textarea 
-                  name="contribution" 
-                  class="input__textarea input"
-                  placeholder="Votre contribution..." 
-                  id="contribution" 
-                  cols="30" 
-                  rows="10"
-                  maxlength="280"
-                  minlength="50"
-                  required
-              ></textarea>
-              <span class="newContribution__info" id="newContrib__info"></span>
-              <small class="newContribution__errors error__contribution"></small>
-            </div>
-            <input class="newContribution__submit" id="btn_submit" type="submit" value="Valider">
-        </form>
-        <button class="joueur__buttonLink" id="saveDraft">Enregistrer un brouillon</button>
-        <div>
-            <p>{{ msg }}</p>
-        </div>
+        {% if joueur.date_debut is same as "now"|date("Y-m-d") or joueur.date_fin is same as "now"|date("Y-m-d") %}
+        <div class="newContribution">
+          <form id="newContrib__form" class="newContribution__form" action="" method="POST">
+              
+              <div class="newContribution__formItem">
+                <label for="contribution"> Votre contribution </label>
+                <textarea 
+                    name="contribution" 
+                    class="input__textarea input"
+                    placeholder="Votre contribution..." 
+                    id="contribution" 
+                    cols="30" 
+                    rows="10"
+                    maxlength="280"
+                    minlength="50"
+                    required
+                ></textarea>
+                <span class="newContribution__info" id="newContrib__info"></span>
+                <small class="newContribution__errors error__contribution"></small>
+              </div>
+              <input class="newContribution__submit" id="btn_submit" type="submit" value="Valider">
+          </form>
+          </div>
+          <div>
+              <p>{{ msg }}</p>
+          </div>
 
+        {% endif %}
       {% endif %}
     {% else %}
       <div>
