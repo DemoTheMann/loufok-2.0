@@ -19,3 +19,8 @@
     exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Controller\ContributionController.php'
     exception-code: 'Undefined array key "role"'
 [2023-12-01 11:18:47]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 14:05:27]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 14:05:38]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 14:57:10]	[ALERT]	404 - commande non existante :: /loufok/login
+[2023-12-01 15:03:19]	[ALERT]	404 - commande non existante :: /index.php
+[2023-12-01 15:03:19]	[ALERT]	404 - commande non existante :: /index.php

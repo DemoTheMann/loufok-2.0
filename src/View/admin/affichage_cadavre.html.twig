@@ -8,7 +8,7 @@
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <input tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
           <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
@@ -114,6 +114,6 @@
     button.addEventListener("click", ()=>{
       div.classList.toggle("d-none");
     })
-
+    
   </script>
 {% endblock %}

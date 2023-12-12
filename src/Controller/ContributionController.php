@@ -38,8 +38,7 @@ class ContributionController extends Controller
         $userContribText = "";
         $error = "";
         $activeCadavre = $cadavreModel->cadavreEnCours();
-        //$joueurDates = $joueurModel->canPlayId($_SESSION['user_id']);
-        $joueurDates = $joueurModel->canPlay($user);
+        $joueurDate = $joueurModel->canPlay($user);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
@@ -67,7 +66,7 @@ class ContributionController extends Controller
                     "error" => $error,
                     "username" => $user,
                     "contributions" => 0,
-                    "joueur" => $joueurDates,
+                    "date" => $joueurDate,
                 ];
             }}
                 if(!$activeCadavre || $error || $msg){
@@ -119,7 +118,7 @@ class ContributionController extends Controller
                 "username" => $user,
                 "error" => $error,
                 "contributions" => $contributions,
-                "joueur" => $joueurDates,
+                "date" => $joueurDate,
             ];
 
             $this->display('joueur/contribution.html.twig', $data);
