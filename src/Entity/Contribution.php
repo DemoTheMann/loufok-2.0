@@ -33,12 +33,26 @@ class Contribution extends Base
 
     public function getUserLatest(int $id_joueur): ?array
     {
-        $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC";
+        $sql = "SELECT * FROM `{$this->tableName}` WHERE id_joueur = :id ORDER BY date_soumission DESC LIMIT 2";
         $sth = $this->query($sql, [':id' => $id_joueur]);
         if ($sth && $sth->rowCount()) {
-            return $sth->fetch();
+            return $sth->fetchAll();
         }
 
         return null;
+    }
+
+    public function findByOrderedContribs(array $criterias): ?array
+    {
+        // décomposer le tableau des critères
+        foreach ($criterias as $f => $v) {
+            $fields[] = "$f = ?";
+            $values[] = $v;
+        }
+        // On transforme le tableau en chaîne de caractères séparée par des AND
+        $fields_list = implode(' AND ', $fields);
+        $sql = "SELECT * FROM `{$this->tableName}` WHERE $fields_list ORDER BY ordre_soumission ASC";
+
+        return $this->query($sql, $values)->fetchAll();
     }
 }

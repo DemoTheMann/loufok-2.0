@@ -4,51 +4,49 @@
   <link rel="stylesheet" href="{{ url('/assets/css/affichage_cadavre.css') }}" >
 {% endblock %}
 {% block content %}
- <!-- menu -->
-  <header>
-      <div class="navbar">
-          <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
-          <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
-            <span class="navbar__cross1"></span>
-            <span class="navbar__cross2"></span>
-          </label>
 
-          <nav class="menu__hidden" >
-            <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/">Retour</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
-            </ul>
-              <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
-          </nav>
-        <div class="menu">
-        </div>
-      </div>
+  <!-- logout -->
+  <header>
+    <div class="navbar">
+      <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
+      <a href="{{ url('/logout') }}" class="navbar__logout">
+        <img src="{{ url('/assets/images/logout.svg') }}" alt="Déconnexion">
+      </a>
+    </div>
   </header>
 
-{# 
-  <header>
-    <a href="/loufok/logout"> Se déconnecter </a>
-  </header> #} 
   <main>
     <div class="welcome">
       <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-{% if title %}
+    <a href="{{ url('/') }}" class="joueur__buttonLink joueur__buttonBack">← Retour</a>
+  {% if title %}
       <section class="cadavreExquis">
       <div class="cadavreExquis__background">
         <h2 class="cadavreExquis__title"> Consultation de votre dernier Cadavre Exquis en date :  {{ title }}</h2>
     {% for contrib in contribs %}
       <div class="contributions">
           <p class="contributions__content">{{ contrib.contributions}}</p>
-          {% if contrib.joueurs %}
-            <p class="contributions__pseudo">Par {{ contrib.joueurs}}</p>
-          {% endif %}
           </div>
     {% endfor %}
       </div>
+
+      <p class="contributions__pseudo">
+      Par 
+
+      {# boucles pour l'ordre, si avant-dernier enlever la virgule et rajouter le "et", si dernier "." #}
+    {% for contrib in contribs %}
+      {% if loop|last %}
+          et {{ contrib.joueurs|capitalize }}.
+        {% elseif loop|length is same as loop.index + 1 %}
+          {{ contrib.joueurs|capitalize }}
+        {% else %}
+          {{ contrib.joueurs|capitalize }},
+        {% endif %}
+    {% endfor %}      
+      </p>
     </section>
-    {% endif %}
+  {% endif %}
     
   </main>
 {% endblock %}

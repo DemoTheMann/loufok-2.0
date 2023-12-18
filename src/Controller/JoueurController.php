@@ -36,9 +36,9 @@ class JoueurController extends Controller
         $title = false;
         $latest = false;
         $user = "";
-        
         $current_cadavre = $cadavreModel->cadavreEnCours();
         $username = $joueurModel->getUserName($userId);
+        
         
         if($current_cadavre)
         {
@@ -51,11 +51,7 @@ class JoueurController extends Controller
                 $contribAleatoire = $contribModel->setRandom($userId);
             }
         }
-        /* if()
-        {
-            $latest = $joueurModel->getLatest($userId);
-        }
-         */
+        
         $latest = $joueurModel->getLatest($userId);
         
         $data= [
@@ -90,7 +86,6 @@ class JoueurController extends Controller
         $title = "";
         $contribs = "";
         $latest = $joueurModel->getLatest($userId);
-
         if(!$latest)
         {
             HTTP::redirect('/');

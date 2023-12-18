@@ -18,6 +18,48 @@ class JoueurModel
 
         return self::$instance;
     }
+    
+    public function canPlay(string $name)
+    {
+        $ajd = date('Y-m-d');
+        switch ($name) {
+            case "tom":
+            case "ecrivain":
+            case "mylan":
+            case "":
+                $date = "2023-12-07";
+                break;
+            case "artiste":
+            case "":
+            case "":
+            case "":
+                $date = "2023-12-09";
+                break;
+            case "":
+            case "":
+            case "":
+            case "":
+                $date = "2023-12-11";
+                break;
+            case "":
+            case "":
+            case "":
+            case "":
+                $date = "2023-12-13";
+                break;
+            case "pascalito":
+                $date = "2023-12-15";
+                break;
+            default:
+                break;
+        }
+        if($date <= $ajd)
+        {
+            return $ajd;
+        }else{
+            return $date;
+        }
+    }
 
     public static function getUserName(int $id_joueur)
     {
@@ -29,16 +71,17 @@ class JoueurModel
     {
         $latestContrib = Contribution::getInstance()->getUserLatest($user_id);
         $latestCadavre = null;
-        if($latestContrib)
-        {
-            $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($latestContrib['id_cadavre']);
-            if($isCadavreOn){
-                return null;
+        if($latestContrib){
+            foreach ($latestContrib as $contrib) {
+                $isCadavreOn = CadavreModel::getInstance()->isCadavreOn($contrib['id_cadavre']);
+                if(!$isCadavreOn){
+                    return $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $contrib['id_cadavre']])[0];
+                }
             }
-            $latestCadavre = Cadavre::getInstance()->findBy(['id_cadavre' => $latestContrib['id_cadavre']])[0];
+        }else{
+            return null;
         }
         
-        return $latestCadavre;
 
     }
 

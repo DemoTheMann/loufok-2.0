@@ -1,0 +1,207 @@
+
+[2023-11-29 13:27:08]	[ALERT]	404 - commande non existante :: /loufok/login
+[2023-11-29 13:35:08]	[ALERT]	404 - commande non existante :: /loufok/logout
+[2023-11-29 10:07:04]	[ALERT]	404 - commande non existante :: /API/cadavres/2
+[2023-11-29 10:10:22]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 62
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:10]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 65
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:43]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 65
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:15:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:16:51]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:17:08]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:19:25]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:20:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 66
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:21:14]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 71
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 72
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:32]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '2',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:22:53]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 73
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:23:34]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 70
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-11-29 10:39:09]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '9',
+        ),
+    )
+    exception-line: 61
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 0'
+[2023-11-29 11:30:59]	[ALERT]	404 - commande non existante :: /API/cadavres/lol
+<<<<<<< HEAD
+[2023-11-29 14:25:22]	[ALERT]	404 - commande non existante :: /API/cadavre
+[2023-11-29 14:30:41]	[ALERT]	404 - commande non existante :: /API/cadavres/97/contributions
+[2023-11-29 14:30:44]	[ALERT]	404 - commande non existante :: /API/cadavres/97/contribution
+[2023-11-29 14:30:53]	[ALERT]	404 - commande non existante :: /API/contributions
+[2023-11-29 14:30:57]	[ALERT]	404 - commande non existante :: /API/contributions/97
+[2023-11-29 14:46:35]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-29 14:48:52]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+[2023-11-29 14:48:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'joueur@joueur',
+        2 => array(),
+    )
+    exception-line: 35
+    exception-file: 'C:\Users\sophie\Documents\$$$S5\SAE loufok joshua\loufok-2.0\src\Model\JoueurModel.php'
+    exception-code: 'Undefined array key "id_cadavre"'
+=======
+[2023-11-29 16:36:01]	[ALERT]	404 - commande non existante :: /API/cadavres/undefined/like
+[2023-11-29 16:37:15]	[ALERT]	404 - commande non existante :: /API/cadavres/92/lik3
+>>>>>>> 6deba451c8e2e8db20efeceb53302514d4083fbf

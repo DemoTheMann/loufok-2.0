@@ -8,7 +8,7 @@
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <input tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
           <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
@@ -16,9 +16,9 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/admin">Retour</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/admin')}}">Retour</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/')}}">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a tabindex="-1" class="menu__hidden__link" href="{{ url('/logout')}}">Déconnexion</a></li>
             </ul>
               <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>
@@ -33,6 +33,45 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
+    <button class="button__players" id="buttonPlay"> Afficher le planning </button>
+
+    <div class="play__message d-none" id="play__message">
+      <div>
+        <p>Les étudiants qui peuvent participer du 07/12/2023 au 08/12/2023 :</p>
+        <ul>
+          <li>Manon</li>
+          <li>Anoki</li>
+          <li>Janice</li>
+        </ul>
+      </div>
+      <div>
+        <p>Les étudiants qui peuvent participer du 09/12/2023 au 10/12/2023 :</p>
+        <ul>
+          <li>Maël</li>
+          <li>Antoine</li>
+          <li>Titouan</li>
+        </ul>
+      </div>
+      <div>
+        <p>Les étudiants qui peuvent participer du 11/12/2023 au 12/12/2023 :</p>
+        <ul>
+          <li>Quentin</li>
+          <li>Evan</li>
+          <li>Fabian</li>
+          <li>Baptiste</li>
+        </ul>
+      </div>
+      <div>
+        <p>Les étudiants qui peuvent participer du 13/12/2023 au 14/12/2023 :</p>
+        <ul>
+          <li>Laura</li>
+          <li>Nathan</li>
+          <li>Antoine</li>
+          <li>Hery</li>
+        </ul>
+      </div>
+    </div>
+
     <div>
     {% if prochaine_date is not empty %}
     <section class="noCadavre">
@@ -67,4 +106,14 @@
 
     </div>
   </main>
+{% endblock %}
+{% block js %}
+  <script defer>
+    const button = document.querySelector("#buttonPlay"); 
+    const div = document.querySelector("#play__message"); 
+    button.addEventListener("click", ()=>{
+      div.classList.toggle("d-none");
+    })
+    
+  </script>
 {% endblock %}

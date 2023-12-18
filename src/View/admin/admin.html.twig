@@ -3,6 +3,7 @@
 {% endblock %}
 {% block title %}Loufok - administrateur{% endblock %}
 {% block content %}
+
   <!-- menu -->
   <header>
       <div class="navbar">
@@ -15,9 +16,9 @@
 
           <nav class="menu__hidden" >
             <ul class="menu__hidden__list">
-              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="/admin">Nouveau cadavre exquis</a></li>
-              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="/admin/affichage">Cadavre exquis en cours</a></li>
-              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="/logout">Déconnexion</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Nouveau cadavre exquis" role="link" tabindex="-1" class="menu__hidden__link" href="{{ url('/admin')}}">Nouveau cadavre exquis</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Cadavre exquis en cours" role="link" tabindex="-1" class="menu__hidden__link" href="{{ url('/admin/affichage')}}">Cadavre exquis en cours</a></li>
+              <li class="menu__hidden__listItem"><a aria-label="Déconnexion" role="link" tabindex="-1" class="menu__hidden__link" href="{{ url('/logout')}}">Déconnexion</a></li>
             </ul>
               <img class="menu__end" src="{{ url('/assets/images/manuscrit.svg')}}" alt="" />
           </nav>
@@ -31,8 +32,8 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-    <div class="newCadavre">
 
+    <div class="newCadavre">
     {% if global_message != 0 %}
     <span class="newCadavre__message">{{global_message}}</span>
     {% endif %}
