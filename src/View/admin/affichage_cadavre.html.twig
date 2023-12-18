@@ -8,7 +8,7 @@
   <header>
       <div class="navbar">
           <h1 class="navbar__title">Loufok - les cadavres exquis revisités </h1>
-          <input {# aria-checked="false" #} tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
+          <input tabindex="0" class="navbar__burger" id="burger" type="checkbox" />
           <label tabindex="0" role="open menu" aria-label="Open menu" for="burger" class="navbar__cross">
             <span class="navbar__cross1"></span>
             <span class="navbar__cross2"></span>
@@ -33,8 +33,9 @@
     <div class="welcome">
         <p class="welcome__name"> Bienvenue {{ username }} </p>
     </div>
-    
-    <div class="play__message">
+    <button class="button__players" id="buttonPlay"> Afficher le planning </button>
+
+    <div class="play__message d-none" id="play__message">
       <div>
         <p>Les étudiants qui peuvent participer du 07/12/2023 au 08/12/2023 :</p>
         <ul>
@@ -105,4 +106,14 @@
 
     </div>
   </main>
+{% endblock %}
+{% block js %}
+  <script defer>
+    const button = document.querySelector("#buttonPlay"); 
+    const div = document.querySelector("#play__message"); 
+    button.addEventListener("click", ()=>{
+      div.classList.toggle("d-none");
+    })
+    
+  </script>
 {% endblock %}

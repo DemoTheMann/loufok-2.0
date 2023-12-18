@@ -27,49 +27,38 @@ class JoueurModel
             case "ecrivain":
             case "mylan":
             case "":
-                $dates = [
-                    "date_debut" => "2023-12-07",
-                    "date_fin" => "2023-12-08"
-                ];
+                $date = "2023-12-07";
                 break;
             case "artiste":
             case "":
             case "":
             case "":
-                $dates = [
-                    "date_debut" => "2023-12-09",
-                    "date_fin" => "2023-12-10"
-                ];
+                $date = "2023-12-09";
                 break;
             case "":
             case "":
             case "":
             case "":
-                $dates = [
-                    "date_debut" => "2023-12-11",
-                    "date_fin" => "2023-12-12"
-                ];
+                $date = "2023-12-11";
                 break;
             case "":
             case "":
             case "":
             case "":
-                $dates = [
-                    "date_debut" => "2023-12-13",
-                    "date_fin" => "2023-12-14"
-                ];
+                $date = "2023-12-13";
                 break;
             case "pascalito":
-                $dates = [
-                    "date_debut" => "2023-11-30",
-                    "date_fin" => "2023-12-01"
-                ];
+                $date = "2023-12-15";
                 break;
             default:
                 break;
         }
-
-        return $dates;
+        if($date <= $ajd)
+        {
+            return $ajd;
+        }else{
+            return $date;
+        }
     }
 
     public static function getUserName(int $id_joueur)

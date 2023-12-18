@@ -31,30 +31,27 @@
 {% block js %}
   <script defer>
     let installPrompt;
+
     const pwaInstallButton = document.getElementById("installPWA");
-    window.addEventListener("beforeinstallprompt", (event) => {
-      event.prevaultDefault();
-      installPrompt = event;
-      pwaInstallButton.removeAttribute("hidden");
-    })
+    pwaInstallButton.removeAttribute("hidden");
+    if (!window.navigator.userAgent.includes("Chrome")) {
+      pwaInstallButton.setAttribute("hidden", "");
+    }
+      if (pwaInstallButton) {
+        window.addEventListener("beforeinstallprompt", (event) => {
+          event.preventDefault();
+          installPrompt = event;
+          pwaInstallButton.classList.remove("d-none");
+        });
+      }
 
     pwaInstallButton.addEventListener("click", async()=>{
       if(!installPrompt) return;
 
       const result = await installPrompt.prompt();
-      console.log("install prompt result", result);
-
-      Notification.requestPermission().then((result => {
-        if(result === "granted") {
-          console.log("Notifications granted");
-        }else{
-          console.log("Notifications refusées");
-        }
-      }))
 
       installPrompt = null;
       pwaInstallButton.setAttribute("hidden", "");
     })
-
   </script>
 {% endblock %}
