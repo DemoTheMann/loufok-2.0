@@ -20,7 +20,7 @@
                 idCadavre = parseInt(APP._button.dataset.cadavre);
                 data = { idCadavre: idCadavre };
 
-                fetch(`http://localhost:8080/api/cadavre/like`, {
+                fetch(`https://jbienvenu.alwaysdata.net/loufok/api/cadavre/like`, {
                     method: "POST",
                     headers: {
                         'Content-Type': "application/json",
