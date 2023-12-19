@@ -1,0 +1,142 @@
+[2023-12-19 9:56:38]	[ALERT]	404 - commande non existante :: /api/cadavre/92/like
+[2023-12-19 10:05:20]	[ALERT]	404 - commande non existante :: /api/cadavre/92/
+[2023-12-19 10:10:55]	[ALERT]	404 - commande non existante :: /loufok/cadavre/92
+[2023-12-19 10:11:21]	[ALERT]	404 - commande non existante :: /loufok/cadavre/92
+[2023-12-19 10:11:23]	[ALERT]	404 - commande non existante :: /loufok/cadavre/92
+[2023-12-19 10:11:49]	[ALERT]	404 - commande non existante :: /loufok/api/cadavre/92
+[2023-12-19 10:11:55]	[ALERT]	404 - commande non existante :: /loufok/api/cadavres
+[2023-12-19 10:35:42]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 39
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 0'
+[2023-12-19 10:36:27]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 39
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 1'
+[2023-12-19 10:36:59]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 1'
+[2023-12-19 10:37:20]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavres',
+        2 => array(),
+    )
+    exception-line: 40
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key 1'
+[2023-12-19 10:49:29]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 91
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 10:55:37]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 92
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 10:56:55]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 81
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 10:57:45]	[ALERT]	404 - commande non existante :: /loufok/api/cadavre/9
+[2023-12-19 10:57:49]	[ALERT]	404 - commande non existante :: /loufok/api/cadavre/9
+[2023-12-19 10:57:53]	[ALERT]	404 - commande non existante :: /loufok/api/cadavre/92
+[2023-12-19 10:58:40]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 81
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 10:59:12]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 81
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 11:02:33]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '100',
+        ),
+    )
+    exception-line: 81
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 11:23:03]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:24:06]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:25:19]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:25:25]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:25:33]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '9',
+        ),
+    )
+    exception-line: 80
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Array to string conversion'
+[2023-12-19 11:29:16]	[ALERT]	404 - commande non existante :: /loufok/api/cadavres
+[2023-12-19 11:32:03]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:33:00]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:33:42]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:36:02]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:38:40]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:40:26]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:40:30]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:41:00]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:51:53]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 11:57:28]	[ALERT]	404 - commande non existante :: /API/cadavre/like
+[2023-12-19 12:18:42]	[ALERT]	404 - commande non existante :: /loufok/api/cadavres
+[2023-12-19 12:38:55]	[ALERT]	404 - commande non existante :: /doc
+[2023-12-19 12:39:00]	[ALERT]	404 - commande non existante :: /doc
+[2023-12-19 12:39:00]	[ALERT]	404 - commande non existante :: /docs
