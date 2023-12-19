@@ -5,6 +5,7 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Entity\Cadavre;
+use App\Entity\Admin;
 use App\Model\ContributionModel;
 use Symfony\Component\Validator\ConstraintViolation;
 
@@ -50,6 +51,8 @@ class APIController extends Controller
         if($cadavre){
             $cadavre = $cadavre[0];
             $contributions = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
+            $adr_admin = Admin::getInstance()->findBy(['id_administrateur'=>$cadavre['id_administrateur']])[0];
+            $cadavre['adr_admin'] = $adr_admin['ad_mail_administrateur'];
             $cadavre['contributions'] = [];
             $cadavre['joueurs'] = [];
 
