@@ -7,22 +7,25 @@
 
             //init
             init: function () {
-                console.log('init');
                 APP.handlers();
             },
 
             //gestionnaire d'ev
             handlers: function () {
-                console.log('handlers');
                 APP._button.addEventListener('click',APP.addLike);
             },
 
             addLike: () => {
 
-                idCadavre = APP._button.dataset.cadavre;
-                // console.log(idCadavre);
-                fetch(`http://localhost:8080/API/cadavres/${idCadavre}/like`, {
+                idCadavre = parseInt(APP._button.dataset.cadavre);
+                data = { idCadavre: idCadavre };
+
+                fetch(`http://localhost:8080/api/cadavre/like`, {
                     method: "POST",
+                    headers: {
+                        'Content-Type': "application/json",
+                    },
+                    body: JSON.stringify(data),
                 })
                 .then(Response =>{
                     console.log(Response);

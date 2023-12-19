@@ -6,9 +6,11 @@ namespace App\Controller;
 
 use App\Entity\Cadavre;
 use App\Model\ContributionModel;
+use Symfony\Component\Validator\ConstraintViolation;
 
 class APIController extends Controller
 {
+
     public function getCadavres()
     {
         $data = [];    
@@ -16,27 +18,25 @@ class APIController extends Controller
 
         foreach($cadavres as $cadavre)
         {
-            $cadavre['contributions'] = [];
-            $cadavre['joueurs'] = [];
-            $contributions = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
 
-            foreach($contributions as $contribution)
-            {
-                array_push($cadavre['contributions'], $contribution['contributions']);
-                if($contribution['joueurs'])
-                {
-                    array_push($cadavre['joueurs'], $contribution['joueurs']);
-                }
-            }
+            $contribution = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
 
+            $cadavre['contribution'] = $contribution[1]['contributions'];
             array_push($data, $cadavre);
 
         }
 
-        $data = json_encode($data);
-
+        // retour au format JSON
         header('Content-Type: application/json');
-        echo $data;
+        // indique au client qu'il est habilité à faire des demandes
+        header('Access-Control-Allow-Origin: *', true);
+        // indique au client les méthodes reconnues
+        header('Access-Control-Allow-Headers: accept,content-type');
+        header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE');
+        // limiter le nombre de requêtes préliminaires en demandant
+        // au navigateur à mettre en cache la requête pendant 1000 secondes
+        header('Access-Control-Max-Age: 1000');
+        echo json_encode($data);
         exit;
     }
 
@@ -61,32 +61,62 @@ class APIController extends Controller
                         array_push($cadavre['joueurs'], $contribution['joueurs']);
                     }
                 }
-            array_push($data, $cadavre);
+
+            sort($cadavre['joueurs']);
+
+            $cadavre = (object) $cadavre;
+
+            $data = $cadavre;
         }
 
-        $data = json_encode($data);
-
+        // retour au format JSON
         header('Content-Type: application/json');
-        echo $data;
+        // indique au client qu'il est habilité à faire des demandes
+        header('Access-Control-Allow-Origin: *', true);
+        // indique au client les méthodes reconnues
+        header('Access-Control-Allow-Headers: accept,content-type');
+        header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE');
+        // limiter le nombre de requêtes préliminaires en demandant
+        // au navigateur à mettre en cache la requête pendant 1000 secondes
+        header('Access-Control-Max-Age: 1000');
+        echo json_encode($data);
         exit;
     }
 
-    public function likeCadavreById($id)
+    public function likeCadavre()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST')
-        {
-            $id = intval($id);
+        {    
+            $QBody = json_decode(file_get_contents("php://input"), true);
 
-            $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
-            $nb_jaime = $cadavre['nb_jaime'];
-            $nb_jaime ++;
-            $result = Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
-            return $result;
+            if(isset($QBody['idCadavre']))
+            {
+                $id = $QBody['idCadavre'];
+
+                $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
+                $nb_jaime = $cadavre['nb_jaime'];
+                $nb_jaime ++;
+                $response = Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
+
+            } else {
+                http_response_code(203);
+                $response = [
+                    'status' => '203',
+                    'error' => 'Incorrect body'
+                ];
+            }
+
+            header('Access-Control-Allow-Origin: *', true);
+            return $response;
+            exit;
 
         }
 
+        // Seulement pour teste, à enlever en prod pour Daylire
+        $cadavres = Cadavre::getInstance()->findAll();
+        $firstCadavreId = $cadavres[0]['id_cadavre'];
         $data = [
-            "id_cadavre" => intval($id),
+            "id_cadavre" => $firstCadavreId,
         ];
         $this->display('testLike.html.twig', $data);
     }
