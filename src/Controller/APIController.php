@@ -19,12 +19,21 @@ class APIController extends Controller
 
         foreach($cadavres as $cadavre)
         {
+            $now = date('Y-m-d');
+            if($cadavre['date_fin_cadavre'] < $now)
+            {
+                $contribution = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
 
-            $contribution = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
+                $cadavre['contribution'] = $contribution[1]['contributions'];
+                array_push($data, $cadavre);
+            }
 
-            $cadavre['contribution'] = $contribution[1]['contributions'];
-            array_push($data, $cadavre);
+        }
 
+        if(!$data)
+        {
+            http_response_code(200);
+            $data = 'Aucun cadavre fini trouvé';
         }
 
         // retour au format JSON
@@ -70,6 +79,10 @@ class APIController extends Controller
             $cadavre = (object) $cadavre;
 
             $data = $cadavre;
+
+        } else {
+            http_response_code(404);
+            $data = 'Aucun cadavre trouvé avec cet identifiant';
         }
 
         // retour au format JSON
