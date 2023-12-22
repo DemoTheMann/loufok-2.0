@@ -140,3 +140,25 @@
 [2023-12-19 12:38:55]	[ALERT]	404 - commande non existante :: /doc
 [2023-12-19 12:39:00]	[ALERT]	404 - commande non existante :: /doc
 [2023-12-19 12:39:00]	[ALERT]	404 - commande non existante :: /docs
+[2023-12-19 19:08:41]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 54
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key "ad_mail_administrateur"'
+[2023-12-19 19:10:05]	[ALERT]	404 - erreur dans le processus de traitement du routage
+    routeInfo: array(
+        0 => 1,
+        1 => 'API@getCadavreById',
+        2 => array(
+            'id' => '92',
+        ),
+    )
+    exception-line: 55
+    exception-file: 'C:\Users\joshu\Documents\dev\github\loufok-2.0\src\Controller\APIController.php'
+    exception-code: 'Undefined array key "ad_mail_administrateur"'
