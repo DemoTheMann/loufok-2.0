@@ -127,13 +127,38 @@ class APIController extends Controller
             exit;
 
         }
-
-        // Seulement pour teste, à enlever en prod pour Daylire
-        $cadavres = Cadavre::getInstance()->findAll();
-        $firstCadavreId = $cadavres[0]['id_cadavre'];
-        $data = [
-            "id_cadavre" => $firstCadavreId,
-        ];
-        $this->display('testLike.html.twig', $data);
     }
+
+    public function dislikeCadavre()
+    {
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
+        {    
+            $QBody = json_decode(file_get_contents("php://input"), true);
+
+            if(isset($QBody['idCadavre']))
+            {
+                $id = $QBody['idCadavre'];
+
+                $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
+                $nb_jaime = $cadavre['nb_jaime'];
+                if(!$nb_jaime === 0){
+                    $nb_jaime --;
+                    $response = Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
+                }
+            } else {
+                http_response_code(203);
+                $response = [
+                    'status' => '203',
+                    'error' => 'Incorrect body'
+                ];
+            }
+
+            header('Access-Control-Allow-Origin: *', true);
+            return $response;
+            exit;
+
+        }
+    }
+
+
 }
