@@ -5,6 +5,7 @@ declare (strict_types = 1); // strict mode
 namespace App\Controller;
 
 use App\Entity\Cadavre;
+use App\Entity\Admin;
 use App\Model\ContributionModel;
 use Symfony\Component\Validator\ConstraintViolation;
 
@@ -18,12 +19,21 @@ class APIController extends Controller
 
         foreach($cadavres as $cadavre)
         {
+            $now = date('Y-m-d');
+            if($cadavre['date_fin_cadavre'] < $now)
+            {
+                $contribution = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
 
-            $contribution = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
+                $cadavre['contribution'] = $contribution[1]['contributions'];
+                array_push($data, $cadavre);
+            }
 
-            $cadavre['contribution'] = $contribution[1]['contributions'];
-            array_push($data, $cadavre);
+        }
 
+        if(!$data)
+        {
+            http_response_code(200);
+            $data = 'Aucun cadavre fini trouvé';
         }
 
         // retour au format JSON
@@ -50,6 +60,8 @@ class APIController extends Controller
         if($cadavre){
             $cadavre = $cadavre[0];
             $contributions = ContributionModel::getInstance()->getContribs($cadavre['id_cadavre']);
+            $adr_admin = Admin::getInstance()->findBy(['id_administrateur'=>$cadavre['id_administrateur']])[0];
+            $cadavre['adr_admin'] = $adr_admin['ad_mail_administrateur'];
             $cadavre['contributions'] = [];
             $cadavre['joueurs'] = [];
 
@@ -67,6 +79,10 @@ class APIController extends Controller
             $cadavre = (object) $cadavre;
 
             $data = $cadavre;
+
+        } else {
+            http_response_code(404);
+            $data = 'Aucun cadavre trouvé avec cet identifiant';
         }
 
         // retour au format JSON
@@ -111,13 +127,38 @@ class APIController extends Controller
             exit;
 
         }
-
-        // Seulement pour teste, à enlever en prod pour Daylire
-        $cadavres = Cadavre::getInstance()->findAll();
-        $firstCadavreId = $cadavres[0]['id_cadavre'];
-        $data = [
-            "id_cadavre" => $firstCadavreId,
-        ];
-        $this->display('testLike.html.twig', $data);
     }
+
+    public function dislikeCadavre()
+    {
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
+        {    
+            $QBody = json_decode(file_get_contents("php://input"), true);
+
+            if(isset($QBody['idCadavre']))
+            {
+                $id = $QBody['idCadavre'];
+
+                $cadavre = Cadavre::getInstance()->findBy(['id_cadavre'=>$id])[0];
+                $nb_jaime = $cadavre['nb_jaime'];
+                if(!$nb_jaime === 0){
+                    $nb_jaime --;
+                    $response = Cadavre::getInstance()->update($id,['nb_jaime'=>$nb_jaime]);
+                }
+            } else {
+                http_response_code(203);
+                $response = [
+                    'status' => '203',
+                    'error' => 'Incorrect body'
+                ];
+            }
+
+            header('Access-Control-Allow-Origin: *', true);
+            return $response;
+            exit;
+
+        }
+    }
+
+
 }

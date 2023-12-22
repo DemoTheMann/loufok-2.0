@@ -21,6 +21,8 @@ return [
   ['GET', '/api/cadavres', 'API@getCadavres'],
   ['GET', '/api/cadavre/{id:\d+}', 'API@getCadavreById'],
   [['POST', 'GET'], '/api/cadavre/like', 'API@likeCadavre'],
+  [['POST', 'GET'], '/api/cadavre/dislike', 'API@dislikeCadavre'],
+
 
   
 ];
